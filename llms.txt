@@ -26,6 +26,10 @@ Alexander K. Eliot is a pen name. Æ Studio is the operating brand. The work is 
 - [Fiverr](https://www.fiverr.com/alexanderkeliot): AI visibility audits and GEO services.
 - [Etsy shop](https://www.etsy.com/shop/AlexanderKonigEliot): reseller fee calculators and profit trackers.
 
+## Press
+
+- [Press kit](https://alexander-k-eliot.github.io/press-kit/): boilerplate, fast facts, ready-to-run story angles, full data set, methodology, visual assets, direct media contact.
+
 ## Contact
 
 alexander.k.eliot@gmail.com
