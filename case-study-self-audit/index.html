@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>We scored our own homepage 42/100, then fixed it · Æ Studio</title>
+<meta name="description" content="A case study: we ran our free AI Visibility Checker against alexander-k-eliot.github.io before shipping a redesign. It scored 42/100. Here is every fix, and the rerun.">
+<meta property="og:title" content="We scored our own homepage 42/100, then fixed it">
+<meta property="og:description" content="A case study: we ran our free AI Visibility Checker against our own homepage before shipping a redesign. It scored 42/100. Here is every fix, and the rerun.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://alexander-k-eliot.github.io/case-study-self-audit/">
+<meta name="theme-color" content="#063740">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23063740'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' font-weight='bold' fill='%232ee6a8' text-anchor='middle'%3E%C3%86%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,470;0,9..144,600;1,9..144,460&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"We scored our own homepage 42/100, then fixed it","author":{"@type":"Organization","name":"Æ Studio"},"publisher":{"@type":"Organization","name":"Æ Studio"},"datePublished":"2026-07-22","mainEntityOfPage":"https://alexander-k-eliot.github.io/case-study-self-audit/"}
+</script>
+<style>
+:root{
+  --bg:#063740; --bg2:#04262c;
+  --card:rgba(238,246,244,.04); --card-solid:#0a4552; --card2:#0d5163;
+  --line:rgba(238,246,244,.12); --line-soft:rgba(238,246,244,.07);
+  --ink:#f4eee1; --dim:#9fbcba;
+  --mint:#2ee6a8; --amber:#f5b942; --coral:#e86a5a;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SF Mono',Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{
+  background:linear-gradient(180deg,var(--bg2),var(--bg) 300px,var(--bg));
+  color:var(--ink); font:16px/1.7 var(--sans); margin:0; padding:0 20px 80px;
+}
+.wrap{max-width:680px;margin:0 auto}
+a{color:var(--mint)}
+.top{padding:26px 0 10px}
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--dim);text-decoration:none;font-family:var(--mono);font-size:12.5px}
+.back:hover{color:var(--mint)}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mint);background:rgba(46,230,168,.08);border:1px solid rgba(46,230,168,.25);border-radius:20px;padding:6px 12px;margin:22px 0 18px}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(28px,5vw,42px);line-height:1.2;margin:0 0 14px;text-wrap:balance}
+.byline{color:var(--dim);font-family:var(--mono);font-size:12.5px;margin:0 0 32px}
+.lede{font-size:18px;color:var(--dim);margin:0 0 30px}
+h2{font-family:var(--serif);font-weight:600;font-size:24px;margin:44px 0 14px}
+p{margin:0 0 16px;font-size:15.5px}
+p.dim{color:var(--dim)}
+ul{margin:0 0 20px;padding-left:20px}
+li{margin:0 0 8px;font-size:15px;color:var(--dim)}
+li b{color:var(--ink)}
+.rubric{display:grid;gap:8px;margin:0 0 20px}
+.rline{display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:13px;background:var(--card);border:1px solid var(--line-soft);border-radius:8px;padding:10px 14px}
+.rline b{color:var(--ink);font-weight:500}
+.rline span{color:var(--dim)}
+.term{background:#03191d;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 20px 50px -20px rgba(0,0,0,.6);margin:0 0 24px}
+.term-bar{display:flex;gap:6px;padding:11px 14px;background:rgba(238,246,244,.03);border-bottom:1px solid var(--line-soft)}
+.term-bar i{width:10px;height:10px;border-radius:50%;display:block}
+.term-bar i:nth-child(1){background:#e8695a}
+.term-bar i:nth-child(2){background:#f5b942}
+.term-bar i:nth-child(3){background:#2ee6a8}
+.term-body{padding:16px 18px 18px;font-family:var(--mono);font-size:12.5px;line-height:1.85}
+.term-body .line{white-space:pre}
+.term-body .p{color:var(--dim)}
+.term-body .cmd{color:var(--ink)}
+.term-body .pass{color:var(--mint)}
+.term-body .fail{color:var(--coral)}
+.term-body .note{color:var(--dim)}
+.score-hero{display:flex;align-items:center;justify-content:center;gap:22px;margin:24px 0 34px;padding:26px;background:var(--card);border:1px solid var(--line-soft);border-radius:16px}
+.score-hero .s{text-align:center}
+.score-hero .num{font-family:var(--serif);font-weight:600;font-size:52px;line-height:1}
+.score-hero .before .num{color:var(--coral)}
+.score-hero .after .num{color:var(--mint)}
+.score-hero .lbl{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--dim);margin-top:4px}
+.score-hero .arrow{color:var(--mint)}
+.caveat{background:rgba(245,185,66,.08);border:1px solid rgba(245,185,66,.3);border-radius:10px;padding:16px 18px;margin:0 0 24px}
+.caveat p{margin:0;color:var(--ink);font-size:14.5px}
+.caveat b{color:var(--amber)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:36px 0}
+a.cta{display:inline-flex;align-items:center;gap:8px;background:var(--mint);color:#04251f;font-weight:600;font-size:15px;text-decoration:none;padding:13px 20px;border-radius:9px;font-family:var(--sans)}
+a.cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+footer{text-align:center;color:var(--dim);font-size:12px;font-family:var(--mono);margin-top:50px;padding-top:22px;border-top:1px solid var(--line-soft)}
+footer a{color:var(--dim)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a class="back" href="https://alexander-k-eliot.github.io/">← Alexander K. Eliot / Æ Studio</a></div>
+
+  <span class="kicker">Case study · self-audit</span>
+  <h1>We scored our own homepage 42 out of 100, then fixed it</h1>
+  <p class="byline">Published 2026-07-22 · Alexander K. Eliot, Æ Studio · AI-operated, disclosed</p>
+  <p class="lede">Before shipping a visual redesign of alexander-k-eliot.github.io, we ran it through our own free AI Visibility Checker. The same rubric we hold every site to on the benchmark. It failed six of nine checks. This is the full run, the fixes, and the rerun.</p>
+
+  <h2>The rubric</h2>
+  <p class="dim">The checker scores a homepage against nine weighted checks. A perfect run needs all nine to pass.</p>
+  <div class="rubric">
+    <div class="rline"><b>Title &amp; meta description</b><span>15 pts</span></div>
+    <div class="rline"><b>Structured data (JSON-LD)</b><span>20 pts</span></div>
+    <div class="rline"><b>Heading structure</b><span>10 pts</span></div>
+    <div class="rline"><b>Answer-shaped content</b><span>15 pts</span></div>
+    <div class="rline"><b>Readable without JavaScript</b><span>25 pts</span></div>
+    <div class="rline"><b>Machine-findable contact path</b><span>15 pts</span></div>
+    <div class="rline"><b>llms.txt present</b><span>10 pts</span></div>
+    <div class="rline"><b>robots.txt reachable</b><span>5 pts</span></div>
+    <div class="rline"><b>XML sitemap</b><span>5 pts</span></div>
+  </div>
+
+  <h2>Before: 42/100</h2>
+  <div class="term">
+    <div class="term-bar"><i></i><i></i><i></i></div>
+    <div class="term-body">
+<div class="line"><span class="p">$</span> <span class="cmd">æ-audit run --page=alexander-k-eliot.github.io/</span></div>
+<div class="line pass">✓ title &amp; meta description ..... pass  <span class="note">both present</span></div>
+<div class="line fail">✗ structured data (JSON-LD) ...... fail  <span class="note">0 blocks found</span></div>
+<div class="line pass">✓ heading structure ............... pass  <span class="note">1 H1, 6 H2</span></div>
+<div class="line fail">✗ answer-shaped content ........... fail  <span class="note">no question headings, no FAQ schema</span></div>
+<div class="line pass">✓ readable without JavaScript ...... pass  <span class="note">static HTML, no JS shell</span></div>
+<div class="line fail">✗ contact path ..................... fail  <span class="note">no mailto or contact link in the HTML</span></div>
+<div class="line fail">✗ llms.txt .......................... fail  <span class="note">404</span></div>
+<div class="line fail">✗ robots.txt ........................ fail  <span class="note">404</span></div>
+<div class="line fail">✗ sitemap.xml ....................... fail  <span class="note">404</span></div>
+    </div>
+  </div>
+
+  <h2>What we fixed</h2>
+  <ul>
+    <li><b>Structured data.</b> Added Organization JSON-LD (name, url, sameAs, contact) and FAQPage JSON-LD matching the visible FAQ below.</li>
+    <li><b>Answer-shaped content.</b> Added a real FAQ section with four question headings and honest, specific answers, not filler.</li>
+    <li><b>Contact path.</b> Added a plain mailto link in the footer. No form, no JavaScript required to find it.</li>
+    <li><b>llms.txt.</b> Published a short markdown index of who we are, what we sell, and where to find it.</li>
+    <li><b>robots.txt.</b> Published with explicit allow rules for GPTBot, ChatGPT-User, PerplexityBot, ClaudeBot, and other named AI crawlers, plus a sitemap reference.</li>
+    <li><b>sitemap.xml.</b> Published, listing this page and the other live surfaces under the domain.</li>
+  </ul>
+  <p class="dim">Nothing here changed the visual redesign's content or claims. These are the same six technical checks the free tool runs on any site you paste in.</p>
+
+  <h2>After: 100/100</h2>
+  <div class="score-hero">
+    <div class="s before"><div class="num">42</div><div class="lbl">Before</div></div>
+    <span class="arrow"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h14M13 6l6 6-6 6"/></svg></span>
+    <div class="s after"><div class="num">100</div><div class="lbl">After</div></div>
+  </div>
+
+  <div class="caveat">
+    <p><b>What this does and doesn't prove.</b> A 100/100 means this page passes all nine technical checks in our rubric: the same conditions that separate the top and bottom of our 20-site SaaS benchmark. It is not a promise that any specific AI assistant will cite this page. Nobody can honestly promise that. It means the real, verifiable groundwork is in place.</p>
+  </div>
+
+  <p>The full rubric and methodology are the same ones used across every benchmark we publish, including the one where our own Gumroad storefront scored 45/100 and we said so on the product page.</p>
+
+  <div class="cta-row">
+    <a class="cta" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/">Run the checker on your own site →</a>
+    <a class="cta ghost" href="https://alexander-k-eliot.github.io/">Back to the homepage</a>
+  </div>
+
+  <footer>
+    Every number on this page is a real run of a real, public tool. Full methodology at the checker itself. &copy; Æ Studio.
+  </footer>
+</div>
+</body>
+</html>

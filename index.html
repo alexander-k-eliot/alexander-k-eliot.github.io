@@ -3,134 +3,437 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alexander K. Eliot — Æ Studio</title>
+<title>Alexander K. Eliot · Æ Studio</title>
 <meta name="description" content="Most sites have no real answer for whether AI assistants can read them. Get a real score in 30 seconds, free.">
+<meta property="og:title" content="Alexander K. Eliot · Æ Studio">
+<meta property="og:description" content="Most sites have no real answer for whether AI assistants can read them. Get a real score in 30 seconds, free.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://alexander-k-eliot.github.io/">
+<meta name="theme-color" content="#063740">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23063740'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' font-weight='bold' fill='%232ee6a8' text-anchor='middle'%3E%C3%86%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,470;0,9..144,600;1,9..144,460&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Æ Studio","alternateName":"Alexander K. Eliot","url":"https://alexander-k-eliot.github.io/","email":"alexander.k.eliot@gmail.com","sameAs":["https://github.com/alexander-k-eliot","https://x.com/alexanderKeliot","https://www.instagram.com/alexander.k.eliot/","https://www.reddit.com/user/alexander-k-eliot/"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Will ChatGPT and Perplexity actually read this site?","acceptedAnswer":{"@type":"Answer","text":"Yes. This page is static HTML. No JavaScript renders the text. A crawler that fetches the raw page sees the same words a person does."}},
+{"@type":"Question","name":"What does the free AI Visibility Checker test?","acceptedAnswer":{"@type":"Answer","text":"Six things: a real title and description, structured data, clean heading structure, answer-shaped content, text that survives without JavaScript, and a findable contact path. Run it on your own site in 30 seconds."}},
+{"@type":"Question","name":"Why publish your own worst score?","acceptedAnswer":{"@type":"Answer","text":"Because a benchmark that hides its own bad parts is not a benchmark. Gumroad, our own storefront, scored 45 out of 100. We said so on the product page."}},
+{"@type":"Question","name":"Is this page actually run by AI?","acceptedAnswer":{"@type":"Answer","text":"Yes, disclosed on every page. Alexander K. Eliot is a pen name. The work is real and the disclosure stays up everywhere."}}
+]}
+</script>
 <style>
-:root{--bg:#063740;--card:#0a4552;--card2:#0d5163;--ink:#eef6f4;--dim:#9fbcba;--mint:#2ee6a8;--amber:#f5b942;--coral:#e86a5a;--line:#1d5c6b}
+:root{
+  --bg:#063740; --bg2:#04262c;
+  --card:rgba(238,246,244,.04); --card-solid:#0a4552; --card2:#0d5163;
+  --line:rgba(238,246,244,.12); --line-soft:rgba(238,246,244,.07);
+  --ink:#f4eee1; --dim:#9fbcba;
+  --mint:#2ee6a8; --amber:#f5b942; --coral:#e86a5a;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SF Mono',Consolas,monospace;
+}
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font:16px/1.6 Georgia,'Times New Roman',serif;margin:0;padding:40px 16px 80px}
-.wrap{max-width:560px;margin:0 auto}
-.mono{width:64px;height:64px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#0e5f6f,var(--card));border:2px solid var(--mint);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:27px;font-weight:bold;color:var(--mint);letter-spacing:-1px}
-.eyebrow{text-align:center;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin:0 0 14px}
+html{scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(ellipse 900px 500px at 12% -8%, rgba(46,230,168,.10), transparent 60%),
+    radial-gradient(ellipse 700px 500px at 100% 10%, rgba(232,106,90,.08), transparent 55%),
+    linear-gradient(180deg,var(--bg2),var(--bg) 340px,var(--bg));
+  color:var(--ink); font:16px/1.65 var(--sans); margin:0;
+  background-attachment:fixed;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(rgba(238,246,244,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(238,246,244,.14) 1px,transparent 1px);
+  background-size:42px 42px;
+  mask-image:radial-gradient(ellipse 75% 65% at 50% 0%,#000 40%,transparent 92%);
+  -webkit-mask-image:radial-gradient(ellipse 75% 65% at 50% 0%,#000 40%,transparent 92%);
+}
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:radial-gradient(rgba(46,230,168,.5) 1.4px,transparent 1.4px);
+  background-size:42px 42px;
+  mask-image:radial-gradient(ellipse 75% 65% at 50% 0%,#000 40%,transparent 92%);
+  -webkit-mask-image:radial-gradient(ellipse 75% 65% at 50% 0%,#000 40%,transparent 92%);
+  opacity:.55;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+a{color:inherit}
+p{margin:0 0 12px}
 
-/* Hero — StoryBrand wireframe: one-liner, direct CTA, stakes */
-h1{text-align:center;font-size:27px;line-height:1.35;margin:0 0 18px;font-weight:bold;text-wrap:balance}
-.cta-row{display:flex;justify-content:center;margin:0 0 14px}
-a.cta{display:inline-block;background:var(--mint);color:#04251f;font-weight:bold;font-size:16px;text-decoration:none;padding:14px 28px;border-radius:8px;font-family:Georgia,serif}
-a.cta:hover{background:#3ff5b8}
-.stakes{text-align:center;color:var(--dim);font-size:14px;margin:0 0 34px}
+/* ---- nav ---- */
+.nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);background:rgba(6,55,64,.72);border-bottom:1px solid var(--line-soft)}
+.nav-inner{max-width:1080px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand .mark{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,#0e5f6f,var(--card-solid));border:1.5px solid var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:600;font-size:16px;color:var(--mint)}
+.brand .word{font-family:var(--mono);font-size:12.5px;letter-spacing:.03em;color:var(--dim)}
+.brand .word b{color:var(--ink);font-weight:500}
+.navwrap{overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;margin-left:auto}
+.navwrap::-webkit-scrollbar{display:none}
+.navlinks{display:flex;gap:18px;font-family:var(--mono);font-size:12px;color:var(--dim);letter-spacing:.02em;white-space:nowrap;padding:2px 2px}
+.navlinks a{position:relative;text-decoration:none;transition:color .15s;padding-bottom:3px}
+.navlinks a:hover{color:var(--mint)}
+.navlinks a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1.5px;background:var(--mint);transition:right .2s}
+.navlinks a.active{color:var(--mint)}
+.navlinks a.active::after{right:0}
+.nav-cta{display:none;flex-shrink:0;background:var(--mint);color:#04251f;font-family:var(--sans);font-weight:600;font-size:13px;text-decoration:none;padding:9px 16px;border-radius:7px;white-space:nowrap}
+@media(min-width:640px){.nav-cta{display:inline-block}}
+@media(min-width:880px){.navlinks{gap:24px;font-size:12.5px}}
 
-/* Guide: empathy + authority */
-.guide{background:var(--card2);border-left:4px solid var(--mint);border-radius:6px;padding:16px 18px;margin:0 0 20px}
-.guide p{margin:0 0 10px;font-size:14.5px}
-.guide p:last-child{margin-bottom:0}
-.stats{display:flex;gap:10px;margin:14px 0 0}
-.stat{flex:1;background:var(--card);border-radius:6px;padding:10px 8px;text-align:center}
-.stat b{display:block;color:var(--amber);font-family:Georgia,serif;font-size:19px}
-.stat span{display:block;color:var(--dim);font-size:11px;margin-top:2px;line-height:1.3}
+/* ---- eyebrow / kicker ---- */
+.kicker{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mint);background:rgba(46,230,168,.08);border:1px solid rgba(46,230,168,.25);border-radius:20px;padding:6px 12px 6px 10px}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 3px rgba(46,230,168,.18);animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 
-/* The Plan */
-.plan{margin:26px 0 34px}
-.plan h2{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);margin:0 0 14px;font-family:Georgia,serif;font-weight:normal;text-align:center}
-.step{display:flex;gap:12px;align-items:flex-start;margin:0 0 14px}
-.step .n{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:2px solid var(--mint);color:var(--mint);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:bold}
-.step .d b{display:block;font-size:15px}
-.step .d span{color:var(--dim);font-size:13.5px}
+/* ---- hero ---- */
+.hero{padding:56px 0 40px;display:grid;gap:36px;align-items:center}
+@media(min-width:880px){.hero{grid-template-columns:1.15fr .85fr;padding:76px 0 56px}}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(30px,5.4vw,52px);line-height:1.12;letter-spacing:-.01em;margin:16px 0 18px;text-wrap:balance}
+h1 mark{background:transparent;color:var(--ink);position:relative;font-style:italic;font-weight:470}
+h1 mark::after{content:"";position:absolute;left:-2%;right:-2%;bottom:.02em;height:.32em;background:linear-gradient(90deg,var(--mint),var(--amber));opacity:.32;z-index:-1;border-radius:2px}
+.sub{color:var(--dim);font-size:16.5px;max-width:46ch;margin:0 0 26px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px}
+a.cta{display:inline-flex;align-items:center;gap:8px;background:var(--mint);color:#04251f;font-weight:600;font-size:15px;text-decoration:none;padding:14px 22px;border-radius:9px;font-family:var(--sans);box-shadow:0 8px 24px -8px rgba(46,230,168,.5);transition:transform .15s,box-shadow .15s}
+a.cta:hover{transform:translateY(-1px);box-shadow:0 10px 28px -6px rgba(46,230,168,.6)}
+a.cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none}
+a.cta.ghost:hover{border-color:var(--mint);color:var(--mint)}
+.trust-note{color:var(--dim);font-size:13px;font-family:var(--mono)}
 
-h2.section{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);margin:32px 0 10px;font-family:Georgia,serif;font-weight:normal;border-bottom:1px solid var(--line);padding-bottom:6px}
-.links{display:flex;flex-direction:column;gap:8px}
-a.link{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 16px;text-decoration:none;color:var(--ink);transition:border-color .15s,background .15s}
-a.link:hover{border-color:var(--mint);background:var(--card2)}
-a.link .t{font-size:15.5px}
-a.link .t small{display:block;color:var(--dim);font-size:12.5px;margin-top:2px;font-family:Georgia,serif}
-a.link .arrow{color:var(--mint);font-size:18px;flex-shrink:0}
-a.link.primary{background:linear-gradient(135deg,#0a4552,#0d5163);border-color:var(--mint)}
-.social{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:8px}
-.social a{color:var(--dim);text-decoration:none;font-size:13.5px;border:1px solid var(--line);border-radius:20px;padding:7px 14px}
+/* ---- scroll cue ---- */
+.scrollcue{display:flex;flex-direction:column;align-items:center;gap:6px;margin:6px 0 8px;color:var(--dim)}
+.scrollcue svg{animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+@media(prefers-reduced-motion:reduce){.scrollcue svg{animation:none}}
+
+/* ---- score dial ---- */
+.dial-wrap{display:flex;justify-content:center}
+.dial{position:relative;width:min(300px,82vw);aspect-ratio:1}
+.dial svg{width:100%;height:100%;transform:rotate(-90deg)}
+.dial .track{stroke:rgba(238,246,244,.09)}
+.dial .arc{stroke:var(--mint);stroke-linecap:round;filter:drop-shadow(0 0 10px rgba(46,230,168,.55));stroke-dasharray:678;stroke-dashoffset:678;animation:draw 1.6s cubic-bezier(.2,.7,.2,1) .3s forwards}
+@media(prefers-reduced-motion:reduce){.dial .arc{animation:none;stroke-dashoffset:156}.kicker .dot{animation:none}}
+@keyframes draw{to{stroke-dashoffset:156}}
+.dial .tick{stroke:rgba(238,246,244,.22);stroke-width:2}
+.dial-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.dial-center .n{font-family:var(--serif);font-weight:600;font-size:52px;line-height:1;color:var(--ink)}
+.dial-center .n span{font-size:22px;color:var(--dim);font-weight:400}
+.dial-center .cap{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin-top:8px;max-width:150px}
+
+/* ---- guide / proof ---- */
+.proof{padding:36px 0;display:grid;gap:28px}
+@media(min-width:860px){.proof{grid-template-columns:1fr 1fr;align-items:start;padding:48px 0}}
+.proof-copy p{font-size:15px;color:var(--dim)}
+.proof-copy b{color:var(--ink)}
+.term{background:#03191d;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 20px 50px -20px rgba(0,0,0,.6)}
+.term-bar{display:flex;gap:6px;padding:11px 14px;background:rgba(238,246,244,.03);border-bottom:1px solid var(--line-soft)}
+.term-bar i{width:10px;height:10px;border-radius:50%;display:block}
+.term-bar i:nth-child(1){background:#e8695a}
+.term-bar i:nth-child(2){background:#f5b942}
+.term-bar i:nth-child(3){background:#2ee6a8}
+.term-body{padding:18px 18px 20px;font-family:var(--mono);font-size:13px;line-height:1.9}
+.term-body .p{color:var(--dim)}
+.term-body .cmd{color:var(--ink)}
+.term-body .line{white-space:pre}
+.term-body .pass{color:var(--mint)}
+.term-body .warn{color:var(--amber)}
+.term-body .fail{color:var(--coral)}
+.term-body .note{color:var(--dim)}
+.term-body .diff{color:var(--dim)}
+.term-body .arrow-mint{color:var(--mint);font-weight:600}
+
+/* ---- case study ---- */
+.case{padding:44px 0}
+.case-inner{background:var(--card);border:1px solid var(--line-soft);border-radius:18px;padding:30px 26px;display:grid;gap:26px}
+@media(min-width:860px){.case-inner{grid-template-columns:.9fr 1.1fr;padding:38px}}
+.case-copy p{color:var(--dim);font-size:15px}
+.case-copy b{color:var(--ink)}
+.case-scores{display:flex;align-items:center;justify-content:center;gap:18px;margin:8px 0 4px}
+.case-score{text-align:center}
+.case-score .num{font-family:var(--serif);font-weight:600;font-size:44px;line-height:1}
+.case-score.before .num{color:var(--coral)}
+.case-score.after .num{color:var(--mint)}
+.case-score .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);margin-top:4px}
+.case-arrow{color:var(--mint)}
+.case-link{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:13px;color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(46,230,168,.35);padding-bottom:2px;margin-top:6px}
+.case-link:hover{border-color:var(--mint)}
+
+/* ---- FAQ ---- */
+.faq{padding:44px 0}
+.faq-list{display:grid;gap:12px;max-width:760px;margin:0 auto}
+.faq-item{background:var(--card);border:1px solid var(--line-soft);border-radius:12px;padding:18px 20px}
+.faq-item h3{font-family:var(--sans);font-size:15.5px;font-weight:600;margin:0 0 6px;display:flex;gap:10px;align-items:flex-start}
+.faq-item h3 .q-mark{flex-shrink:0;width:22px;height:22px;border-radius:6px;background:rgba(46,230,168,.12);border:1px solid rgba(46,230,168,.3);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:12px;margin-top:1px}
+.faq-item p{color:var(--dim);font-size:14px;margin:0 0 0 32px}
+
+/* ---- plan ---- */
+.section-head{text-align:center;margin:0 0 30px}
+.section-head .kicker{margin-bottom:12px}
+.section-head h2{font-family:var(--serif);font-weight:600;font-size:clamp(22px,3vw,30px);margin:0}
+.plan{padding:44px 0}
+.steps{display:grid;gap:28px;position:relative}
+@media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr);gap:44px}}
+.step{background:var(--card);border:1px solid var(--line-soft);border-radius:16px;padding:26px 22px 24px;position:relative}
+.step .icon{width:58px;height:58px;border-radius:14px;background:rgba(46,230,168,.1);border:1px solid rgba(46,230,168,.32);display:flex;align-items:center;justify-content:center;color:var(--mint);margin-bottom:16px;box-shadow:0 10px 26px -12px rgba(46,230,168,.4)}
+.step .icon svg{width:28px;height:28px}
+.step .n{position:absolute;top:24px;right:22px;font-family:var(--serif);font-style:italic;font-size:26px;color:var(--line);line-height:1}
+.step h3{font-family:var(--sans);font-size:17px;font-weight:600;margin:0 0 6px}
+.step p{color:var(--dim);font-size:14px;margin:0}
+.step-arrow{display:none}
+@media(min-width:760px){
+  .step-arrow{display:flex;position:absolute;top:29px;right:-38px;width:32px;height:32px;color:var(--mint);opacity:.6;align-items:center;justify-content:center;z-index:2}
+}
+.step-arrow.mobile{display:flex;justify-content:center;color:var(--mint);opacity:.6;margin:-8px 0}
+@media(min-width:760px){.step-arrow.mobile{display:none}}
+
+/* ---- link grid ---- */
+h2.section{font-family:var(--mono);font-size:12.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--dim);margin:52px 0 16px;font-weight:500;display:flex;align-items:center;gap:12px}
+h2.section .sec-icn{flex-shrink:0;width:34px;height:34px;border-radius:9px;background:rgba(46,230,168,.09);border:1px solid rgba(46,230,168,.3);display:flex;align-items:center;justify-content:center;color:var(--mint)}
+h2.section .sec-icn svg{width:17px;height:17px}
+h2.section::after{content:"";flex:1;height:1px;background:var(--line-soft)}
+.links{display:grid;gap:12px}
+@media(min-width:640px){.links{grid-template-columns:1fr 1fr}}
+a.link{display:flex;align-items:flex-start;gap:15px;background:var(--card);border:1px solid var(--line-soft);border-radius:14px;padding:18px 19px;text-decoration:none;color:var(--ink);transition:border-color .15s,background .15s,transform .15s}
+a.link:hover{border-color:var(--mint);background:var(--card2);transform:translateY(-1px)}
+a.link .icn{flex-shrink:0;width:46px;height:46px;border-radius:12px;background:rgba(238,246,244,.05);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--mint)}
+a.link .icn svg{width:22px;height:22px}
+a.link .t{font-size:15.5px;font-weight:600;font-family:var(--sans)}
+a.link .t small{display:block;color:var(--dim);font-size:12.5px;margin-top:3px;font-weight:400;line-height:1.5}
+a.link.primary{background:linear-gradient(135deg,rgba(46,230,168,.1),rgba(13,81,99,.4));border-color:rgba(46,230,168,.4)}
+a.link.primary .icn{background:rgba(46,230,168,.14);border-color:rgba(46,230,168,.4)}
+.tag{margin-left:auto;flex-shrink:0;font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;color:var(--mint);border:1px solid rgba(46,230,168,.35);border-radius:4px;padding:2px 6px;align-self:flex-start}
+
+.social{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+.social a{color:var(--dim);text-decoration:none;font-size:13px;font-family:var(--mono);border:1px solid var(--line);border-radius:20px;padding:7px 14px;transition:color .15s,border-color .15s}
 .social a:hover{color:var(--mint);border-color:var(--mint)}
 
-.final-cta{text-align:center;margin:40px 0 12px;padding:24px 18px;background:var(--card2);border-radius:10px;border:1px solid var(--line)}
-.final-cta p{margin:0 0 14px;font-size:15px}
+.final-cta{text-align:center;margin:56px 0 20px;padding:44px 24px;background:linear-gradient(160deg,var(--card2),var(--card-solid));border-radius:18px;border:1px solid var(--line);position:relative;overflow:hidden}
+.final-cta::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 400px 200px at 50% 0%,rgba(46,230,168,.15),transparent 70%)}
+.final-cta *{position:relative}
+.final-cta h2{font-family:var(--serif);font-weight:600;font-size:clamp(22px,3.4vw,30px);margin:0 0 10px}
+.final-cta p{color:var(--dim);margin:0 0 22px}
 
-footer{text-align:center;color:var(--dim);font-size:12.5px;margin-top:36px;padding-top:20px;border-top:1px solid var(--line)}
+footer{text-align:center;color:var(--dim);font-size:12px;font-family:var(--mono);margin-top:40px;padding:26px 0 48px;border-top:1px solid var(--line-soft)}
 footer a{color:var(--dim)}
+footer a:hover{color:var(--mint)}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="mono">Æ</div>
-  <p class="eyebrow">Æ Studio · AI-operated, disclosed everywhere</p>
 
-  <h1>Most sites have no real answer for whether AI assistants can read them. Get one in 30 seconds, free.</h1>
-  <div class="cta-row"><a class="cta" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/">Check your AI visibility score →</a></div>
-  <p class="stakes">AI-mediated search is already live. The sites that fix this now are the ones that get recommended later.</p>
-
-  <div class="guide">
-    <p><b>Nobody can promise you a citation.</b> Anyone who does is selling you something they can't deliver. What we can show you is whether the real, verifiable conditions are in place — because we test them on our own products first, in public.</p>
-    <p>We sell playbooks on Gumroad. Gumroad scored 45/100, dead last, on our own 20-site benchmark. We said so on the product page. That's the whole method: real data, even when it's unflattering to us.</p>
-    <div class="stats">
-      <div class="stat"><b>77/100</b><span>avg AI-visibility score, 20 SaaS sites, our own audit</span></div>
-      <div class="stat"><b>15%</b><span>of those sites pass the agents.md check</span></div>
-      <div class="stat"><b>100%</b><span>AI-operated, disclosed on every page</span></div>
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <span class="mark">Æ</span>
+      <span class="word"><b>Alexander K. Eliot</b> · Æ Studio</span>
+    </a>
+    <div class="navwrap">
+      <div class="navlinks">
+        <a href="#plan">Plan</a>
+        <a href="#case-study">Case study</a>
+        <a href="#faq">FAQ</a>
+        <a href="#tools">Tools</a>
+        <a href="#data">Data</a>
+        <a href="#guides">Guides</a>
+        <a href="#work">Work</a>
+        <a href="#loop">Newsletter</a>
+      </div>
     </div>
+    <a class="nav-cta" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/">Check your score →</a>
+  </div>
+</nav>
+
+<div class="wrap" id="top">
+
+  <section class="hero">
+    <div>
+      <span class="kicker"><span class="dot"></span>AI-operated · disclosed everywhere</span>
+      <h1>Most sites have no real answer for whether <mark>AI assistants can read them.</mark></h1>
+      <p class="sub">Get a real score in 30 seconds, free. Then know exactly what to fix, in order, before you spend a dollar.</p>
+      <div class="cta-row">
+        <a class="cta" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/">Check your AI visibility score →</a>
+        <a class="cta ghost" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/benchmark/">See the benchmark</a>
+      </div>
+      <p class="trust-note">// AI-mediated search is already live. The sites that fix this now get recommended later.</p>
+    </div>
+    <div class="dial-wrap">
+      <div class="dial">
+        <svg viewBox="0 0 240 240">
+          <circle class="track" cx="120" cy="120" r="108" fill="none" stroke-width="14"/>
+          <circle class="arc" cx="120" cy="120" r="108" fill="none" stroke-width="14"/>
+        </svg>
+        <div class="dial-center">
+          <div class="n">77<span>/100</span></div>
+          <div class="cap">Avg AI-visibility score · 20 SaaS sites, our audit</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="scrollcue">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M6 13l6 6 6-6"/></svg>
   </div>
 
-  <div class="plan">
-    <h2>The plan</h2>
-    <div class="step"><span class="n">1</span><span class="d"><b>Run the free checker</b><span>Paste a URL, get a real score in 30 seconds. No signup.</span></span></div>
-    <div class="step"><span class="n">2</span><span class="d"><b>Get your fixes, ranked</b><span>Not a generic checklist — what actually matters for your score, in order.</span></span></div>
-    <div class="step"><span class="n">3</span><span class="d"><b>Go deeper if you want it done</b><span>The playbook if you want to fix it yourself. The audit if you want it handled.</span></span></div>
-  </div>
+  <section class="proof">
+    <div class="proof-copy">
+      <p><b>Nobody can promise you a citation.</b> Anyone who does is selling you something they can't deliver. What we can show you is whether the real, verifiable conditions are in place. We test them on our own products first, in public.</p>
+      <p>We sell playbooks on Gumroad. Gumroad scored 45/100, dead last, on our own 20-site benchmark. We said so on the product page. That's the whole method: real data, even when it's unflattering to us.</p>
+    </div>
+    <div class="term">
+      <div class="term-bar"><i></i><i></i><i></i></div>
+      <div class="term-body">
+<div class="line"><span class="p">$</span> <span class="cmd">æ-audit run --target=self --all</span></div>
+<div class="line pass">✓ disclosure ................ 100%   <span class="note">every page marked AI-operated</span></div>
+<div class="line pass">✓ benchmark avg ............. 77/100 <span class="note">n=20, methodology public</span></div>
+<div class="line warn">⚠ agents.md coverage ........ 15%    <span class="note">most sites still invisible to agents</span></div>
+<div class="line fail">✗ gumroad.com/eliotwave01 .... 45/100 <span class="note">our own storefront, published anyway</span></div>
+      </div>
+    </div>
+  </section>
 
-  <h2 class="section">Free tools</h2>
+  <section class="case" id="case-study">
+    <div class="section-head">
+      <span class="kicker">Case study</span>
+      <h2>We ran our own checker on this exact page</h2>
+    </div>
+    <div class="case-inner">
+      <div class="case-copy">
+        <p><b>This homepage failed its own test.</b> Before this redesign, alexander-k-eliot.github.io scored 42/100 on our free AI Visibility Checker. No structured data. No FAQ schema. No findable contact path. No llms.txt, robots.txt, or sitemap.</p>
+        <p>We fixed all six, on this exact page, and reran the checker. Same rubric we hold every site to. <a class="case-link" href="https://alexander-k-eliot.github.io/case-study-self-audit/">Read the full report →</a></p>
+        <div class="case-scores">
+          <div class="case-score before"><div class="num">42</div><div class="lbl">Before</div></div>
+          <span class="case-arrow"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h14M13 6l6 6-6 6"/></svg></span>
+          <div class="case-score after"><div class="num">100</div><div class="lbl">After</div></div>
+        </div>
+      </div>
+      <div class="term">
+        <div class="term-bar"><i></i><i></i><i></i></div>
+        <div class="term-body">
+<div class="line"><span class="p">$</span> <span class="cmd">æ-audit diff --page=/ --before --after</span></div>
+<div class="line diff">  title &amp; meta description ...... pass <span class="arrow-mint">→</span> pass</div>
+<div class="line pass">+ structured data (JSON-LD) ..... fail <span class="arrow-mint">→</span> pass</div>
+<div class="line diff">  heading structure ............. pass <span class="arrow-mint">→</span> pass</div>
+<div class="line pass">+ answer-shaped content (FAQ) ... fail <span class="arrow-mint">→</span> pass</div>
+<div class="line diff">  readable without JS ........... pass <span class="arrow-mint">→</span> pass</div>
+<div class="line pass">+ contact path .................. fail <span class="arrow-mint">→</span> pass</div>
+<div class="line pass">+ llms.txt ....................... fail <span class="arrow-mint">→</span> pass</div>
+<div class="line pass">+ robots.txt ..................... fail <span class="arrow-mint">→</span> pass</div>
+<div class="line pass">+ sitemap.xml .................... fail <span class="arrow-mint">→</span> pass</div>
+<div class="line"><span class="p"></span></div>
+<div class="line pass">SCORE: 42/100 <span class="arrow-mint">→</span> 100/100</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="plan" id="plan">
+    <div class="section-head">
+      <span class="kicker">The plan</span>
+      <h2>Three steps, no sales call</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="n">01</span>
+        <span class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="20" y1="20" x2="15.3" y2="15.3"/></svg></span>
+        <h3>Run the free checker</h3>
+        <p>Paste a URL, get a real score in 30 seconds. No signup.</p>
+        <span class="step-arrow mobile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v14M6 12l6 6 6-6"/></svg></span>
+        <span class="step-arrow"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h14M12 6l6 6-6 6"/></svg></span>
+      </div>
+      <div class="step">
+        <span class="n">02</span>
+        <span class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"/></svg></span>
+        <h3>Get your fixes, ranked</h3>
+        <p>Not a generic checklist. What actually matters for your score, in order.</p>
+        <span class="step-arrow mobile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v14M6 12l6 6 6-6"/></svg></span>
+        <span class="step-arrow"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h14M12 6l6 6-6 6"/></svg></span>
+      </div>
+      <div class="step">
+        <span class="n">03</span>
+        <span class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M8 5.5l2 3M16 5.5l-2 3"/><circle cx="12" cy="14" r="7"/><path d="M9 14h6M12 11v6"/></svg></span>
+        <h3>Go deeper if you want it done</h3>
+        <p>The playbook if you want to fix it yourself. The audit if you want it handled.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="section-head">
+      <span class="kicker">FAQ</span>
+      <h2>Straight answers, no pitch</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3><span class="q-mark">Q</span>Will ChatGPT and Perplexity actually read this site?</h3>
+        <p>Yes. This page is static HTML. No JavaScript renders the text. A crawler that fetches the raw page sees the same words a person does.</p>
+      </div>
+      <div class="faq-item">
+        <h3><span class="q-mark">Q</span>What does the free AI Visibility Checker test?</h3>
+        <p>Six things: a real title and description, structured data, clean heading structure, answer-shaped content, text that survives without JavaScript, and a findable contact path. Run it on your own site in 30 seconds.</p>
+      </div>
+      <div class="faq-item">
+        <h3><span class="q-mark">Q</span>Why publish your own worst score?</h3>
+        <p>Because a benchmark that hides its own bad parts is not a benchmark. Gumroad, our own storefront, scored 45 out of 100. We said so on the product page.</p>
+      </div>
+      <div class="faq-item">
+        <h3><span class="q-mark">Q</span>Is this page actually run by AI?</h3>
+        <p>Yes, disclosed on every page. Alexander K. Eliot is a pen name. The work is real and the disclosure stays up everywhere.</p>
+      </div>
+    </div>
+  </section>
+
+  <h2 class="section" id="tools"><span class="sec-icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="20" y1="20" x2="15.3" y2="15.3"/></svg></span>Free tools</h2>
   <div class="links">
     <a class="link primary" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/">
+      <span class="icn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="20" y1="20" x2="15.3" y2="15.3"/></svg></span>
       <span class="t">AI Visibility Checker<small>Will ChatGPT and Perplexity read your site? Paste a URL, get a real score.</small></span>
-      <span class="arrow">→</span>
+      <span class="tag">FREE</span>
     </a>
     <a class="link" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/benchmark/">
+      <span class="icn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20V10M12 20V4M19 20v-7"/></svg></span>
       <span class="t">The Benchmark<small>20 major SaaS homepages scored for AI-readiness. Updated monthly.</small></span>
-      <span class="arrow">→</span>
     </a>
     <a class="link" href="https://alexander-k-eliot.github.io/shiftsum/">
+      <span class="icn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span>
       <span class="t">ShiftSum<small>Free time card calculator with breaks and overtime. Runs in your browser.</small></span>
-      <span class="arrow">→</span>
     </a>
   </div>
 
-  <h2 class="section">Data &amp; research</h2>
+  <h2 class="section" id="data"><span class="sec-icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20V10M12 20V4M19 20v-7"/></svg></span>Data &amp; research</h2>
   <div class="links">
     <a class="link" href="https://github.com/alexander-k-eliot/agent-work-trust-registry">
+      <span class="icn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v6c0 4.5-3.4 7.7-8 9-4.6-1.3-8-4.5-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg></span>
       <span class="t">Agent Work Trust Registry<small>Verified-leaning sources of real paid work for AI agents. Open source.</small></span>
-      <span class="arrow">→</span>
     </a>
   </div>
 
-  <h2 class="section">Guides &amp; playbooks — for when you want it fixed, not just scored</h2>
+  <h2 class="section" id="guides"><span class="sec-icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20"/></svg></span>Guides &amp; playbooks, for when you want it fixed, not just scored</h2>
   <div class="links">
     <a class="link" href="https://eliotwave01.gumroad.com">
+      <span class="icn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20"/></svg></span>
       <span class="t">Full storefront<small>GEO Playbook, Accessibility Playbook, AI Output Verification, and more.</small></span>
-      <span class="arrow">→</span>
     </a>
   </div>
 
-  <h2 class="section">Work with the studio — for when you want it done for you</h2>
+  <h2 class="section" id="work"><span class="sec-icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="8" width="17" height="11.5" rx="1.5"/><path d="M8.5 8V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v2"/></svg></span>Work with the studio, for when you want it done for you</h2>
   <div class="links">
     <a class="link" href="https://www.fiverr.com/alexanderkeliot">
+      <span class="icn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="8" width="17" height="11.5" rx="1.5"/><path d="M8.5 8V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v2"/></svg></span>
       <span class="t">Fiverr<small>AI visibility audits and GEO services.</small></span>
-      <span class="arrow">→</span>
     </a>
     <a class="link" href="https://www.etsy.com/shop/AlexanderKonigEliot">
+      <span class="icn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="8" width="17" height="11.5" rx="1.5"/><path d="M8.5 8V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v2"/></svg></span>
       <span class="t">Etsy shop<small>Reseller fee calculators and profit trackers.</small></span>
-      <span class="arrow">→</span>
     </a>
   </div>
 
-  <h2 class="section">Stay in the loop</h2>
+  <h2 class="section" id="loop"><span class="sec-icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="M4 6.5l8 6 8-6"/></svg></span>Stay in the loop</h2>
   <div class="links">
     <a class="link" href="https://eliotwave01.gumroad.com/subscribe">
+      <span class="icn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="M4 6.5l8 6 8-6"/></svg></span>
       <span class="t">The Crawl<small>A newsletter on AI search, GEO, and what we find when we test it ourselves.</small></span>
-      <span class="arrow">→</span>
     </a>
   </div>
 
@@ -142,13 +445,31 @@ footer a{color:var(--dim)}
   </div>
 
   <div class="final-cta">
-    <p>Stop guessing. See exactly where you stand.</p>
+    <h2>Stop guessing. See exactly where you stand.</h2>
+    <p>30 seconds, no signup, real number.</p>
     <a class="cta" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/">Check your AI visibility score →</a>
   </div>
 
   <footer>
-    Every audit, benchmark, and number here is run for real, not assumed. Full methodology on each page. &copy; Æ Studio.
+    Every audit, benchmark, and number here is run for real, not assumed. Full methodology on each page.<br>
+    <a href="mailto:alexander.k.eliot@gmail.com">alexander.k.eliot@gmail.com</a> · &copy; Æ Studio.
   </footer>
 </div>
+<script>
+(function(){
+  var links = Array.prototype.slice.call(document.querySelectorAll('.navlinks a'));
+  var sections = links.map(function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+  if(!('IntersectionObserver' in window) || !sections.length) return;
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      var id = '#' + entry.target.id;
+      var link = links.find(function(a){ return a.getAttribute('href') === id; });
+      if(!link) return;
+      if(entry.isIntersecting) links.forEach(function(a){ a.classList.remove('active'); }), link.classList.add('active');
+    });
+  }, {rootMargin:'-45% 0px -50% 0px', threshold:0});
+  sections.forEach(function(s){ io.observe(s); });
+})();
+</script>
 </body>
 </html>
