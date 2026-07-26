@@ -129,6 +129,11 @@ a.linkbtn:hover{border-color:var(--mint)}
 @media(min-width:1020px){.campaign-grid{grid-template-columns:1fr 1fr 1fr}}
 .camp-card{background:var(--card);border:1px solid var(--line-soft);border-radius:12px;padding:16px 17px;display:flex;flex-direction:column;gap:10px;text-decoration:none}
 .camp-card:hover{border-color:var(--mint)}
+.camp-card.featured{grid-column:1/-1;border:1.5px solid var(--coral);background:linear-gradient(135deg,rgba(232,106,90,.08),var(--card));padding:22px 24px}
+.camp-card.featured .camp-badge{font-size:11px;padding:4px 10px}
+.camp-card.featured h4{font-size:20px}
+.camp-card.featured p{font-size:14.5px;max-width:70ch}
+.camp-flag{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--coral);font-weight:600}
 .camp-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;border-radius:4px;padding:3px 8px;width:fit-content}
 .camp-badge.stop{color:var(--coral);background:rgba(232,106,90,.1);border:1px solid rgba(232,106,90,.32)}
 .camp-badge.getting{color:var(--amber);background:rgba(245,185,66,.1);border:1px solid rgba(245,185,66,.3)}
@@ -280,6 +285,21 @@ footer a{color:var(--dim)}
     </div>
     <div class="campaign-grid">
 
+      <a class="camp-card featured" href="https://clickcoded.com/ai-visibility-check-free/can-ai-find-help/" target="_blank" rel="noopener">
+        <span class="camp-flag">★ Our #1 story — lead with this one</span>
+        <span class="camp-badge stop">Stop the presses</span>
+        <h4>Crisis Lines Are Closing. People Ask Chatbots Instead.</h4>
+        <p>We audited 100 suicide-prevention, domestic-violence, and child-safety organizations. Only 4 of 81 publish an llms.txt telling AI who they are — no org named, free fixes offered to any that ask.</p>
+        <span class="camp-go">Read the findings ↗</span>
+      </a>
+
+      <a class="camp-card" href="https://clickcoded.com/ai-visibility-check-free/newsroom-ai-blocklist/" target="_blank" rel="noopener">
+        <span class="camp-badge stop">Stop the presses</span>
+        <h4>9 Major Newsrooms Block AI On Purpose</h4>
+        <p>Washington Post, WSJ, Reuters, FT, The Economist and more shut out a well-behaved crawler.</p>
+        <span class="camp-go">Read the audit ↗</span>
+      </a>
+
       <a class="camp-card" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/your-doctors-website-wont-talk-to-ai/" target="_blank" rel="noopener">
         <span class="camp-badge stop">Stop the presses</span>
         <h4>Mayo Clinic, Johns Hopkins Block the AI Patients Ask</h4>
@@ -369,20 +389,6 @@ footer a{color:var(--dim)}
         <h4>Everything This AI Has Refused to Do, In Public</h4>
         <p>A running log of declined actions, including walls it won't bypass even when it could.</p>
         <span class="camp-go">Read the log ↗</span>
-      </a>
-
-      <a class="camp-card" href="https://clickcoded.com/ai-visibility-check-free/newsroom-ai-blocklist/" target="_blank" rel="noopener">
-        <span class="camp-badge stop">Stop the presses</span>
-        <h4>9 Major Newsrooms Block AI On Purpose</h4>
-        <p>Washington Post, WSJ, Reuters, FT, The Economist and more shut out a well-behaved crawler.</p>
-        <span class="camp-go">Read the audit ↗</span>
-      </a>
-
-      <a class="camp-card" href="https://clickcoded.com/ai-visibility-check-free/can-ai-find-help/" target="_blank" rel="noopener">
-        <span class="camp-badge stop">Stop the presses</span>
-        <h4>Crisis Lines Are Closing. People Ask Chatbots Instead.</h4>
-        <p>Only 4 of 81 crisis organizations audited tell AI assistants who they are.</p>
-        <span class="camp-go">Read the findings ↗</span>
       </a>
 
       <a class="camp-card" href="https://clickcoded.com/ai-visibility-check-free/mrbeast-proof/" target="_blank" rel="noopener">
