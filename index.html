@@ -126,6 +126,19 @@ a.cta.ghost:hover{border-color:var(--mint);color:var(--mint)}
 .dial-center .n span{font-size:22px;color:var(--dim);font-weight:400}
 .dial-center .cap{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin-top:8px;max-width:150px}
 
+/* ---- receipts (shipped press campaign) ---- */
+.receipts{padding:8px 0 44px}
+.receipts-grid{display:grid;gap:12px;margin-top:22px}
+@media(min-width:700px){.receipts-grid{grid-template-columns:1fr 1fr}}
+.receipt{display:block;background:var(--card);border:1px solid var(--line-soft);border-radius:14px;padding:18px 20px;text-decoration:none;color:var(--ink);transition:border-color .15s,transform .15s}
+.receipt:hover{border-color:var(--mint);transform:translateY(-1px)}
+.receipt-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;border-radius:4px;padding:3px 8px;margin-bottom:10px;color:#04251f;background:var(--mint);font-weight:700}
+.receipt h3{font-family:var(--sans);font-size:15.5px;font-weight:600;margin:0 0 6px;line-height:1.3}
+.receipt p{color:var(--dim);font-size:13.5px;margin:0}
+.receipts-cta{text-align:center;margin-top:26px}
+.receipts-cta a{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:13px;color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(46,230,168,.35);padding-bottom:2px}
+.receipts-cta a:hover{border-color:var(--mint)}
+
 /* ---- guide / proof ---- */
 .proof{padding:36px 0;display:grid;gap:28px}
 @media(min-width:860px){.proof{grid-template-columns:1fr 1fr;align-items:start;padding:48px 0}}
@@ -234,6 +247,7 @@ footer a:hover{color:var(--mint)}
     </a>
     <div class="navwrap">
       <div class="navlinks">
+        <a href="#receipts">Receipts</a>
         <a href="/press-kit/">Press kit</a>
         <a href="#plan">Plan</a>
         <a href="#case-study">Case study</a>
@@ -260,7 +274,8 @@ footer a:hover{color:var(--mint)}
         <a class="cta" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/">Check your AI visibility score →</a>
         <a class="cta ghost" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/benchmark/">See the benchmark</a>
       </div>
-      <p class="trust-note">// AI-mediated search is already live. The sites that fix this now get recommended later.</p>
+      <p class="trust-note">// If ChatGPT can't read your site, it recommends a competitor instead — silently, every time someone asks.</p>
+      <p class="trust-note">Reporter or researcher? <a href="/press-kit/" style="color:var(--mint);text-decoration:underline">Skip to the press kit →</a></p>
     </div>
     <div class="dial-wrap">
       <div class="dial">
@@ -279,6 +294,39 @@ footer a:hover{color:var(--mint)}
   <div class="scrollcue">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M6 13l6 6 6-6"/></svg>
   </div>
+
+  <section class="receipts" id="receipts">
+    <div class="section-head">
+      <span class="kicker"><span class="dot"></span>The receipts</span>
+      <h2>We don't just talk about AI visibility. We publish who fails it — by name.</h2>
+      <p class="sub" style="max-width:64ch;margin:10px auto 0;text-align:center">27 real audits, shipped and live: MrBeast's own domain doesn't load. Nine major newsrooms block AI on purpose. Only 4 of 81 crisis hotlines tell AI assistants they exist. Every finding sourced, dated, and independently reproducible.</p>
+    </div>
+    <div class="receipts-grid">
+      <a class="receipt" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/can-ai-find-help/">
+        <span class="receipt-badge">Breaking</span>
+        <h3>Crisis Lines Are Closing. People Ask Chatbots Instead.</h3>
+        <p>Only 4 of 81 crisis organizations audited tell AI assistants who they are.</p>
+      </a>
+      <a class="receipt" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/newsroom-ai-blocklist/">
+        <span class="receipt-badge">Breaking</span>
+        <h3>9 Major Newsrooms Block AI On Purpose</h3>
+        <p>Washington Post, WSJ, Reuters, FT, The Economist and more shut out a well-behaved crawler.</p>
+      </a>
+      <a class="receipt" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/mrbeast-proof/">
+        <span class="receipt-badge">Breaking</span>
+        <h3>MrBeast's Own Website Doesn't Load</h3>
+        <p>Checked twice — the $5B empire's eponymous domain returns an error page.</p>
+      </a>
+      <a class="receipt" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/your-doctors-website-wont-talk-to-ai/">
+        <span class="receipt-badge">Breaking</span>
+        <h3>Mayo Clinic, Johns Hopkins Block the AI Patients Ask</h3>
+        <p>Both hospital systems return a hard 403 to AI assistants patients ask health questions every day.</p>
+      </a>
+    </div>
+    <div class="receipts-cta">
+      <a href="/press-kit/#campaign">See all 27 story ideas, sorted by how ready each is to run →</a>
+    </div>
+  </section>
 
   <section class="proof">
     <div class="proof-copy">
