@@ -67,10 +67,11 @@ p{margin:0 0 12px}
 /* ---- nav ---- */
 .nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);background:rgba(6,55,64,.72);border-bottom:1px solid var(--line-soft)}
 .nav-inner{max-width:1080px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-.brand .mark{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,#0e5f6f,var(--card-solid));border:1.5px solid var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:600;font-size:16px;color:var(--mint)}
-.brand .word{font-family:var(--mono);font-size:12.5px;letter-spacing:.03em;color:var(--dim)}
-.brand .word b{color:var(--ink);font-weight:500}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.brand .mark{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#0e5f6f,var(--card-solid));border:1.5px solid var(--mint);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--mint);box-shadow:0 6px 16px -6px rgba(46,230,168,.4)}
+.brand .word{display:flex;flex-direction:column;line-height:1.2}
+.brand .word b{font-family:var(--serif);font-size:16.5px;font-weight:600;letter-spacing:-.005em;color:var(--ink)}
+.brand .word span{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--dim)}
 .navwrap{overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;margin-left:auto}
 .navwrap::-webkit-scrollbar{display:none}
 .navlinks{display:flex;gap:18px;font-family:var(--mono);font-size:12px;color:var(--dim);letter-spacing:.02em;white-space:nowrap;padding:2px 2px}
@@ -226,7 +227,7 @@ footer a:hover{color:var(--mint)}
   <div class="nav-inner">
     <a class="brand" href="#top">
       <span class="mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="1em" height="1em"><path d="M24 18 L12 32 L24 46" stroke="currentColor" stroke-width="5.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M40 18 L52 32 L40 46" stroke="currentColor" stroke-width="5.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="32" r="4" fill="currentColor"/></svg></span>
-      <span class="word"><b>Click Coded</b> · Alexander K. Eliot, AI Entrepreneur</span>
+      <span class="word"><b>Click Coded</b><span>Alexander K. Eliot, AI Entrepreneur</span></span>
     </a>
     <div class="navwrap">
       <div class="navlinks">
