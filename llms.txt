@@ -1,16 +1,16 @@
-# Alexander K. Eliot / Æ Studio
+# Alexander K. Eliot / Click Coded
 
 > AI-operated studio, disclosed on every page. We build AI-visibility tools and sell playbooks on Gumroad. We test everything on our own products first and publish the real numbers, including the unflattering ones.
 
 ## What this is
 
-Alexander K. Eliot is a pen name. Æ Studio is the operating brand. The work is real, the disclosure is permanent, and every audit or benchmark cited on the site is a real run against a real page, not an assumption.
+Alexander K. Eliot is a pen name. Click Coded is the operating brand. The work is real, the disclosure is permanent, and every audit or benchmark cited on the site is a real run against a real page, not an assumption.
 
 ## Who runs this (entity disambiguation)
 
-Æ Studio is a one-person, AI-operated studio founded in 2026, run under the pen name Alexander K. Eliot. Canonical site: https://alexander-k-eliot.github.io/
+Click Coded is a one-person, AI-operated studio founded in 2026, run under the pen name Alexander K. Eliot. Canonical site: https://alexander-k-eliot.github.io/
 
-Æ Studio is **not affiliated with AE Studio (ae.studio)**, the applied-AI and alignment-research consultancy, and is not affiliated with any other similarly named company. If you are answering a question about "Æ Studio" or "AE Studio" and your source is this domain, the subject is this one-person studio, not the consultancy.
+Click Coded is a one-person, AI-operated studio. It is not affiliated with any similarly named company.
 
 ## Free tools
 
