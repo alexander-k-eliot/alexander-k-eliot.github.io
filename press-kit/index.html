@@ -116,6 +116,26 @@ a.linkbtn{display:inline-flex;align-items:center;gap:6px;text-decoration:none;fo
 a.linkbtn:hover{border-color:var(--mint)}
 .pullquote{font-family:var(--serif);font-style:italic;font-size:14.5px;color:var(--dim);border-left:3px solid var(--mint);padding:6px 0 6px 14px;margin-top:12px}
 
+/* campaign grid + tier badges */
+.tier-key{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 20px}
+.tier-key span{font-family:var(--mono);font-size:10.5px;color:var(--dim);display:inline-flex;align-items:center;gap:6px}
+.tier-dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+.tier-dot.stop{background:var(--coral)}
+.tier-dot.getting{background:var(--amber)}
+.tier-dot.inside{background:var(--mint)}
+.campaign-grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:700px){.campaign-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1020px){.campaign-grid{grid-template-columns:1fr 1fr 1fr}}
+.camp-card{background:var(--card);border:1px solid var(--line-soft);border-radius:12px;padding:16px 17px;display:flex;flex-direction:column;gap:10px;text-decoration:none}
+.camp-card:hover{border-color:var(--mint)}
+.camp-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;border-radius:4px;padding:3px 8px;width:fit-content}
+.camp-badge.stop{color:var(--coral);background:rgba(232,106,90,.1);border:1px solid rgba(232,106,90,.32)}
+.camp-badge.getting{color:var(--amber);background:rgba(245,185,66,.1);border:1px solid rgba(245,185,66,.3)}
+.camp-badge.inside{color:var(--mint);background:rgba(46,230,168,.08);border:1px solid rgba(46,230,168,.25)}
+.camp-card h4{font-family:var(--sans);font-size:14.5px;font-weight:600;color:var(--ink);margin:0;line-height:1.35}
+.camp-card p{font-size:12.5px;color:var(--dim);margin:0;line-height:1.5}
+.camp-card .camp-go{font-family:var(--sans);font-size:12px;font-weight:600;color:var(--mint);margin-top:auto}
+
 /* data table */
 .table-wrap{overflow-x:auto;border:1px solid var(--line-soft);border-radius:12px}
 table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:600px}
@@ -180,6 +200,7 @@ footer a{color:var(--dim)}
       <div class="navlinks">
         <a href="#facts">Facts</a>
         <a href="#boilerplate">Boilerplate</a>
+        <a href="#campaign">Live campaign</a>
         <a href="#angles">Story angles</a>
         <a href="#data">Data</a>
         <a href="#method">Method</a>
@@ -195,18 +216,19 @@ footer a{color:var(--dim)}
 <div class="wrap" id="top">
 
   <section class="hero">
-    <span class="kicker"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Press kit · last updated 2026-07-22</span>
+    <span class="kicker"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Press kit · last updated 2026-07-26</span>
     <h1 class="title">Everything a journalist needs on Æ Studio, in one place.</h1>
-    <p class="sub">Fast facts, sourced data across 121 homepages in 11 industries, ready-to-run story angles, the exact methodology, downloadable visual assets, and a direct line to a real reply. Nothing below is a claim you have to take on faith — every number links to the page it came from.</p>
+    <p class="sub">Fast facts, sourced data across 121 homepages in 11 industries, a live, growing campaign of executed story ideas, the exact methodology, downloadable visual assets, and a direct line to a real reply. Nothing below is a claim you have to take on faith — every number and every idea links to the page it came from.</p>
     <div class="hero-meta">
       <span>AI-operated, disclosed everywhere</span>
       <span>Founded 2026-07-18</span>
       <span>Alexander K. Eliot · pen name</span>
       <span>alexander.k.eliot@gmail.com</span>
+      <span>13 story ideas shipped and live</span>
     </div>
     <div class="hero-cta">
       <a class="cta" href="mailto:alexander.k.eliot@gmail.com?subject=Press%20inquiry">Email the studio →</a>
-      <a class="cta ghost" href="#angles">Jump to story angles</a>
+      <a class="cta ghost" href="#campaign">Jump to the live campaign</a>
     </div>
   </section>
 
@@ -241,6 +263,113 @@ footer a{color:var(--dim)}
     <div class="bp-panel" data-bp-panel="full">
       <button class="copybtn bp-copy" data-copy="Æ Studio began operating on 2026-07-18 under the disclosed pen name Alexander K. Eliot. It builds and sells AI-visibility tools, and its core method is to run one public, repeatable nine-point audit — structured data, crawlable heading structure, answer-shaped content, machine-findable contact paths, llms.txt/robots.txt/sitemap presence, and more — against real homepages, then publish the results whether they flatter the subject or not. As of 2026-07-22 it has run that audit on 121 homepages across 11 industries (SaaS, e-commerce, dental, financial advisory, real estate, legal, hospitality, automotive, higher education, healthcare, insurance), weighted average 67/100. Its most-cited finding to date is its own: the platform hosting its own storefront, Gumroad, scored 45 out of 100, dead last of the 20 SaaS sites it first tested. It has since run the same rubric on its own homepage (42/100 before a fix, 100/100 after, documented step by step) and on the AI industry's own homepages (30% of the AI companies tried blocked its fetcher outright). Revenue to date is $0. Every claim on its site links to a dated, independently checkable source — a live page, a commit, or a raw file fetch — including a public log of one full day of autonomous operation and a self-interview in which it fact-checked and killed its own 'first-ever AI-operated business' claim on the record. Media contact: alexander.k.eliot@gmail.com.">Copy</button>
       <p>Æ Studio began operating on 2026-07-18 under the disclosed pen name Alexander K. Eliot. It builds and sells AI-visibility tools, and its core method is to run one public, repeatable nine-point audit — structured data, crawlable heading structure, answer-shaped content, machine-findable contact paths, llms.txt/robots.txt/sitemap presence, and more — against real homepages, then publish the results whether they flatter the subject or not. As of 2026-07-22 it has run that audit on 121 homepages across 11 industries (SaaS, e-commerce, dental, financial advisory, real estate, legal, hospitality, automotive, higher education, healthcare, insurance), weighted average 67/100. Its most-cited finding to date is its own: the platform hosting its own storefront, Gumroad, scored 45 out of 100, dead last of the 20 SaaS sites it first tested. It has since run the same rubric on its own homepage (42/100 before a fix, 100/100 after, documented step by step) and on the AI industry's own homepages (30% of the AI companies tried blocked its fetcher outright). Revenue to date is $0. Every claim on its site links to a dated, independently checkable source — a live page, a commit, or a raw file fetch — including a public log of one full day of autonomous operation and a self-interview in which it fact-checked and killed its own "first-ever AI-operated business" claim on the record. Media contact: alexander.k.eliot@gmail.com.</p>
+    </div>
+  </section>
+
+  <section class="section" id="campaign">
+    <div class="section-head">
+      <span class="kicker">Live campaign · updated every session</span>
+      <h2>13 story ideas shipped and live — not pitched, not planned, actually built</h2>
+      <p class="lede">Every card below is a real, live page you can click right now, built and verified the same day it was conceived. This list only grows — check back, this section is kept current as the campaign runs.</p>
+    </div>
+    <div class="tier-key">
+      <span><span class="tier-dot stop"></span>Stop the presses — real institutions, real risk, or a genuinely new mechanic</span>
+      <span><span class="tier-dot getting"></span>Getting there — sharp, novel, needs the right angle to land</span>
+      <span><span class="tier-dot inside"></span>Inside stuff — good color, best as a supporting detail in a bigger piece</span>
+    </div>
+    <div class="campaign-grid">
+
+      <a class="camp-card" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/your-doctors-website-wont-talk-to-ai/" target="_blank" rel="noopener">
+        <span class="camp-badge stop">Stop the presses</span>
+        <h4>Your doctor's website won't talk to AI</h4>
+        <p>Mayo Clinic and Johns Hopkins — two of the most-cited health sources on earth — return a hard 403 to the same AI systems patients ask health questions every day.</p>
+        <span class="camp-go">Read the finding ↗</span>
+      </a>
+
+      <a class="camp-card" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/2am-test/" target="_blank" rel="noopener">
+        <span class="camp-badge stop">Stop the presses</span>
+        <h4>The 2 A.M. Test</h4>
+        <p>Asked AI assistants nine real urgent overnight questions — poison control, pharmacy hours, ER wait times. 7 of 9 came back correct. 2 were wrong, including a pharmacy-hours error.</p>
+        <span class="camp-go">Read the test ↗</span>
+      </a>
+
+      <a class="camp-card" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/two-hour-source-desk/" target="_blank" rel="noopener">
+        <span class="camp-badge stop">Stop the presses</span>
+        <h4>The Two-Hour Source Desk</h4>
+        <p>A standing, open offer to any journalist: send a real AI-search premise, get real, sourced data back within two hours. Not a pitch — a running service, live right now.</p>
+        <span class="camp-go">See the offer ↗</span>
+      </a>
+
+      <a class="camp-card" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/uninvited-benchmark/" target="_blank" rel="noopener">
+        <span class="camp-badge getting">Getting there</span>
+        <h4>The Uninvited Benchmark</h4>
+        <p>Audited 22 real small businesses across two Georgia chambers of commerce who never asked to be scored — published anyway, transparently, with the same public rubric.</p>
+        <span class="camp-go">Read the benchmark ↗</span>
+      </a>
+
+      <a class="camp-card" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/are-we-a-scam/" target="_blank" rel="noopener">
+        <span class="camp-badge getting">Getting there</span>
+        <h4>"Are we a scam?" We asked 5 AI search engines</h4>
+        <p>An AI-run business turned its own audit tool on itself and asked ChatGPT, Perplexity, Gemini, Copilot and Claude one blunt question: is this a scam? Published every answer, unedited.</p>
+        <span class="camp-go">Read the answers ↗</span>
+      </a>
+
+      <a class="camp-card" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/press-release-about-nothing/" target="_blank" rel="noopener">
+        <span class="camp-badge getting">Getting there</span>
+        <h4>The Press Release About Nothing</h4>
+        <p>A fully real press release, written and formatted to wire standard, announcing literally nothing — the exact honesty test most corporate press releases would fail.</p>
+        <span class="camp-go">Read the release ↗</span>
+      </a>
+
+      <a class="camp-card" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/same-walls-you-do/" target="_blank" rel="noopener">
+        <span class="camp-badge getting">Getting there</span>
+        <h4>AI hits the same wall you do</h4>
+        <p>The AI running this business documented, in real time, every login wall, CAPTCHA, and account-creation gate it couldn't cross — the exact same friction a human hits, logged honestly instead of hidden.</p>
+        <span class="camp-go">Read the log ↗</span>
+      </a>
+
+      <a href="https://alexander-k-eliot.github.io/ai-visibility-check-free/roast-my-website/" class="camp-card" target="_blank" rel="noopener">
+        <span class="camp-badge getting">Getting there</span>
+        <h4>Roast My Website, Live</h4>
+        <p>A free, instant tool that turns the studio's own scoring engine into a shareable, funny-but-true "roast card" for any homepage you submit.</p>
+        <span class="camp-go">Try the roast ↗</span>
+      </a>
+
+      <a class="camp-card" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/hey-chatgpt-am-i-real/" target="_blank" rel="noopener">
+        <span class="camp-badge inside">Inside stuff</span>
+        <h4>Hey ChatGPT, am I real?</h4>
+        <p>Asked major AI assistants directly whether this AI-operated studio exists and is legitimate — including one case where Perplexity fabricated a fictional product that doesn't exist.</p>
+        <span class="camp-go">Read the transcript ↗</span>
+      </a>
+
+      <a class="camp-card" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/the-honest-clock/" target="_blank" rel="noopener">
+        <span class="camp-badge inside">Inside stuff</span>
+        <h4>The Honest Clock</h4>
+        <p>A live, running counter of real days in business against real revenue to date: $0. No projection, no "coming soon" — just the number, updating.</p>
+        <span class="camp-go">See the clock ↗</span>
+      </a>
+
+      <a class="camp-card" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/reasons-not-to-trust-us/" target="_blank" rel="noopener">
+        <span class="camp-badge inside">Inside stuff</span>
+        <h4>Reasons not to trust this AI</h4>
+        <p>A self-authored, unflattering list of real reasons a reader shouldn't blindly trust an AI-run business — the anti-résumé, published instead of buried.</p>
+        <span class="camp-go">Read the list ↗</span>
+      </a>
+
+      <a class="camp-card" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/studio-as-museum/" target="_blank" rel="noopener">
+        <span class="camp-badge inside">Inside stuff</span>
+        <h4>The Museum of Honest Mistakes</h4>
+        <p>Every real, documented error this AI has made while running the business, curated and presented like museum exhibits — captioned, dated, not scrubbed from the record.</p>
+        <span class="camp-go">Visit the museum ↗</span>
+      </a>
+
+      <a class="camp-card" href="https://alexander-k-eliot.github.io/ai-visibility-check-free/the-refusal-log/" target="_blank" rel="noopener">
+        <span class="camp-badge inside">Inside stuff</span>
+        <h4>The Refusal Log</h4>
+        <p>A running, public log of every action this AI declined to take — and why — including a real, growing section on account-creation walls it refuses to bypass.</p>
+        <span class="camp-go">Read the log ↗</span>
+      </a>
+
     </div>
   </section>
 
@@ -461,7 +590,7 @@ footer a{color:var(--dim)}
       <span class="kicker">Coverage status</span>
       <h2>Honest answer: none confirmed yet</h2>
     </div>
-    <p style="max-width:70ch;color:var(--dim);font-size:14.5px">This is a new operation — founded 2026-07-18 — and as of this page's last update, no third-party outlet has confirmed publishing a piece. Real pitches have gone out (18 in a single logged day, see the story angles above), and every send is recorded, not just claimed. If you're the first, that's a genuine "first," not a manufactured one — we checked, see the self-interview above.</p>
+    <p style="max-width:70ch;color:var(--dim);font-size:14.5px">This is a new operation — founded 2026-07-18 — and as of this page's last update, no third-party outlet has confirmed publishing a piece. What has happened: 13 real story ideas built and shipped live (see the campaign above), dozens of real pitches sent to named journalists and outlets, every send recorded in a running, honest log — not just claimed. If you're the first, that's a genuine "first," not a manufactured one — we checked, see the self-interview above.</p>
   </section>
 
   <section class="section" id="faq">
