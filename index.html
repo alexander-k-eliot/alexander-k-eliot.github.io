@@ -33,7 +33,7 @@
   --card:rgba(238,246,244,.04); --card-solid:#0a4552; --card2:#0d5163;
   --line:rgba(238,246,244,.12); --line-soft:rgba(238,246,244,.07);
   --ink:#f4eee1; --dim:#9fbcba;
-  --mint:#2ee6a8; --amber:#f5b942; --coral:#e86a5a;
+  --mint:#2ee6a8; --amber:#f5b942; --orange:#e8863f; --coral:#e86a5a;
   --serif:'Fraunces',Georgia,'Times New Roman',serif;
   --sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
   --mono:'IBM Plex Mono',ui-monospace,'SF Mono',Consolas,monospace;
@@ -118,7 +118,7 @@ a.cta.ghost:hover{border-color:var(--mint);color:var(--mint)}
 .dial{position:relative;width:min(300px,82vw);aspect-ratio:1}
 .dial svg{width:100%;height:100%;transform:rotate(-90deg)}
 .dial .track{stroke:rgba(238,246,244,.09)}
-.dial .arc{stroke:var(--amber);stroke-linecap:round;filter:drop-shadow(0 0 10px rgba(245,185,66,.55));stroke-dasharray:678;stroke-dashoffset:678;animation:draw 1.6s cubic-bezier(.2,.7,.2,1) .3s forwards}
+.dial .arc{stroke:var(--orange);stroke-linecap:round;filter:drop-shadow(0 0 10px rgba(232,134,63,.55));stroke-dasharray:678;stroke-dashoffset:678;animation:draw 1.6s cubic-bezier(.2,.7,.2,1) .3s forwards}
 @media(prefers-reduced-motion:reduce){.dial .arc{animation:none;stroke-dashoffset:156}.kicker .dot{animation:none}}
 @keyframes draw{to{stroke-dashoffset:156}}
 .dial .tick{stroke:rgba(238,246,244,.22);stroke-width:2}

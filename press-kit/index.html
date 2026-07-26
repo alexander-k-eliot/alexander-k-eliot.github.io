@@ -24,7 +24,7 @@
   --card:rgba(238,246,244,.04); --card-solid:#0a4552; --card2:#0d5163;
   --line:rgba(238,246,244,.12); --line-soft:rgba(238,246,244,.07);
   --ink:#f4eee1; --dim:#9fbcba;
-  --mint:#2ee6a8; --amber:#f5b942; --coral:#e86a5a;
+  --mint:#2ee6a8; --amber:#f5b942; --orange:#e8863f; --coral:#e86a5a;
   --serif:'Fraunces',Georgia,'Times New Roman',serif;
   --sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
   --mono:'IBM Plex Mono',ui-monospace,'SF Mono',Consolas,monospace;
@@ -167,8 +167,8 @@ th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line-soft)
 th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--dim);background:var(--card)}
 td.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
 tr:last-child td{border-bottom:none}
-.score-hi{color:var(--mint)}
-.score-mid{color:var(--amber)}
+.score-hi{color:var(--amber)}
+.score-mid{color:var(--orange)}
 .score-lo{color:var(--coral)}
 
 /* named findings */
@@ -644,20 +644,20 @@ footer a{color:var(--dim)}
       <table id="dataTable">
         <thead><tr><th>Industry</th><th>Sites scored</th><th>Average</th><th>Median</th><th>Notable</th></tr></thead>
         <tbody>
-          <tr><td>SaaS homepages</td><td class="num">20</td><td class="num score-hi">77</td><td class="num">82.5</td><td>Vercel led at 100; own storefront Gumroad scored 45, last of 20</td></tr>
-          <tr><td>DTC &amp; e-commerce</td><td class="num">9</td><td class="num score-hi">77</td><td class="num">80</td><td>Structured product data the common miss</td></tr>
-          <tr><td>Telecom</td><td class="num">8</td><td class="num score-hi">76.3</td><td class="num">72.5</td><td>Highest average and highest llms.txt adoption of any edition; T-Mobile still blocked fetcher</td></tr>
-          <tr><td>Automotive</td><td class="num">8</td><td class="num score-hi">75.6</td><td class="num">77.5</td><td>Hyundai/Kia led; Tesla, BMW, Mercedes-Benz, Audi, GM, Honda blocked fetcher</td></tr>
+          <tr><td>SaaS homepages</td><td class="num">20</td><td class="num score-mid">77</td><td class="num">82.5</td><td>Vercel led at 100; own storefront Gumroad scored 45, last of 20</td></tr>
+          <tr><td>DTC &amp; e-commerce</td><td class="num">9</td><td class="num score-mid">77</td><td class="num">80</td><td>Structured product data the common miss</td></tr>
+          <tr><td>Telecom</td><td class="num">8</td><td class="num score-mid">76.3</td><td class="num">72.5</td><td>Highest average and highest llms.txt adoption of any edition; T-Mobile still blocked fetcher</td></tr>
+          <tr><td>Automotive</td><td class="num">8</td><td class="num score-mid">75.6</td><td class="num">77.5</td><td>Hyundai/Kia led; Tesla, BMW, Mercedes-Benz, Audi, GM, Honda blocked fetcher</td></tr>
           <tr><td>Insurance carriers</td><td class="num">8</td><td class="num score-mid">69.4</td><td class="num">70</td><td>43% block rate (Geico, Allstate, Farmers, Nationwide, Hartford, USAA)</td></tr>
           <tr><td>Dental practices</td><td class="num">13</td><td class="num score-mid">67.7</td><td class="num">70</td><td>Only 23% publish llms.txt</td></tr>
           <tr><td>Healthcare systems</td><td class="num">10</td><td class="num score-mid">67.5</td><td class="num">70</td><td>Cleveland Clinic only one of 10 with llms.txt; Mayo Clinic &amp; Johns Hopkins blocked fetcher</td></tr>
           <tr><td>Financial advisors</td><td class="num">16</td><td class="num score-mid">67.2</td><td class="num">70</td><td>Only 13% publish agents.md</td></tr>
           <tr><td>Higher education</td><td class="num">12</td><td class="num score-mid">58.8</td><td class="num">62.5</td><td>MIT scored lowest of any school, 35</td></tr>
           <tr><td>Real estate</td><td class="num">10</td><td class="num score-mid">58.5</td><td class="num">65</td><td>4 of 14 brokerages/portals blocked outright, incl. Zillow, Realtor.com</td></tr>
-          <tr><td>Banking</td><td class="num">11</td><td class="num score-lo">57.3</td><td class="num">65</td><td>TD Bank, Fifth Third, and KeyBank blocked fetcher outright</td></tr>
-          <tr><td>Legal services</td><td class="num">11</td><td class="num score-lo">56.8</td><td class="num">60</td><td>Zero of 11 firms publish agents.md; Jones Day blocks GPTBot outright</td></tr>
-          <tr><td>Hospitality</td><td class="num">4</td><td class="num score-lo">56.3</td><td class="num">50</td><td>10 of 14 hotel brands blocked fetcher — highest block rate measured</td></tr>
-          <tr><td>Government &amp; public services</td><td class="num">11</td><td class="num score-lo">51.4</td><td class="num">50</td><td>IRS, SSA, StudentAid.gov did not answer at all; zero scorable sites publish llms.txt</td></tr>
+          <tr><td>Banking</td><td class="num">11</td><td class="num score-mid">57.3</td><td class="num">65</td><td>TD Bank, Fifth Third, and KeyBank blocked fetcher outright</td></tr>
+          <tr><td>Legal services</td><td class="num">11</td><td class="num score-mid">56.8</td><td class="num">60</td><td>Zero of 11 firms publish agents.md; Jones Day blocks GPTBot outright</td></tr>
+          <tr><td>Hospitality</td><td class="num">4</td><td class="num score-mid">56.3</td><td class="num">50</td><td>10 of 14 hotel brands blocked fetcher — highest block rate measured</td></tr>
+          <tr><td>Government &amp; public services</td><td class="num">11</td><td class="num score-mid">51.4</td><td class="num">50</td><td>IRS, SSA, StudentAid.gov did not answer at all; zero scorable sites publish llms.txt</td></tr>
           <tr><td>Airlines</td><td class="num">7</td><td class="num score-lo">43.6</td><td class="num">45</td><td>Lowest average of any edition; 7 of 14 blocked fetcher, incl. United, Delta, American, JetBlue</td></tr>
         </tbody>
       </table>
