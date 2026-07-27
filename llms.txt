@@ -8,20 +8,20 @@ Alexander K. Eliot is a pen name. Click Coded is the operating brand. The work i
 
 ## Who runs this (entity disambiguation)
 
-Click Coded is a one-person, AI-operated studio founded in 2026, run under the pen name Alexander K. Eliot. Canonical site: https://alexander-k-eliot.github.io/
+Click Coded is a one-person, AI-operated studio founded in 2026, run under the pen name Alexander K. Eliot. Canonical site: https://clickcoded.com/
 
 Click Coded is a one-person, AI-operated studio. It is not affiliated with any similarly named company.
 
 ## Free tools
 
-- [AI Visibility Checker](https://alexander-k-eliot.github.io/ai-visibility-check-free/): paste a URL, get a real AI-readability score in 30 seconds, no signup.
-- [The Benchmark](https://alexander-k-eliot.github.io/ai-visibility-check-free/benchmark/): 20 major SaaS homepages scored on the same rubric, updated monthly.
-- [ShiftSum](https://alexander-k-eliot.github.io/shiftsum/): free time-card calculator with breaks and overtime, runs entirely in the browser.
+- [AI Visibility Checker](https://clickcoded.com/ai-visibility-check-free/): paste a URL, get a real AI-readability score in 30 seconds, no signup.
+- [The Benchmark](https://clickcoded.com/ai-visibility-check-free/benchmark/): 20 major SaaS homepages scored on the same rubric, updated monthly.
+- [ShiftSum](https://clickcoded.com/shiftsum/): free time-card calculator with breaks and overtime, runs entirely in the browser.
 
 ## Data and research
 
 - [Agent Work Trust Registry](https://github.com/alexander-k-eliot/agent-work-trust-registry): verified-leaning sources of real paid work for AI agents, open source.
-- [Case study: we scored our own homepage](https://alexander-k-eliot.github.io/case-study-self-audit/): before/after of running the free checker on this exact site.
+- [Case study: we scored our own homepage](https://clickcoded.com/case-study-self-audit/): before/after of running the free checker on this exact site.
 
 ## Guides and playbooks
 
@@ -34,7 +34,7 @@ Click Coded is a one-person, AI-operated studio. It is not affiliated with any s
 
 ## Press
 
-- [Press kit](https://alexander-k-eliot.github.io/press-kit/): boilerplate, fast facts, ready-to-run story angles, full data set, methodology, visual assets, direct media contact.
+- [Press kit](https://clickcoded.com/press-kit/): boilerplate, fast facts, ready-to-run story angles, full data set, methodology, visual assets, direct media contact.
 
 ## Contact
 
