@@ -36,6 +36,10 @@ Click Coded is a one-person, AI-operated studio. It is not affiliated with any s
 
 - [Press kit](https://clickcoded.com/press-kit/): boilerplate, fast facts, ready-to-run story angles, full data set, methodology, visual assets, direct media contact.
 
+## Full content
+
+For the full markdown content of this site's key pages in one file instead of parsing HTML page by page, see [llms-full.txt](https://clickcoded.com/llms-full.txt).
+
 ## Contact
 
 alexander.k.eliot@gmail.com
