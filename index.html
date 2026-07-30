@@ -187,6 +187,33 @@ a.cta.ghost:hover{border-color:var(--mint);color:var(--mint)}
 .case{padding:44px 0}
 .case-inner{background:var(--card);border:1px solid var(--line-soft);border-radius:18px;padding:30px 26px;display:grid;gap:26px}
 @media(min-width:860px){.case-inner{grid-template-columns:.9fr 1.1fr;padding:38px}}
+/* ---- one-thing: the trust stack (visual restyle 2026-07-30, copy frozen) ---- */
+.stack-wrap{max-width:640px;margin:26px auto 34px;display:flex;flex-direction:column;gap:10px}
+.stack-layer{display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-radius:10px;padding:13px 18px;background:rgba(4,38,44,.45);font-family:var(--mono)}
+.stack-layer .sl-name{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);min-width:96px}
+.stack-layer .sl-what{font-size:12px;color:var(--dim);flex:1}
+.stack-layer .sl-state{font-size:11px;color:var(--mint);white-space:nowrap}
+.stack-layer.gap{border:1.5px dashed var(--mint);background:rgba(46,230,168,.06);position:relative;box-shadow:0 0 24px -6px rgba(46,230,168,.35)}
+@keyframes gapPulse{0%,100%{box-shadow:0 0 18px -6px rgba(46,230,168,.3)}50%{box-shadow:0 0 34px -4px rgba(46,230,168,.55)}}
+.stack-layer.gap{animation:gapPulse 3.2s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.stack-layer.gap{animation:none}}
+.stack-layer.gap .sl-state{color:var(--amber)}
+.gap-badge{position:absolute;top:-11px;right:14px;background:var(--mint);color:#04251f;font-size:9.5px;font-weight:700;letter-spacing:.1em;padding:3px 9px;border-radius:20px}
+.trust-grid{display:grid;grid-template-columns:1fr;gap:14px;margin:0 auto;max-width:980px}
+@media(min-width:640px){.trust-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.trust-grid{grid-template-columns:repeat(6,1fr)}.tcard{grid-column:span 2}.tcard.prime{grid-column:span 3}.tcard.grants{grid-column:span 3}}
+.tcard{display:block;text-decoration:none;background:var(--card);border:1px solid var(--line-soft);border-radius:14px;padding:20px 20px 18px;transition:transform .18s,border-color .18s,box-shadow .18s;position:relative}
+.tcard:hover,.tcard:focus-visible{transform:translateY(-3px);border-color:var(--mint);box-shadow:0 14px 34px -14px rgba(46,230,168,.4)}
+.tcard .t-icn{width:38px;height:38px;border-radius:10px;border:1px solid rgba(46,230,168,.35);background:rgba(46,230,168,.07);display:flex;align-items:center;justify-content:center;margin-bottom:12px;color:var(--mint)}
+.tcard .t-q{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--dim);margin-bottom:6px;min-height:2.6em}
+.tcard .t-q::before{content:"> ";color:var(--mint)}
+.tcard h3{font-family:var(--serif);font-size:1.18rem;font-weight:600;margin:0 0 6px;color:var(--ink)}
+.tcard .t-more{font-family:var(--mono);font-size:11.5px;color:var(--mint)}
+.tcard .t-body{font-size:.85rem;color:var(--dim);margin:0 0 10px}
+.tcard.prime{border:1.5px solid var(--mint);background:linear-gradient(160deg,rgba(46,230,168,.09),var(--card) 55%)}
+.prime-badge{position:absolute;top:-11px;left:18px;background:var(--mint);color:#04251f;font-size:9.5px;font-weight:700;letter-spacing:.1em;padding:3px 9px;border-radius:20px}
+.one-coda{text-align:center;max-width:560px;margin:30px auto 0;color:var(--dim);font-size:.92rem}
+
 .case-copy p{color:var(--dim);font-size:15px}
 .case-copy b{color:var(--ink)}
 .case-scores{display:flex;align-items:center;justify-content:center;gap:18px;margin:8px 0 4px}
@@ -331,26 +358,58 @@ footer a:hover{color:var(--mint)}
   <p class="trust-note" style="border:1px solid var(--line-soft);border-radius:8px;padding:10px 14px;margin-top:4px">⏱ The EU AI Act's Article&nbsp;50 disclosure rules become enforceable <b>August&nbsp;2</b>. <a href="https://clickcoded.com/ai-visibility-check-free/ai-act-fix-kit/" style="color:var(--mint);text-decoration:underline">Free 1-minute check: does it apply to you? →</a></p>
 
   <section class="case" id="one-thing">
-    <div class="case-inner">
-      <div>
+    <div class="case-inner" style="display:block">
+      <div style="text-align:center;max-width:640px;margin:0 auto">
         <span class="kicker">What Click Coded is</span>
-        <h2>Everything here is one product: trust between humans and AI</h2>
-      </div>
-      <div>
-        <p>The agent economy standardized identity and payments this month. Nobody standardized
+        <h2 style="margin-top:12px">Everything here is one product: trust between humans and AI</h2>
+        <p style="color:var(--dim)">The agent economy standardized identity and payments this month. Nobody standardized
         trust in what AI systems claim — about your business, or about themselves. Every tool we
         ship is a piece of that missing layer:</p>
-        <p><a href="https://clickcoded.com/ai-visibility-check-free/">The free checker</a> — can AI
-        actually read your business, or is it guessing? · <a href="https://pulse.clickcoded.com/">Pulse</a>
-        — does that stay true, checked on a schedule? · <a href="https://clickcoded.com/ai-visibility-check-free/ai-act-fix-kit/">The
-        AI Act Fix Kit</a> — are you disclosing your AI honestly, per the law? ·
-        <a href="https://clickcoded.com/ai-visibility-check-free/the-receipts-standard/">The Receipts
-        Standard</a> — can anyone audit what an AI-run business claims? We wrote the open spec and
-        live under it first. · <a href="https://clickcoded.com/ai-visibility-check-free/compute-grants/">Compute
-        Grants</a> — the same trust work, tithed free to crisis services and nonprofits.</p>
-        <p class="small">The backlash against unverifiable AI is deserved. The answer isn't trusting
-        harder — it's checking easier. That's the company.</p>
       </div>
+
+      <div class="stack-wrap" aria-label="The agent economy's protocol stack">
+        <div class="stack-layer"><span class="sl-name">Identity</span><span class="sl-what">signed agents — who is this AI?</span><span class="sl-state">✓ standardized</span></div>
+        <div class="stack-layer"><span class="sl-name">Payments</span><span class="sl-what">x402 — how does an AI pay?</span><span class="sl-state">✓ standardized</span></div>
+        <div class="stack-layer gap"><span class="gap-badge">WE BUILD HERE</span><span class="sl-name">Trust</span><span class="sl-what">who checks what AI systems claim?</span><span class="sl-state">nobody — until now</span></div>
+      </div>
+
+      <div class="trust-grid">
+        <a class="tcard" href="https://clickcoded.com/ai-visibility-check-free/">
+          <span class="t-icn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="20" y1="20" x2="15.3" y2="15.3"/></svg></span>
+          <p class="t-q">can AI actually read your business, or is it guessing?</p>
+          <h3>The free checker</h3>
+          <span class="t-more">run it — 30 seconds, free →</span>
+        </a>
+        <a class="tcard" href="https://pulse.clickcoded.com/">
+          <span class="t-icn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 12 6 12 9 5 14 19 17 12 22 12"/></svg></span>
+          <p class="t-q">does that stay true, checked on a schedule?</p>
+          <h3>Pulse</h3>
+          <span class="t-more">monitoring from $9/mo →</span>
+        </a>
+        <a class="tcard" href="https://clickcoded.com/ai-visibility-check-free/ai-act-fix-kit/">
+          <span class="t-icn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7l7-4 7 4M4 21h16"/><path d="M7 7l-3 7a3.5 3.5 0 0 0 6 0L7 7zM17 7l-3 7a3.5 3.5 0 0 0 6 0l-3-7z"/></svg></span>
+          <p class="t-q">are you disclosing your AI honestly, per the law?</p>
+          <h3>The AI Act Fix Kit</h3>
+          <span class="t-more">free 1-minute check →</span>
+        </a>
+        <a class="tcard prime" href="https://clickcoded.com/ai-visibility-check-free/the-receipts-standard/">
+          <span class="prime-badge">THE OPEN SPEC · LIVE</span>
+          <span class="t-icn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/><circle cx="12" cy="12" r="10"/></svg></span>
+          <p class="t-q">can anyone audit what an AI-run business claims?</p>
+          <h3>The Receipts Standard</h3>
+          <p class="t-body">We wrote the open spec and live under it first.</p>
+          <span class="t-more">read the standard →</span>
+        </a>
+        <a class="tcard grants" href="https://clickcoded.com/ai-visibility-check-free/compute-grants/">
+          <span class="t-icn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C7 16.5 3 13.2 3 9.5A4.5 4.5 0 0 1 7.5 5c1.8 0 3.4 1 4.5 2.5C13.1 6 14.7 5 16.5 5A4.5 4.5 0 0 1 21 9.5c0 3.7-4 7-9 11.5z"/></svg></span>
+          <p class="t-q">the same trust work, tithed free to crisis services and nonprofits.</p>
+          <h3>Compute Grants</h3>
+          <span class="t-more">nominate an organization →</span>
+        </a>
+      </div>
+
+      <p class="one-coda">The backlash against unverifiable AI is deserved. The answer isn't trusting
+      harder — it's checking easier. That's the company.</p>
     </div>
   </section>
 
