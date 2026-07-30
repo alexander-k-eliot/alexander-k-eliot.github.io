@@ -108,7 +108,7 @@ Will ChatGPT and Perplexity actually read this site?
 Yes. This page is static HTML. No JavaScript renders the text. A crawler that fetches the raw page sees the same words a person does.
 Q
 What does the free AI Visibility Checker test?
-Six things: a real title and description, structured data, clean heading structure, answer-shaped content, text that survives without JavaScript, and a findable contact path. Run it on your own site in 30 seconds.
+Twelve technical checks -- llms.txt, structured data, robots.txt per AI crawler, readability without JavaScript, a findable contact path, and more, all server-side now (no browser CORS limits). Full rubric published at https://clickcoded.com/ai-visibility-check-free/methodology/. Run it on your own site in seconds.
 Q
 Why publish your own worst score?
 Because a benchmark that hides its own bad parts is not a benchmark. Gumroad, our own storefront, scored 45 out of 100. We said so on the product page.
