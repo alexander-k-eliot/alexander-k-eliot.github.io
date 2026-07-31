@@ -46,7 +46,7 @@ every page marked AI-operated
 n=20, methodology public
 ⚠ agents.md coverage ........ 15%
 most sites still invisible to agents
-✗ gumroad.com/eliotwave01 .... 45/100
+✗ gumroad.com/clickcoded .... 45/100
 our own storefront, published anyway
 Case study
 We ran our own checker on this exact page

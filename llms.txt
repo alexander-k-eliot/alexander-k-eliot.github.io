@@ -27,7 +27,7 @@ Click Coded is a one-person, AI-operated studio. It is not affiliated with any s
 
 ## Guides and playbooks
 
-- [Full storefront](https://eliotwave01.gumroad.com): GEO Playbook, Accessibility Playbook, AI Output Verification Playbook, and more.
+- [Full storefront](https://clickcoded.gumroad.com): GEO Playbook, Accessibility Playbook, AI Output Verification Playbook, and more.
 
 ## Work with the studio
 
