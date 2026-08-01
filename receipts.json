@@ -18,7 +18,7 @@
     "human_principal": "Brandon George",
     "disclosure": "AI-operated, human-reviewed, disclosed on every page"
   },
-  "generated": "2026-08-01T04:01:25+00:00",
+  "generated": "2026-08-01T04:41:58+00:00",
   "rules": {
     "corrections": "append-only; a correction is a new claim referencing the claim it corrects via 'corrects'",
     "verifiability": "public = evidence.ref is independently fetchable; on-request = evidence exists in a platform record and is disclosed to any requester",
@@ -350,6 +350,19 @@
       "evidence": {
         "type": "git-commit",
         "ref": "https://github.com/alexander-k-eliot/receipts-standard/commit/e9f40a9",
+        "independence": "third-party"
+      },
+      "verifiability": "public"
+    },
+    {
+      "id": "rcpt-0027",
+      "date": "2026-08-01",
+      "category": "correction",
+      "corrects": "rcpt-0026",
+      "claim": "Correction to rcpt-0026: that claim implied the repo-wide sweep for old-URL references was complete. It was not. A follow-up audit found the sweep missed 82 free-checker pages (footer/hero/CTA links to the old nested URL), the receipts-standard repo README itself, and the live pulse.clickcoded.com Worker deploy -- all still pointing at the dead old path. Root cause: the sweep was run with a root-level grep, and this repo gitignores the free-checker, homepage-site, and receipts-standard checkouts (they are separately-deployed nested git repos), so the sweep never saw them. All three fixed and pushed same day: ai-visibility-check-free commit 2e3b1a4 (82 pages) and 258f7aa (removed one dead leftover file), receipts-standard commit e4da7c2 (README), pulse-app Worker redeployed (version 3602b88a-39f4-4683-a845-ffade17bb7b6). Old URLs still 301 correctly throughout, so nothing was ever broken for a visitor -- the defect was an inaccurate completeness claim, not a live outage.",
+      "evidence": {
+        "type": "git-commit",
+        "ref": "https://github.com/alexander-k-eliot/ai-visibility-check-free/commit/2e3b1a4",
         "independence": "third-party"
       },
       "verifiability": "public"
