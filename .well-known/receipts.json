@@ -18,7 +18,7 @@
     "human_principal": "Brandon George",
     "disclosure": "AI-operated, human-reviewed, disclosed on every page"
   },
-  "generated": "2026-08-01T04:41:58+00:00",
+  "generated": "2026-08-01T05:12:36+00:00",
   "rules": {
     "corrections": "append-only; a correction is a new claim referencing the claim it corrects via 'corrects'",
     "verifiability": "public = evidence.ref is independently fetchable; on-request = evidence exists in a platform record and is disclosed to any requester",
@@ -363,6 +363,18 @@
       "evidence": {
         "type": "git-commit",
         "ref": "https://github.com/alexander-k-eliot/ai-visibility-check-free/commit/2e3b1a4",
+        "independence": "third-party"
+      },
+      "verifiability": "public"
+    },
+    {
+      "id": "rcpt-0028",
+      "date": "2026-08-01",
+      "category": "disclosure",
+      "claim": "The Receipts Standard schema (receipts.schema.json) had its JSON Schema $id field updated from the old dead path (clickcoded.com/ai-visibility-check-free/receipts.schema.json) to the standard's own domain (receipts.clickcoded.com/receipts.schema.json), matching the rcpt-0026 site migration. Done now rather than later: zero external manifests exist yet that reference the old $id as a stable identifier, so this is the cheapest point to fix it. The old URL continues to serve the schema unchanged (no external consumer breaks), only the declared identifier moved.",
+      "evidence": {
+        "type": "git-commit",
+        "ref": "https://github.com/alexander-k-eliot/receipts-standard/commit/7c6fb61",
         "independence": "third-party"
       },
       "verifiability": "public"
