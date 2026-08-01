@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/ai-visibility-check-free/assets/favicon.svg" type="image/svg+xml">
+<title>Free robots.txt Generator: set your AI-crawler policy for ChatGPT, Perplexity, Claude and Google</title>
+<link rel="canonical" href="https://clickcoded.com/tools/robots-txt-generator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free robots.txt Generator — set your AI-crawler policy for ChatGPT, Perplexity, Claude and Google">
+<meta property="og:description" content="Generate a robots.txt with an explicit AI-crawler policy in 60 seconds. Choose which AI assistants can read your site, keep your sitemap and disallow rules. Free, no signup.">
+<meta property="og:image" content="https://clickcoded.com/ai-visibility-check-free/assets/og-cards/robots-txt-generator.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free robots.txt Generator — set your AI-crawler policy for ChatGPT, Perplexity, Claude and Google">
+<meta name="twitter:description" content="Generate a robots.txt with an explicit AI-crawler policy in 60 seconds. Choose which AI assistants can read your site, keep your sitemap and disallow rules. Free, no signup.">
+<meta name="twitter:image" content="https://clickcoded.com/ai-visibility-check-free/assets/og-cards/robots-txt-generator.png">
+<meta name="description" content="Generate a robots.txt with an explicit AI-crawler policy in 60 seconds. Choose which AI assistants can read your site, keep your sitemap and disallow rules. Free, no signup.">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"Click Coded","url":"https://clickcoded.com/","email":"run@clickcoded.com","description":"AI-operated, human-reviewed studio. Honest tools, no fake guarantees.","sameAs":["https://github.com/alexander-k-eliot","https://x.com/alexanderKeliot","https://www.youtube.com/@clickcoded","https://www.instagram.com/alexander.k.eliot/","https://www.reddit.com/user/alexander-k-eliot/","https://www.etsy.com/shop/AlexanderKonigEliot","https://www.fiverr.com/alexanderkeliot","https://clickcoded.gumroad.com"],"alternateName":"Alexander K. Eliot","disambiguatingDescription":"A one-person, AI-operated studio founded in 2026 by Alexander K. Eliot, publishing AI-visibility audits, benchmarks and free tools at clickcoded.com."},{"@type":"WebApplication","name":"robots.txt Generator","applicationCategory":"DeveloperApplication","operatingSystem":"Web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Generates a robots.txt file with an explicit AI-crawler access policy for ChatGPT, Perplexity, Claude and other assistants."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does robots.txt affect AI assistants?","acceptedAnswer":{"@type":"Answer","text":"Yes. Crawlers like GPTBot, ClaudeBot, PerplexityBot and Google-Extended check robots.txt before reading your site. If you block them, or never decide, you may be invisible to AI answers that would otherwise cite you."}},{"@type":"Question","name":"Where do I put robots.txt?","acceptedAnswer":{"@type":"Answer","text":"Upload it to the root of your website so it is served at https://yourdomain.com/robots.txt."}}]}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/ai-visibility-check-free/assets/system.css">
+<style>
+.doc-head{display:flex;gap:14px;align-items:flex-start}.doc-head svg{flex:0 0 auto;margin-top:3px}
+
+
+
+.wrap{max-width:720px;margin:0 auto}
+h1{font-size:1.9rem;line-height:1.2;margin:18px 0 6px}h2{font-size:1.15rem;margin:26px 0 8px}
+.mark{color:var(--mint);font-weight:bold}.sub{color:var(--dim);margin-bottom:18px}
+label{display:block;margin:12px 0 4px;font-size:.92rem;color:var(--dim)}
+input,textarea{width:100%;padding:10px;border:1px solid #1d5c6b;border-radius:6px;background:#052b32;color:var(--ink);font:inherit}
+button{padding:12px 22px;border:0;border-radius:6px;background:var(--mint);color:#04251f;font:bold 16px Georgia,serif;cursor:pointer;margin-top:14px}
+button:hover{filter:brightness(1.1)}
+#out{width:100%;min-height:260px;font-family:ui-monospace,Menlo,monospace;font-size:13px;margin-top:10px}
+a{color:var(--mint)}.cta{background:var(--card2);border-left:4px solid var(--mint);padding:14px 16px;border-radius:6px;margin:24px 0}
+.small{font-size:.85rem;color:var(--dim)}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.copied{color:var(--amber)}
+.bots{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0}
+.bot{display:flex;align-items:center;gap:8px;background:#052b32;border:1px solid #1d5c6b;border-radius:6px;padding:9px 10px;font-size:14px;cursor:pointer}
+.bot input{width:auto;accent-color:var(--mint)}
+.presetrow{display:flex;gap:8px;margin:10px 0}
+.presetrow button{margin:0;flex:1;background:var(--card-solid);color:var(--dim);font-size:13px;padding:9px}
+.presetrow button.active{background:var(--mint);color:#04251f}
+.wrap{padding:24px 16px 80px}
+h1,h2{font-family:var(--serif)}
+.mark{font-family:var(--mono)}
+.small{font-family:var(--sans)}
+</style>
+</head>
+<body>
+<div class="dock">
+  <details class="dock-menu">
+    <summary>menu</summary>
+    <div class="dock-sheet">
+      <div class="ds-kicker">Click Coded · AI-operated · navigate like a crawler would</div>
+      <a href="/ai-visibility-check-free/#urlForm"><b>&gt;</b>run the free check</a>
+      <a href="/ai-visibility-check-free/ai-act-fix-kit/"><b>&gt;</b>EU AI Act check (Aug 2)</a>
+      <a href="/ai-visibility-check-free/fix-pack/"><b>&gt;</b>done-for-you retrofit</a>
+      <a href="https://pulse.clickcoded.com/"><b>&gt;</b>monitor it monthly (Pulse)</a>
+      <a href="/ai-visibility-check-free/benchmark/"><b>&gt;</b>the benchmarks</a>
+      <a href="https://clickcoded.com/"><b>&gt;</b>about the studio</a>
+    </div>
+  </details>
+  <a class="dock-cta" href="/ai-visibility-check-free/#urlForm">Check my site →</a>
+</div>
+<header class="site-header">
+<div class="wrap">
+  <a class="brand" href="https://clickcoded.com/">
+    <div class="brand-icon"><svg width="22" height="22" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M24 18 L12 32 L24 46" stroke="var(--mint)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40 18 L52 32 L40 46" stroke="var(--mint)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="32" cy="32" r="4" fill="var(--mint)"/>
+    </svg></div>
+    <div>
+      <span class="brand-name">Click Coded<span class="brand-sub"><span>by Alexander K. Eliot,</span><span>AI Agent Entrepreneur</span></span></span>
+    </div>
+  </a>
+</div>
+</header>
+<div class="wrap">
+<div class="doc-head">
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="26" y1="4" x2="26" y2="10" stroke="var(--mint)" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="26" cy="4" r="2.5" fill="var(--coral)"/>
+<rect x="8" y="10" width="36" height="28" rx="8" stroke="var(--mint)" stroke-width="2.5"/>
+<circle cx="18" cy="24" r="3.5" fill="var(--mint)"/>
+<circle cx="34" cy="24" r="3.5" fill="var(--mint)"/>
+<path d="M17 32h18" stroke="var(--mint)" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="4" y1="20" x2="8" y2="20" stroke="var(--mint)" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="44" y1="20" x2="48" y2="20" stroke="var(--mint)" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
+<div>
+<p class="mark">CLICK CODED · free tool</p>
+<h1>robots.txt Generator</h1>
+</div>
+</div>
+<p class="sub">robots.txt is the first thing every crawler checks, including the AI ones. Decide who gets in, generate the file, done. Free, no signup, runs in your browser.</p>
+
+<h2>Quick policy</h2>
+<div class="presetrow">
+  <button id="pAllow" class="active">Allow AI assistants (recommended)</button>
+  <button id="pBlock">Block AI assistants</button>
+  <button id="pCustom">Choose per-bot</button>
+</div>
+<p class="small" id="policyNote">Every listed AI crawler can read your site. Traditional search engines are always allowed. Best choice if you want to be found and cited by ChatGPT, Perplexity, and Claude.</p>
+
+<div id="botList" class="bots" style="display:none"></div>
+
+<label>Sitemap URL (optional)</label>
+<input id="sitemap" placeholder="https://yoursite.com/sitemap.xml">
+<label>Paths to disallow for everyone, one per line (optional. E.g. /admin, /cart)</label>
+<textarea id="disallow" placeholder="/admin&#10;/cart&#10;/checkout"></textarea>
+
+<button id="gen">Generate robots.txt</button>
+<button id="copy" style="background:#0a4552;color:var(--mint)">Copy</button>
+<span id="msg" class="small"></span>
+<textarea id="out" readonly placeholder="Your robots.txt appears here..."></textarea>
+
+<div class="cta">
+<strong>Now finish the job.</strong>
+<p>robots.txt decides who can crawl. It doesn't tell them what you offer, that's <a href="../llms-txt-generator/">llms.txt</a>. It doesn't state your business facts, that's <a href="../schema-generator/">structured data</a>. It doesn't make your answers quotable, that's <a href="../faq-schema-generator/">FAQ schema</a>. Do all four, then verify with the free <a href="../">AI visibility checker</a>. Want it all done and confirmed? See the <a href="mailto:run@clickcoded.com?subject=Agent-ready%20retrofit%20request">agent-ready retrofit</a> ($60-175).</p>
+<p>Policies drift too. A plugin update or a migration can quietly reset them. <a href="https://clickcoded.gumroad.com/l/pulse">Pulse's Agency tier</a> re-checks robots.txt and the rest of your AI-visibility score every month and flags it in your next report if it changes, $99/mo, built for agencies managing multiple client sites, not a single-site plan.</p>
+<p>Want the full 12-point checklist this file is one line of? Take the <a href="https://clickcoded.gumroad.com/l/ai-visibility-checklist">free AI Visibility Checklist</a>. Pay what you want, including nothing.</p>
+</div>
+
+<h2>Why this matters</h2>
+<p class="small">AI crawlers. GPTBot (OpenAI), ClaudeBot and Claude-User (Anthropic), PerplexityBot, OAI-SearchBot, Google-Extended, anthropic-ai. Check robots.txt before reading anything. Not deciding means someone else decided for you, usually by leaving you off a default deny-list you never wrote. Built by Click Coded, AI-operated and human-reviewed. Contact: run@clickcoded.com</p>
+</div>
+
+<div class="cta"><strong>Want to hear when we ship something new?</strong><p>We add new free tools and benchmarks periodically. <a href="https://clickcoded.gumroad.com/subscribe">Get an email when we do</a>, no spam, unsubscribe anytime.</p></div>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const BOTS = [
+    ['GPTBot','OpenAI (ChatGPT training)'],
+    ['OAI-SearchBot','OpenAI (ChatGPT search/citations)'],
+    ['ChatGPT-User','OpenAI (live browsing on a user\'s behalf)'],
+    ['ClaudeBot','Anthropic (Claude training)'],
+    ['Claude-User','Anthropic (Claude live browsing)'],
+    ['anthropic-ai','Anthropic (general)'],
+    ['PerplexityBot','Perplexity (search/citations)'],
+    ['Google-Extended','Google (Gemini/AI Overviews training)'],
+  ];
+  let mode='allow';
+  const listEl=$('botList');
+  BOTS.forEach(([name,desc])=>{
+    const d=document.createElement('label');
+    d.className='bot';
+    d.innerHTML=`<input type="checkbox" data-bot="${name}" checked> <span><b>${name}</b><br><span class="small">${desc}</span></span>`;
+    listEl.appendChild(d);
+  });
+
+  function setMode(m){
+    mode=m;
+    $('pAllow').className = m==='allow' ? 'active':'';
+    $('pBlock').className = m==='block' ? 'active':'';
+    $('pCustom').className = m==='custom' ? 'active':'';
+    listEl.style.display = m==='custom' ? 'grid' : 'none';
+    $('policyNote').textContent =
+      m==='allow' ? 'Every listed AI crawler can read your site. Traditional search engines are always allowed. Best choice if you want to be found and cited by ChatGPT, Perplexity, and Claude.' :
+      m==='block' ? 'Every listed AI crawler is blocked. Traditional search engines are still allowed. Choose this only if you deliberately do not want AI assistants citing you.' :
+      'Check the boxes for the AI crawlers you want to allow. Unchecked ones are blocked.';
+    build();
+  }
+  $('pAllow').addEventListener('click',()=>setMode('allow'));
+  $('pBlock').addEventListener('click',()=>setMode('block'));
+  $('pCustom').addEventListener('click',()=>setMode('custom'));
+
+  function build(){
+    const sitemap=$('sitemap').value.trim();
+    const disallows=$('disallow').value.split('\n').map(s=>s.trim()).filter(Boolean);
+    let allowed;
+    if(mode==='allow') allowed=BOTS.map(b=>b[0]);
+    else if(mode==='block') allowed=[];
+    else allowed=[...listEl.querySelectorAll('input:checked')].map(i=>i.dataset.bot);
+
+    let t='User-agent: *\n';
+    if(disallows.length) disallows.forEach(p=>t+=`Disallow: ${p}\n`); else t+='Disallow:\n';
+    t+='\n# AI assistant crawler policy\n';
+    BOTS.forEach(([name])=>{
+      t+=`User-agent: ${name}\n`;
+      if(allowed.includes(name)){
+        t+='Allow: /\n\n';
+      } else {
+        t+='Disallow: /\n\n';
+      }
+    });
+    if(sitemap) t+=`Sitemap: ${sitemap}\n`;
+    t+=`\n# Generated free at clickcoded.com/tools/robots-txt-generator/\n`;
+    $('out').value=t.trim()+'\n';
+  }
+  ['sitemap','disallow'].forEach(id=>$(id).addEventListener('input',build));
+  listEl.addEventListener('change',build);
+  $('gen').addEventListener('click',build);
+  $('copy').addEventListener('click',()=>{
+    if(!$('out').value) build();
+    $('out').select(); document.execCommand('copy');
+    $('msg').textContent=' copied to clipboard'; $('msg').className='small copied';
+    setTimeout(()=>{$('msg').textContent='';},2500);
+  });
+  build();
+})();
+</script>
+<p class="small">Part of Click Coded: trust between humans and AI, checkable. <a href="https://receipts.clickcoded.com/">The Checkable Standard</a></p>
+</body>
+</html>

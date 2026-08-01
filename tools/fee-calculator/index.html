@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/ai-visibility-check-free/assets/favicon.svg" type="image/svg+xml">
+<title>Reseller Fee Calculator: what you actually keep on Etsy, eBay, Poshmark, Mercari, Depop</title>
+<link rel="canonical" href="https://clickcoded.com/tools/fee-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Reseller Fee Calculator — what you actually keep on Etsy, eBay, Poshmark, Mercari, Depop">
+<meta property="og:description" content="Free reseller fee calculator. Enter your sale and see the platform fee, net profit, and margin for Etsy, eBay, Poshmark, Mercari and Depop with real 2026 US fee rates. No signup.">
+<meta property="og:image" content="https://clickcoded.com/ai-visibility-check-free/assets/og-cards/fee-calculator.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Reseller Fee Calculator — what you actually keep on Etsy, eBay, Poshmark, Mercari, Depop">
+<meta name="twitter:description" content="Free reseller fee calculator. Enter your sale and see the platform fee, net profit, and margin for Etsy, eBay, Poshmark, Mercari and Depop with real 2026 US fee rates. No signup.">
+<meta name="twitter:image" content="https://clickcoded.com/ai-visibility-check-free/assets/og-cards/fee-calculator.png">
+<meta name="description" content="Free reseller fee calculator. Enter your sale and see the platform fee, net profit, and margin for Etsy, eBay, Poshmark, Mercari and Depop with real 2026 US fee rates. No signup.">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Reseller Fee Calculator","applicationCategory":"BusinessApplication","operatingSystem":"Web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Calculates platform fees, net profit and margin for marketplace resellers on Etsy, eBay, Poshmark, Mercari and Depop."},{"@type":"Organization","name":"Click Coded","url":"https://clickcoded.com/","email":"run@clickcoded.com","description":"AI-operated, human-reviewed studio. Honest spreadsheets and tools for resellers.","sameAs":["https://github.com/alexander-k-eliot","https://x.com/alexanderKeliot","https://www.youtube.com/@clickcoded","https://www.instagram.com/alexander.k.eliot/","https://www.reddit.com/user/alexander-k-eliot/","https://www.etsy.com/shop/AlexanderKonigEliot","https://www.fiverr.com/alexanderkeliot","https://clickcoded.gumroad.com"],"alternateName":"Alexander K. Eliot","disambiguatingDescription":"A one-person, AI-operated studio founded in 2026 by Alexander K. Eliot, publishing AI-visibility audits, benchmarks and free tools at clickcoded.com."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What fee does Poshmark charge?","acceptedAnswer":{"@type":"Answer","text":"Poshmark charges a flat $2.95 on sales under $15, and 20% on sales of $15 or more (US, 2026). Buyers pay shipping."}},{"@type":"Question","name":"What is eBay's final value fee?","acceptedAnswer":{"@type":"Answer","text":"For most categories eBay charges about 13.25% of the total (item plus shipping) plus $0.30 per order (US, 2026). Category rates vary."}}]}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/ai-visibility-check-free/assets/system.css">
+<style>
+.doc-head{display:flex;gap:14px;align-items:flex-start}.doc-head svg{flex:0 0 auto;margin-top:3px}
+.scorewrap{position:relative;width:150px;height:150px;margin:0 auto 4px}
+.ring{position:absolute;top:0;left:0;width:100%;height:100%}
+.scoretext{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 10px}
+
+
+
+.wrap{max-width:640px;margin:0 auto}
+h1{font-size:1.9rem;line-height:1.2;margin:20px 0 6px}
+h2{font-size:1.2rem;margin:28px 0 8px}
+.mark{color:var(--mint);font-weight:bold}
+.sub{color:var(--dim);margin-bottom:20px}
+label{display:block;margin:14px 0 4px;font-size:.95rem;color:var(--dim)}
+select,input{width:100%;padding:11px;border:1px solid #1d5c6b;border-radius:6px;background:#052b32;color:var(--ink);font:inherit}
+.card{background:var(--card);border-radius:8px;padding:20px;margin:22px 0}
+.big{font-size:2.6rem;font-weight:bold;color:var(--mint)}
+.line{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #14545f}
+.line:last-child{border:0}
+.neg{color:var(--coral)}
+a{color:var(--mint)}
+.cta{background:var(--card2);border-left:4px solid var(--mint);padding:14px 16px;border-radius:6px;margin:24px 0}
+.small{font-size:.85rem;color:var(--dim)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.wrap{padding:24px 16px 80px}
+h1,h2{font-family:var(--serif)}
+.mark{font-family:var(--mono)}
+.small{font-family:var(--sans)}
+</style>
+</head>
+<body>
+<div class="dock">
+  <details class="dock-menu">
+    <summary>menu</summary>
+    <div class="dock-sheet">
+      <div class="ds-kicker">Click Coded · AI-operated · navigate like a crawler would</div>
+      <a href="/ai-visibility-check-free/#urlForm"><b>&gt;</b>run the free check</a>
+      <a href="/ai-visibility-check-free/ai-act-fix-kit/"><b>&gt;</b>EU AI Act check (Aug 2)</a>
+      <a href="/ai-visibility-check-free/fix-pack/"><b>&gt;</b>done-for-you retrofit</a>
+      <a href="https://pulse.clickcoded.com/"><b>&gt;</b>monitor it monthly (Pulse)</a>
+      <a href="/ai-visibility-check-free/benchmark/"><b>&gt;</b>the benchmarks</a>
+      <a href="https://clickcoded.com/"><b>&gt;</b>about the studio</a>
+    </div>
+  </details>
+  <a class="dock-cta" href="/ai-visibility-check-free/#urlForm">Check my site →</a>
+</div>
+<header class="site-header">
+<div class="wrap">
+  <a class="brand" href="https://clickcoded.com/">
+    <div class="brand-icon"><svg width="22" height="22" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M24 18 L12 32 L24 46" stroke="var(--mint)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40 18 L52 32 L40 46" stroke="var(--mint)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="32" cy="32" r="4" fill="var(--mint)"/>
+    </svg></div>
+    <div>
+      <span class="brand-name">Click Coded<span class="brand-sub"><span>by Alexander K. Eliot,</span><span>AI Agent Entrepreneur</span></span></span>
+    </div>
+  </a>
+</div>
+</header>
+<div class="wrap">
+<div class="doc-head">
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="26" cy="26" r="21" stroke="#155866" stroke-width="5"/>
+<path d="M26 5a21 21 0 0 1 18.2 31.4" stroke="var(--mint)" stroke-width="5" stroke-linecap="round"/>
+<text x="26" y="32" font-family="Georgia,serif" font-size="20" font-weight="bold" fill="var(--ink)" text-anchor="middle">$</text>
+</svg>
+<div>
+<p class="mark">CLICK CODED</p>
+<h1>What do you actually keep?</h1>
+</div>
+</div>
+<p class="sub">Enter a sale. See the platform fee, your net profit, and your margin, with real 2026 US fee rates. Free, no signup, nothing stored.</p>
+
+<div>
+  <label for="platform">Platform</label>
+  <select id="platform">
+    <option value="etsy">Etsy</option>
+    <option value="ebay">eBay</option>
+    <option value="poshmark" selected>Poshmark</option>
+    <option value="mercari">Mercari</option>
+    <option value="depop">Depop</option>
+  </select>
+  <div class="grid">
+    <div><label for="price">Sale price ($)</label><input id="price" type="number" value="42" min="0" step="0.01"></div>
+    <div><label for="ship">Shipping you charged ($)</label><input id="ship" type="number" value="0" min="0" step="0.01"></div>
+    <div><label for="shipcost">Your shipping cost ($)</label><input id="shipcost" type="number" value="0" min="0" step="0.01"></div>
+    <div><label for="cost">Item cost / COGS ($)</label><input id="cost" type="number" value="12" min="0" step="0.01"></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="scorewrap">
+    <svg class="ring" width="150" height="150" viewBox="0 0 150 150">
+      <circle cx="75" cy="75" r="65" fill="none" stroke="#0c3f49" stroke-width="12"/>
+      <circle id="marginRing" cx="75" cy="75" r="65" fill="none" stroke="var(--mint)" stroke-width="12" stroke-linecap="round" transform="rotate(-90 75 75)" stroke-dasharray="0 408.4"/>
+    </svg>
+    <div class="scoretext"><span class="big" id="net" style="font-size:1.7rem">$0.00</span></div>
+  </div>
+  <div class="sub" id="margin" style="text-align:center">net profit</div>
+  <div class="line"><span>Sale + shipping charged</span><span id="gross">$0.00</span></div>
+  <div class="line"><span id="feelabel">Platform fee</span><span class="neg" id="fee">$0.00</span></div>
+  <div class="line"><span>Your shipping cost</span><span class="neg" id="shipout">$0.00</span></div>
+  <div class="line"><span>Item cost</span><span class="neg" id="costout">$0.00</span></div>
+  <div class="line"><strong>You keep</strong><strong id="net2">$0.00</strong></div>
+</div>
+
+<div class="cta">
+<strong>Selling more than one thing?</strong>
+<p>This calculator does one sale. <span id="platformListing">The <a href="https://www.etsy.com/listing/4540171138">Reseller Profit Tracker spreadsheet</a></span> ($14.99) does hundreds. Auto fees, a live profit dashboard, and inventory tracking. Every rate is editable and dated, so your math never goes stale. Want the strategy behind the numbers, break-even math, which platform actually nets more per item, a real tracking system? <a href="https://clickcoded.gumroad.com/l/reseller-profit-playbook">The Reseller Profit Playbook</a> ($29) teaches the full method.</p>
+</div>
+
+<p class="small">Want all six platforms compared side by side, with the full formulas? Read <a href="../reseller-fee-guide/">Reseller Platform Fees Compared 2026</a>. Want to know what this sale actually paid per hour once sourcing, photos, listing and packing are counted? Try the <a href="../hourly-wage-calculator/">True Hourly Wage Calculator</a>.</p>
+
+<p class="small">More free tools from Click Coded: <a href="../">AI visibility checker</a> · <a href="../robots-txt-generator/">robots.txt generator</a> · <a href="../llms-txt-generator/">llms.txt generator</a> · <a href="../schema-generator/">schema generator</a> · <a href="../faq-schema-generator/">FAQ schema generator</a> · <a href="../contrast-checker/">WCAG contrast checker</a> · <a href="../writing-tells-scanner/">writing tells scanner</a>.</p>
+
+<h2>The 2026 US fee rates used here</h2>
+<ul class="small" style="margin-left:18px">
+<li><strong>Etsy:</strong> 6.5% transaction + 3% processing on price+shipping, + $0.25 processing + $0.20 listing.</li>
+<li><strong>eBay:</strong> ~13.25% final value fee on price+shipping + $0.30/order (most categories. Category rates vary).</li>
+<li><strong>Poshmark:</strong> flat $2.95 under $15, otherwise 20% of price (buyers pay shipping).</li>
+<li><strong>Mercari:</strong> 10% flat on price+shipping.</li>
+<li><strong>Depop (US):</strong> 0% selling fee + 3.3% + $0.45 payment processing.</li>
+</ul>
+<p class="small">Rates verified July 2026. Platforms change fees. Always verify in your seller account. This is a snapshot tool, not financial advice. Built by Click Coded, AI-operated and human-reviewed. Contact: run@clickcoded.com</p>
+</div>
+
+<div class="cta"><strong>Want to hear when we ship something new?</strong><p>We add new free tools and benchmarks periodically. <a href="https://clickcoded.gumroad.com/subscribe">Get an email when we do</a>, no spam, unsubscribe anytime.</p></div>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const usd=n=>(n<0?'-$':'$')+Math.abs(n).toFixed(2);
+  function fee(p, price, ship){
+    const base=price+ship;
+    if(p==='etsy')   return base*0.095 + 0.45;          // 6.5%+3% + $0.25 + $0.20 listing
+    if(p==='ebay')   return base*0.1325 + 0.30;
+    if(p==='mercari')return base*0.10;
+    if(p==='depop')  return base*0.033 + 0.45;
+    if(p==='poshmark') return price<15 ? 2.95 : price*0.20;  // buyers pay shipping
+    return 0;
+  }
+  const listings={
+    etsy:{url:'https://www.etsy.com/listing/4540171138',name:'Reseller Profit Tracker spreadsheet'},
+    ebay:{url:'https://www.etsy.com/listing/4540912109',name:'eBay Profit Tracker spreadsheet'},
+    poshmark:{url:'https://www.etsy.com/listing/4540908931',name:'Poshmark Profit Tracker spreadsheet'},
+    mercari:{url:'https://www.etsy.com/listing/4541054271',name:'Mercari Fee Calculator spreadsheet'},
+    depop:{url:'https://www.etsy.com/listing/4540933894',name:'Depop Fee Calculator spreadsheet'}
+  };
+  function calc(){
+    const p=$('platform').value;
+    const l=listings[p]||listings.etsy;
+    $('platformListing').innerHTML='The <a href="'+l.url+'">'+l.name+'</a>';
+    const price=+$('price').value||0, ship=+$('ship').value||0;
+    const shipcost=+$('shipcost').value||0, cost=+$('cost').value||0;
+    const f=fee(p,price,ship);
+    const gross=price+ship;
+    const net=gross-f-shipcost-cost;
+    const margin=gross>0?(net/gross*100):0;
+    $('gross').textContent=usd(gross);
+    $('fee').textContent='-'+usd(f);
+    $('shipout').textContent='-'+usd(shipcost);
+    $('costout').textContent='-'+usd(cost);
+    $('net').textContent=usd(net);
+    $('net2').textContent=usd(net);
+    $('net').style.color = net>=0 ? 'var(--mint)' : 'var(--coral)';
+    $('margin').textContent='net profit  ·  '+margin.toFixed(1)+'% margin';
+    const clamped=Math.max(0,Math.min(100,margin));
+    $('marginRing').setAttribute('stroke-dasharray',(clamped/100*408.4)+' 408.4');
+    $('marginRing').style.stroke = net>=0 ? 'var(--mint)' : 'var(--coral)';
+    $('feelabel').textContent = p==='poshmark' && price<15 ? 'Platform fee (flat under $15)' : 'Platform fee';
+  }
+  ['platform','price','ship','shipcost','cost'].forEach(id=>$(id).addEventListener('input',calc));
+  calc();
+})();
+</script>
+<p class="small">Part of Click Coded: trust between humans and AI, checkable. <a href="https://receipts.clickcoded.com/">The Checkable Standard</a></p>
+</body>
+</html>

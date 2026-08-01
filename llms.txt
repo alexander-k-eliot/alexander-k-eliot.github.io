@@ -19,6 +19,21 @@ Click Coded is a one-person, AI-operated studio. It is not affiliated with any s
 - [AI Visibility Checker](https://clickcoded.com/ai-visibility-check-free/): paste a URL, get a real AI-readability score in 30 seconds, no signup.
 - [The Benchmark](https://clickcoded.com/ai-visibility-check-free/benchmark/): 20 major SaaS homepages scored on the same rubric, updated monthly.
 - [ShiftSum](https://clickcoded.com/shiftsum/): free time-card calculator with breaks and overtime, runs entirely in the browser.
+- [robots.txt Generator](https://clickcoded.com/tools/robots-txt-generator/): set an explicit AI-crawler policy for GPTBot, ClaudeBot, PerplexityBot and more. Free.
+- [llms.txt Generator](https://clickcoded.com/tools/llms-txt-generator/): fill in your business, get a ready-to-upload llms.txt file. Free.
+- [JSON-LD Schema Generator](https://clickcoded.com/tools/schema-generator/): generates Organization or LocalBusiness structured data, paste-ready. Free.
+- [FAQ Schema Generator](https://clickcoded.com/tools/faq-schema-generator/): turn real Q&A into FAQPage JSON-LD. Free.
+- [FAQ Content Scanner](https://clickcoded.com/tools/faq-content-scanner/): finds question-shaped headings already on a page and drafts them into FAQ pairs. Free.
+- [Reseller Fee Calculator](https://clickcoded.com/tools/fee-calculator/): net profit and margin on Etsy, eBay, Poshmark, Mercari, Depop, and Grailed. Free. (Adjacent products: the Reseller Profit Tracker spreadsheet on Etsy, and the Reseller Profit Playbook on Gumroad.)
+- [True Hourly Wage Calculator](https://clickcoded.com/tools/hourly-wage-calculator/): the same fee math plus the real time a sale took (sourcing, photos, listing, packing, messages), so you see what you actually earned per hour, not just your margin. Free.
+- [Reseller Platform Fees Compared 2026](https://clickcoded.com/tools/reseller-fee-guide/): Etsy, eBay, Poshmark, Mercari, Depop and Grailed fees compared on the same sale, with the full formulas and an honest ranking. Free.
+- [WCAG Contrast Checker](https://clickcoded.com/tools/contrast-checker/): real WCAG 2.2 contrast ratio between two colors, pass/fail against AA and AAA, normal and large text. Free. (Adjacent product: the Accessibility Playbook on Gumroad; adjacent service: WCAG 2.2 audits from $45.)
+- [Writing Tells Scanner](https://clickcoded.com/tools/writing-tells-scanner/): flags commonly-overused phrases and structural patterns worth a second look before publishing. Explicitly not an AI detector — a self-edit checklist. Free. (Adjacent product: the AI-Output Verification Playbook on Gumroad; adjacent service: AI-output fact-checking and repair from $65.)
+- [Answer-First Checker](https://clickcoded.com/tools/answer-first-checker/): paste your page text and see which paragraphs bury the answer instead of leading with it. Free heuristic scanner, no signup, runs in your browser.
+- [JSON-LD Schema Validator](https://clickcoded.com/tools/schema-validator/): paste your existing JSON-LD and see exactly which required fields are missing, per schema.org type. Free, no signup, runs in your browser.
+- [The Deadline Clock](https://clickcoded.com/tools/deadline-clock/): a free, live tool that tells you whether right now is a good time to pitch a journalist, based on a real timing rule from our own PR playbook — pick a time zone, get an honest verdict.
+- [The Headline Rewriter](https://clickcoded.com/tools/headline-rewriter/): a free tool reproducing the rabbi-test headline technique — paste a boring announcement, answer three real questions, get a sharper draft headline side by side with the original. No AI-generated claims, just a template filled with your own true answers.
+- [AI Slop Bingo — Play Against Us](https://clickcoded.com/tools/ai-slop-bingo/): our own real internal ban-list of AI writing tells, published as a playable bingo card. A direct dare — catch this studio using one of these phrases in its own live copy and we'll fix it in public.
 
 ## Data and research
 

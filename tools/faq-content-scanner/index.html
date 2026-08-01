@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/ai-visibility-check-free/assets/favicon.svg" type="image/svg+xml">
+<title>Free FAQ Content Scanner: find the question-shaped headings already on your page</title>
+<link rel="canonical" href="https://clickcoded.com/tools/faq-content-scanner/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free FAQ Content Scanner — find the question-shaped headings already on your page">
+<meta property="og:description" content="Paste your page HTML or a URL. We scan for question-shaped headings you already have and turn them into ready FAQ pairs. Free, no signup.">
+<meta property="og:image" content="https://clickcoded.com/ai-visibility-check-free/assets/og-cards/faq-content-scanner.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free FAQ Content Scanner — find the question-shaped headings already on your page">
+<meta name="twitter:description" content="Paste your page HTML or a URL. We scan for question-shaped headings you already have and turn them into ready FAQ pairs. Free, no signup.">
+<meta name="twitter:image" content="https://clickcoded.com/ai-visibility-check-free/assets/og-cards/faq-content-scanner.png">
+<meta name="description" content="Paste your page HTML or a URL. We scan for question-shaped headings you already have and turn them into ready FAQ pairs. Free, no signup.">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"Click Coded","url":"https://clickcoded.com/","email":"run@clickcoded.com","description":"AI-operated, human-reviewed studio. Honest tools, no fake guarantees.","sameAs":["https://github.com/alexander-k-eliot","https://x.com/alexanderKeliot","https://www.youtube.com/@clickcoded","https://www.instagram.com/alexander.k.eliot/","https://www.reddit.com/user/alexander-k-eliot/","https://www.etsy.com/shop/AlexanderKonigEliot","https://www.fiverr.com/alexanderkeliot","https://clickcoded.gumroad.com"],"alternateName":"Alexander K. Eliot","disambiguatingDescription":"A one-person, AI-operated studio founded in 2026 by Alexander K. Eliot, publishing AI-visibility audits, benchmarks and free tools at clickcoded.com."},{"@type":"WebApplication","name":"FAQ Content Scanner","applicationCategory":"DeveloperApplication","operatingSystem":"Web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Scans a page for question-shaped headings and drafts FAQ pairs from existing content."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a question-shaped heading?","acceptedAnswer":{"@type":"Answer","text":"A heading (H2 or H3) phrased as a question a buyer would actually ask, such as 'How much does X cost?' or 'What does Y include?'. AI assistants extract these more reliably than statement headings."}},{"@type":"Question","name":"Does this scanner store my content?","acceptedAnswer":{"@type":"Answer","text":"No. Everything runs in your browser. Nothing is uploaded or saved."}}]}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/ai-visibility-check-free/assets/system.css">
+<style>
+.doc-head{display:flex;gap:14px;align-items:flex-start}.doc-head svg{flex:0 0 auto;margin-top:3px}
+
+
+
+.wrap{max-width:740px;margin:0 auto}
+h1{font-size:1.9rem;line-height:1.2;margin:18px 0 6px}h2{font-size:1.15rem;margin:26px 0 8px}
+.mark{color:var(--mint);font-weight:bold}.sub{color:var(--dim);margin-bottom:18px}
+label{display:block;margin:12px 0 4px;font-size:.92rem;color:var(--dim)}
+input,textarea{width:100%;padding:10px;border:1px solid #1d5c6b;border-radius:6px;background:#052b32;color:var(--ink);font:inherit}
+textarea{min-height:120px;font-family:ui-monospace,Menlo,monospace;font-size:13px}
+button{padding:11px 20px;border:0;border-radius:6px;background:var(--mint);color:#04251f;font:bold 15px Georgia,serif;cursor:pointer}
+button:hover{filter:brightness(1.1)}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:10px 0}
+.card{background:var(--card);border-radius:8px;padding:16px 18px;margin:10px 0}
+.found{color:var(--mint);font-weight:bold}
+.editable{width:100%;background:#052b32;border:1px solid #1d5c6b;border-radius:6px;padding:8px;color:var(--ink);font:inherit;margin-top:6px}
+a{color:var(--mint)}.cta{background:var(--card2);border-left:4px solid var(--mint);padding:14px 16px;border-radius:6px;margin:24px 0}
+.small{font-size:.85rem;color:var(--dim)}
+.copied{color:var(--amber)}
+#out{width:100%;min-height:180px;font-family:ui-monospace,Menlo,monospace;font-size:13px;margin-top:10px;display:none}
+.empty{color:var(--dim);font-style:italic}
+.wrap{padding:24px 16px 80px}
+h1,h2{font-family:var(--serif)}
+.mark{font-family:var(--mono)}
+.small{font-family:var(--sans)}
+</style>
+</head>
+<body>
+<div class="dock">
+  <details class="dock-menu">
+    <summary>menu</summary>
+    <div class="dock-sheet">
+      <div class="ds-kicker">Click Coded · AI-operated · navigate like a crawler would</div>
+      <a href="/ai-visibility-check-free/#urlForm"><b>&gt;</b>run the free check</a>
+      <a href="/ai-visibility-check-free/ai-act-fix-kit/"><b>&gt;</b>EU AI Act check (Aug 2)</a>
+      <a href="/ai-visibility-check-free/fix-pack/"><b>&gt;</b>done-for-you retrofit</a>
+      <a href="https://pulse.clickcoded.com/"><b>&gt;</b>monitor it monthly (Pulse)</a>
+      <a href="/ai-visibility-check-free/benchmark/"><b>&gt;</b>the benchmarks</a>
+      <a href="https://clickcoded.com/"><b>&gt;</b>about the studio</a>
+    </div>
+  </details>
+  <a class="dock-cta" href="/ai-visibility-check-free/#urlForm">Check my site →</a>
+</div>
+<header class="site-header">
+<div class="wrap">
+  <a class="brand" href="https://clickcoded.com/">
+    <div class="brand-icon"><svg width="22" height="22" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M24 18 L12 32 L24 46" stroke="var(--mint)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40 18 L52 32 L40 46" stroke="var(--mint)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="32" cy="32" r="4" fill="var(--mint)"/>
+    </svg></div>
+    <div>
+      <span class="brand-name">Click Coded<span class="brand-sub"><span>by Alexander K. Eliot,</span><span>AI Agent Entrepreneur</span></span></span>
+    </div>
+  </a>
+</div>
+</header>
+<div class="wrap">
+<div class="doc-head">
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="22" cy="22" r="14" stroke="var(--mint)" stroke-width="2.5"/>
+<line x1="32" y1="32" x2="45" y2="45" stroke="var(--mint)" stroke-width="3.5" stroke-linecap="round"/>
+<text x="22" y="29" font-family="Georgia,serif" font-size="18" font-weight="bold" fill="var(--amber)" text-anchor="middle">?</text>
+</svg>
+<div>
+<p class="mark">CLICK CODED · free tool</p>
+<h1>FAQ Content Scanner</h1>
+</div>
+</div>
+<p class="sub">Before you write new FAQ content, check what you already have. This scans your page for question-shaped headings, the ones AI assistants already look for, and drafts them into FAQ pairs you can edit and export. Free, runs in your browser, nothing stored.</p>
+
+<div class="row">
+<input type="url" id="siteUrl" placeholder="https://yourbusiness.com/faq-or-services-page" style="flex:1;min-width:220px">
+<button id="scanUrl">Scan URL</button>
+</div>
+<p class="small">Most sites block cross-site reads from a browser (normal, not a problem with your site). If the URL scan comes back empty, use paste below. It always works.</p>
+
+<label>Or paste your page HTML (View Page Source, copy all, paste here)</label>
+<textarea id="htmlPaste" placeholder="&lt;!doctype html&gt; ..."></textarea>
+<button id="scanPaste">Scan pasted HTML</button>
+
+<div id="results"></div>
+
+<div class="cta" id="exportBox" style="display:none">
+<strong>Found some. Now make them official.</strong>
+<p>Edit any question or answer above, then export and paste straight into the <a href="../faq-schema-generator/">FAQ Schema Generator</a> to get FAQPage JSON-LD.</p>
+<button id="export" style="margin-top:8px">Export edited pairs</button>
+<textarea id="out" readonly></textarea>
+<button id="copy" style="background:#0a4552;color:var(--mint);margin-top:8px;display:none">Copy</button>
+<span id="msg" class="small"></span>
+</div>
+
+<h2>What counts as a question-shaped heading</h2>
+<p class="small">Any H2 or H3 that ends in "?" or opens with what, how, why, when, where, who, which, can, does, is, or are. We pull the heading plus the text immediately after it as a draft answer. Read it, trim it, make sure it is actually true and actually on your page before you publish schema for it.</p>
+<p class="small">Before you turn a draft answer into schema, check it actually leads with the answer. The <a href="../answer-first-checker/">Answer-First Structure Checker</a> flags paragraphs that bury the point instead of stating it first.</p>
+<p class="small">Want this checked automatically going forward? <a href="https://clickcoded.gumroad.com/l/pulse">Pulse's Agency tier</a> re-runs the full AI-visibility check monthly across your roster and flags it in your next report, $99/mo, built for agencies managing multiple client sites, not a single-site plan.</p>
+<p class="small">Want the full 12-point checklist this is one piece of? Take the <a href="https://clickcoded.gumroad.com/l/ai-visibility-checklist">free AI Visibility Checklist</a>. Pay what you want, including nothing.</p>
+<p class="small">Built by Click Coded, AI-operated and human-reviewed. Contact: run@clickcoded.com</p>
+</div>
+
+<div class="cta"><strong>Want to hear when we ship something new?</strong><p>We add new free tools and benchmarks periodically. <a href="https://clickcoded.gumroad.com/subscribe">Get an email when we do</a>, no spam, unsubscribe anytime.</p></div>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const QSTART=/^(what|how|why|when|where|who|which|can|do|does|is|are)\b/i;
+
+  function extractCandidates(html){
+    const doc=new DOMParser().parseFromString(html,'text/html');
+    const heads=[...doc.querySelectorAll('h2,h3')];
+    const out=[];
+    heads.forEach(h=>{
+      const t=(h.textContent||'').trim();
+      if(!t) return;
+      const looksQ = /\?\s*$/.test(t) || QSTART.test(t);
+      if(!looksQ) return;
+      let answer='';
+      let n=h.nextElementSibling;
+      let hops=0;
+      while(n && hops<4 && answer.length<400){
+        if(/^H[1-6]$/.test(n.tagName)) break;
+        const nt=(n.textContent||'').trim();
+        if(nt) answer+=(answer?' ':'')+nt;
+        n=n.nextElementSibling; hops++;
+      }
+      out.push({q:t, a:answer.slice(0,400)});
+    });
+    return out;
+  }
+
+  function render(pairs, sourceNote){
+    const box=$('results');
+    if(!pairs.length){
+      box.innerHTML=`<div class="card"><span class="empty">No question-shaped H2/H3 found${sourceNote?(' — '+sourceNote):''}. That itself is a finding: add a few, then use the <a href="../faq-schema-generator/">FAQ Schema Generator</a> directly with your own Q&amp;A.</span></div>`;
+      $('exportBox').style.display='none';
+      return;
+    }
+    box.innerHTML = `<div class="card"><span class="found">${pairs.length} candidate${pairs.length===1?'':'s'} found.</span> Edit any of these before exporting.</div>` +
+      pairs.map((p,i)=>`
+        <div class="card">
+          <label>Question ${i+1}</label>
+          <input class="cq editable" data-i="${i}" value="${p.q.replace(/"/g,'&quot;')}">
+          <label>Draft answer (from the page — verify and trim)</label>
+          <textarea class="ca editable" data-i="${i}" rows="3">${p.a}</textarea>
+        </div>`).join('');
+    $('exportBox').style.display='block';
+    $('out').style.display='none';
+    $('copy').style.display='none';
+  }
+
+  function doScanHtml(html){
+    render(extractCandidates(html));
+  }
+
+  async function tryFetch(url){
+    try{const r=await fetch(url,{mode:'cors'});if(!r.ok)return{ok:false};return{ok:true,text:await r.text()};}
+    catch(e){return {ok:false,cors:true};}
+  }
+
+  $('scanUrl').addEventListener('click', async ()=>{
+    let u=$('siteUrl').value.trim();
+    if(!u) return;
+    if(!/^https?:\/\//i.test(u)) u='https://'+u;
+    const btn=$('scanUrl'); btn.textContent='Scanning...'; btn.disabled=true;
+    const r=await tryFetch(u);
+    btn.textContent='Scan URL'; btn.disabled=false;
+    if(r.ok) doScanHtml(r.text);
+    else render([], r.cors ? 'this site blocks cross-site browser reads, try paste instead' : 'could not fetch that URL');
+  });
+
+  $('scanPaste').addEventListener('click', ()=>{
+    const html=$('htmlPaste').value;
+    if(html.trim().length<50){ alert('Paste your full page HTML first.'); return; }
+    doScanHtml(html);
+  });
+
+  $('export').addEventListener('click', ()=>{
+    const qs=[...document.querySelectorAll('.cq')], as=[...document.querySelectorAll('.ca')];
+    const lines=[];
+    qs.forEach((q,i)=>{
+      const a=as[i].value.trim();
+      if(q.value.trim() && a) lines.push('Q: '+q.value.trim()+'\nA: '+a);
+    });
+    $('out').value = lines.join('\n\n') || '(no complete Q&A pairs — fill in a question and answer above)';
+    $('out').style.display='block';
+    $('copy').style.display='inline-block';
+  });
+  $('copy').addEventListener('click', ()=>{
+    $('out').select(); document.execCommand('copy');
+    $('msg').textContent=' copied — paste into the FAQ Schema Generator'; $('msg').className='small copied';
+    setTimeout(()=>{$('msg').textContent='';},3000);
+  });
+})();
+</script>
+<p class="small">Part of Click Coded: trust between humans and AI, checkable. <a href="https://receipts.clickcoded.com/">The Checkable Standard</a></p>
+</body>
+</html>

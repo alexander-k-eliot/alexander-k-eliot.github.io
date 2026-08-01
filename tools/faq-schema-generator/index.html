@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/ai-visibility-check-free/assets/favicon.svg" type="image/svg+xml">
+<title>Free FAQ Schema Generator: turn your Q&amp;A into JSON-LD FAQPage markup</title>
+<link rel="canonical" href="https://clickcoded.com/tools/faq-schema-generator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free FAQ Schema Generator — turn your Q&amp;A into JSON-LD FAQPage markup">
+<meta property="og:description" content="Paste your questions and answers, get ready-to-paste FAQPage JSON-LD. AI assistants and search engines can quote your answers directly. Free, no signup.">
+<meta property="og:image" content="https://clickcoded.com/ai-visibility-check-free/assets/og-cards/faq-schema-generator.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free FAQ Schema Generator — turn your Q&amp;A into JSON-LD FAQPage markup">
+<meta name="twitter:description" content="Paste your questions and answers, get ready-to-paste FAQPage JSON-LD. AI assistants and search engines can quote your answers directly. Free, no signup.">
+<meta name="twitter:image" content="https://clickcoded.com/ai-visibility-check-free/assets/og-cards/faq-schema-generator.png">
+<meta name="description" content="Paste your questions and answers, get ready-to-paste FAQPage JSON-LD. AI assistants and search engines can quote your answers directly. Free, no signup.">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"Click Coded","url":"https://clickcoded.com/","email":"run@clickcoded.com","description":"AI-operated, human-reviewed studio. Honest tools, no fake guarantees.","sameAs":["https://github.com/alexander-k-eliot","https://x.com/alexanderKeliot","https://www.youtube.com/@clickcoded","https://www.instagram.com/alexander.k.eliot/","https://www.reddit.com/user/alexander-k-eliot/","https://www.etsy.com/shop/AlexanderKonigEliot","https://www.fiverr.com/alexanderkeliot","https://clickcoded.gumroad.com"],"alternateName":"Alexander K. Eliot","disambiguatingDescription":"A one-person, AI-operated studio founded in 2026 by Alexander K. Eliot, publishing AI-visibility audits, benchmarks and free tools at clickcoded.com."},{"@type":"WebApplication","name":"FAQ Schema Generator","applicationCategory":"DeveloperApplication","operatingSystem":"Web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Converts questions and answers into FAQPage JSON-LD structured data."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is FAQPage schema?","acceptedAnswer":{"@type":"Answer","text":"FAQPage is a schema.org structured-data type that marks up a list of questions and their answers so search engines and AI assistants can extract and quote them directly, instead of guessing which paragraph answers a question."}},{"@type":"Question","name":"Do the questions on the page have to match the schema exactly?","acceptedAnswer":{"@type":"Answer","text":"Yes. Only mark up questions you genuinely answer visibly on the same page, with the same wording. Structured data that does not match the visible page content is a policy violation for search engines and misleads AI assistants."}}]}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/ai-visibility-check-free/assets/system.css">
+<style>
+.doc-head{display:flex;gap:14px;align-items:flex-start}.doc-head svg{flex:0 0 auto;margin-top:3px}
+
+
+
+.wrap{max-width:720px;margin:0 auto}
+h1{font-size:1.9rem;line-height:1.2;margin:18px 0 6px}h2{font-size:1.15rem;margin:26px 0 8px}
+.mark{color:var(--mint);font-weight:bold}.sub{color:var(--dim);margin-bottom:18px}
+label{display:block;margin:10px 0 4px;font-size:.9rem;color:var(--dim)}
+input,textarea{width:100%;padding:10px;border:1px solid #1d5c6b;border-radius:6px;background:#052b32;color:var(--ink);font:inherit}
+textarea{min-height:60px}
+button{padding:12px 22px;border:0;border-radius:6px;background:var(--mint);color:#04251f;font:bold 16px Georgia,serif;cursor:pointer;margin-top:14px}
+button:hover{filter:brightness(1.1)}
+#out{width:100%;min-height:240px;font-family:ui-monospace,Menlo,monospace;font-size:13px;margin-top:10px}
+a{color:var(--mint)}.cta{background:var(--card2);border-left:4px solid var(--mint);padding:14px 16px;border-radius:6px;margin:24px 0}
+.small{font-size:.85rem;color:var(--dim)}
+.copied{color:var(--amber)}
+.qa{background:#052b32;border:1px solid #1d5c6b;border-radius:8px;padding:14px;margin:10px 0}
+.qa .rm{float:right;background:none;border:0;color:var(--coral);font:bold 14px Georgia,serif;cursor:pointer;padding:0;margin:0}
+.addbtn{background:var(--card-solid);color:var(--mint);font-size:14px;padding:9px 16px}
+.count{color:var(--dim);font-size:.85rem}
+.wrap{padding:24px 16px 80px}
+h1,h2{font-family:var(--serif)}
+.mark{font-family:var(--mono)}
+.small{font-family:var(--sans)}
+</style>
+</head>
+<body>
+<div class="dock">
+  <details class="dock-menu">
+    <summary>menu</summary>
+    <div class="dock-sheet">
+      <div class="ds-kicker">Click Coded · AI-operated · navigate like a crawler would</div>
+      <a href="/ai-visibility-check-free/#urlForm"><b>&gt;</b>run the free check</a>
+      <a href="/ai-visibility-check-free/ai-act-fix-kit/"><b>&gt;</b>EU AI Act check (Aug 2)</a>
+      <a href="/ai-visibility-check-free/fix-pack/"><b>&gt;</b>done-for-you retrofit</a>
+      <a href="https://pulse.clickcoded.com/"><b>&gt;</b>monitor it monthly (Pulse)</a>
+      <a href="/ai-visibility-check-free/benchmark/"><b>&gt;</b>the benchmarks</a>
+      <a href="https://clickcoded.com/"><b>&gt;</b>about the studio</a>
+    </div>
+  </details>
+  <a class="dock-cta" href="/ai-visibility-check-free/#urlForm">Check my site →</a>
+</div>
+<header class="site-header">
+<div class="wrap">
+  <a class="brand" href="https://clickcoded.com/">
+    <div class="brand-icon"><svg width="22" height="22" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M24 18 L12 32 L24 46" stroke="var(--mint)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40 18 L52 32 L40 46" stroke="var(--mint)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="32" cy="32" r="4" fill="var(--mint)"/>
+    </svg></div>
+    <div>
+      <span class="brand-name">Click Coded<span class="brand-sub"><span>by Alexander K. Eliot,</span><span>AI Agent Entrepreneur</span></span></span>
+    </div>
+  </a>
+</div>
+</header>
+<div class="wrap">
+<div class="doc-head">
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 10h34a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H24l-9 8v-8h-9a4 4 0 0 1-4-4V14a4 4 0 0 1 4-4Z" stroke="var(--mint)" stroke-width="2.5" stroke-linejoin="round"/>
+<text x="23" y="28" font-family="ui-monospace,monospace" font-size="16" font-weight="bold" fill="var(--amber)" text-anchor="middle">{ }</text>
+</svg>
+<div>
+<p class="mark">CLICK CODED · free tool</p>
+<h1>FAQ Schema Generator</h1>
+</div>
+</div>
+<p class="sub">FAQPage markup lets AI assistants and search engines quote your answers directly instead of guessing which paragraph answers a question. Add your real Q&amp;A, generate the code, paste it in your &lt;head&gt;. Free, runs in your browser.</p>
+
+<p class="small">Not sure what questions you already answer? Run the <a href="../faq-content-scanner/">FAQ Content Scanner</a> first. It finds question-shaped headings already on your page.</p>
+
+<div id="qaList"></div>
+<button id="add" class="addbtn" type="button">+ Add another question</button>
+<p class="count" id="count"></p>
+
+<button id="gen">Generate FAQ schema</button>
+<button id="copy" style="background:#0a4552;color:var(--mint)">Copy</button>
+<span id="msg" class="small"></span>
+<textarea id="out" readonly placeholder="Your FAQPage JSON-LD appears here..."></textarea>
+
+<div class="cta">
+<strong>One rule that matters more than the code.</strong>
+<p>Only mark up questions you genuinely answer, visibly, on the same page, with matching wording. Mismatched schema is a policy violation for search engines and misleads AI assistants, the opposite of what we sell. Then add <a href="../schema-generator/">Organization schema</a>, <a href="../llms-txt-generator/">llms.txt</a>, and a <a href="../robots-txt-generator/">robots.txt AI-crawler policy</a> to round out the basics, and verify with the free <a href="../">AI visibility checker</a>.</p>
+<p>Before you mark up an answer, check it's actually answer-first. The <a href="../answer-first-checker/">Answer-First Structure Checker</a> flags paragraphs that bury the point instead of leading with it.</p>
+<p>Ship it, then keep it honest. <a href="https://clickcoded.gumroad.com/l/pulse">Pulse's Agency tier</a> re-checks your FAQ schema and the rest of your AI-visibility score every month and flags it in your next report, $99/mo, built for agencies managing multiple client sites, not a single-site plan.</p>
+<p>Want the full 12-point checklist this is one line of? Take the <a href="https://clickcoded.gumroad.com/l/ai-visibility-checklist">free AI Visibility Checklist</a>. Pay what you want, including nothing.</p>
+</div>
+
+<h2>Why this matters</h2>
+<p class="small">Question-shaped headings with a clear answer are one of the strongest signals AI assistants use to extract quotable content. FAQPage schema makes that structure explicit and machine-readable instead of implicit in your prose. Built by Click Coded, AI-operated and human-reviewed. No citation guarantees. Nobody can promise AI rankings. This gives assistants the clean facts that make citation possible. Contact: run@clickcoded.com</p>
+</div>
+
+<div class="cta"><strong>Want to hear when we ship something new?</strong><p>We add new free tools and benchmarks periodically. <a href="https://clickcoded.gumroad.com/subscribe">Get an email when we do</a>, no spam, unsubscribe anytime.</p></div>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const list=$('qaList');
+  let n=0;
+
+  function addRow(q,a){
+    n++;
+    const id=n;
+    const div=document.createElement('div');
+    div.className='qa';
+    div.dataset.id=id;
+    div.innerHTML=`<button class="rm" type="button" title="Remove">&times;</button>
+      <label>Question ${id}</label>
+      <input class="q" placeholder="What does a kitchen remodel cost in Austin?" value="${q?escapeAttr(q):''}">
+      <label>Answer</label>
+      <textarea class="a" placeholder="A full kitchen remodel in Austin typically runs $25,000 to $60,000 depending on scope.">${a?escapeHtml(a):''}</textarea>`;
+    list.appendChild(div);
+    div.querySelector('.rm').addEventListener('click',()=>{div.remove();updateCount();build();});
+    div.querySelectorAll('input,textarea').forEach(el=>el.addEventListener('input',build));
+    updateCount();
+  }
+  function escapeAttr(s){return s.replace(/"/g,'&quot;');}
+  function escapeHtml(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+  function updateCount(){
+    const c=list.children.length;
+    $('count').textContent=c+' question'+(c===1?'':'s');
+  }
+
+  function build(){
+    const rows=[...list.querySelectorAll('.qa')];
+    const items=rows.map(r=>({
+      q:r.querySelector('.q').value.trim(),
+      a:r.querySelector('.a').value.trim()
+    })).filter(x=>x.q && x.a);
+    if(!items.length){ $('out').value=''; return; }
+    const obj={
+      '@context':'https://schema.org',
+      '@type':'FAQPage',
+      mainEntity: items.map(it=>({
+        '@type':'Question', name: it.q,
+        acceptedAnswer: {'@type':'Answer', text: it.a}
+      }))
+    };
+    $('out').value = '<script type="application/ld+json">\n'+JSON.stringify(obj,null,2)+'\n<\/script>';
+  }
+
+  $('add').addEventListener('click',()=>addRow());
+  $('gen').addEventListener('click',build);
+  $('copy').addEventListener('click',()=>{
+    if(!$('out').value) build();
+    if(!$('out').value){ $('msg').textContent=' add at least one Q&A first'; $('msg').className='small'; return; }
+    $('out').select(); document.execCommand('copy');
+    $('msg').textContent=' copied to clipboard'; $('msg').className='small copied';
+    setTimeout(()=>{$('msg').textContent='';},2500);
+  });
+
+  addRow('What does a kitchen remodel cost in Austin?','A full kitchen remodel in Austin typically runs $25,000 to $60,000 depending on scope.');
+  addRow('How long does the project take?','Most kitchen remodels take 6 to 10 weeks from demo to final walkthrough.');
+  build();
+})();
+</script>
+<p class="small">Part of Click Coded: trust between humans and AI, checkable. <a href="https://receipts.clickcoded.com/">The Checkable Standard</a></p>
+</body>
+</html>

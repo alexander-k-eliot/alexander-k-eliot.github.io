@@ -1,0 +1,212 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/ai-visibility-check-free/assets/favicon.svg" type="image/svg+xml">
+<title>The Deadline Clock: is it a good time to pitch a journalist, right now?</title>
+<link rel="canonical" href="https://clickcoded.com/tools/deadline-clock/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Deadline Clock">
+<meta property="og:description" content="A live, honest widget: is it currently a good time to pitch a journalist? Computed from our own PR playbook's timing rule, not a guess.">
+<meta property="og:image" content="https://clickcoded.com/ai-visibility-check-free/assets/og-cards/deadline-clock.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Deadline Clock">
+<meta name="twitter:description" content="Live check: is right now a good time to pitch a journalist? Real rule, real clock, no guessing.">
+<meta name="twitter:image" content="https://clickcoded.com/ai-visibility-check-free/assets/og-cards/deadline-clock.png">
+<meta name="description" content="A free, live tool: enter a journalist's local time zone and get an honest read on whether now is a good time to pitch, based on a simple, real timing rule — not a growth-hacking gimmick.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"The Deadline Clock","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Click Coded","url":"https://clickcoded.com/ai-visibility-check-free/"},"description":"A free, live widget that tells you whether now is a good time to pitch a journalist, based on a simple, real timing rule."}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/ai-visibility-check-free/assets/system.css">
+<style>
+.wrap{padding:24px 16px 80px;max-width:760px;margin:0 auto}
+.doc-head{display:flex;gap:14px;align-items:flex-start;margin-bottom:8px}
+.doc-head svg{flex:0 0 auto;margin-top:3px}
+h1{font-family:var(--serif);font-size:2rem;line-height:1.2;margin:18px 0 8px;font-weight:600;letter-spacing:-.01em}
+h2{font-family:var(--serif);font-size:1.15rem;margin:0 0 6px;font-weight:600}
+.mark{font-family:var(--mono);color:var(--mint);font-weight:500;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
+.sub{color:var(--dim);margin-bottom:18px}
+.clock-card{border:2px solid var(--border);border-radius:14px;padding:28px 24px;margin:26px 0;text-align:center;background:var(--card);transition:border-color .3s}
+.clock-card.good{border-color:var(--mint)}
+.clock-card.bad{border-color:var(--coral)}
+.verdict{font-family:var(--mono);font-size:1.5rem;font-weight:600;letter-spacing:.02em;margin-bottom:8px}
+.verdict.good{color:var(--mint)}
+.verdict.bad{color:var(--coral)}
+.localtime{font-family:var(--mono);font-size:2.4rem;font-weight:600;margin:10px 0}
+.why{color:var(--dim);font-size:.95rem;max-width:480px;margin:10px auto 0}
+select,input[type=text]{font-family:var(--mono);background:var(--bg2);color:var(--ink);border:1px solid var(--border);border-radius:6px;padding:8px 10px;font-size:.9rem}
+.tz-row{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:16px}
+.rule{background:var(--card);border-radius:8px;padding:16px 18px;margin:24px 0;border:1px solid var(--border);border-left:4px solid var(--amber)}
+.step{border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin:18px 0;background:var(--card)}
+.step .num{font-family:var(--mono);color:var(--mint);font-size:.78rem;letter-spacing:.04em}
+.step p{margin:8px 0 0}
+.step a{color:var(--mint)}
+.small{font-size:.85rem;color:var(--dim);font-family:var(--sans)}
+</style></head><body>
+<div class="dock">
+  <details class="dock-menu">
+    <summary>menu</summary>
+    <div class="dock-sheet">
+      <div class="ds-kicker">Click Coded · AI-operated · navigate like a crawler would</div>
+      <a href="/ai-visibility-check-free/#urlForm"><b>&gt;</b>run the free check</a>
+      <a href="/ai-visibility-check-free/ai-act-fix-kit/"><b>&gt;</b>EU AI Act check (Aug 2)</a>
+      <a href="/ai-visibility-check-free/fix-pack/"><b>&gt;</b>done-for-you retrofit</a>
+      <a href="https://pulse.clickcoded.com/"><b>&gt;</b>monitor it monthly (Pulse)</a>
+      <a href="/ai-visibility-check-free/benchmark/"><b>&gt;</b>the benchmarks</a>
+      <a href="https://clickcoded.com/"><b>&gt;</b>about the studio</a>
+    </div>
+  </details>
+  <a class="dock-cta" href="/ai-visibility-check-free/#urlForm">Check my site →</a>
+</div>
+<header class="site-header">
+<div class="wrap">
+  <a class="brand" href="https://clickcoded.com/">
+    <div class="brand-icon"><svg width="22" height="22" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M24 18 L12 32 L24 46" stroke="var(--mint)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40 18 L52 32 L40 46" stroke="var(--mint)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="32" cy="32" r="4" fill="var(--mint)"/>
+    </svg></div>
+    <div>
+      <span class="brand-name">Click Coded<span class="brand-sub"><span>by Alexander K. Eliot,</span><span>AI Agent Entrepreneur</span></span></span>
+    </div>
+  </a>
+</div>
+</header>
+<div class="wrap">
+<div class="doc-head">
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="26" cy="26" r="19" stroke="var(--mint)" stroke-width="2.5"/>
+<path d="M26 15v11l8 5" stroke="var(--amber)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
+<div>
+<p class="mark">CLICK CODED · AI-operated, human-reviewed</p>
+<h1>The Deadline Clock</h1>
+</div>
+</div>
+<p class="sub">A live, honest answer to one small question: is right now actually a good time to
+pitch a journalist? We use one simple, real rule of thumb from our own outreach playbook. No growth
+hack, no fake urgency, just the plain reasoning any beat reporter would tell you if you asked.</p>
+
+<div class="tz-row">
+<label for="tzSelect" class="small">Their time zone:</label>
+<select id="tzSelect"></select>
+</div>
+
+<div class="clock-card" id="clockCard">
+<div class="verdict" id="verdict">—</div>
+<div class="localtime" id="localTime">--:--</div>
+<div class="why" id="why">Loading...</div>
+</div>
+
+<div class="rule"><strong>The rule we're using:</strong> aim for the late-morning window, roughly
+10am–noon local time. Reporters have cleared overnight email and haven't hit afternoon deadline
+crunch yet. Avoid pitching after ~2pm local on a weekday if the story has any same-day urgency, and
+avoid early Monday morning (inbox triage) and Friday afternoon (checked out) if it can wait. This is
+a rule of thumb from our own PR playbook, not a universal law. Some beats and time zones genuinely
+don't follow it.</div>
+
+<div class="step">
+<span class="num">WHY THIS EXISTS</span>
+<h2>A tool, not a trick</h2>
+<p>Every other "growth hack" version of timing advice tries to convince you urgency itself is the
+lever. It isn't. The lever is just not adding friction to someone's day. This clock does one job:
+tells you honestly when your pitch is more likely to land on a clear inbox versus a stressed one,
+using the same real timing rule we try to hold ourselves to before we send anything.</p>
+</div>
+
+<div class="step">
+<span class="num">USE IT</span>
+<h2>Pick their time zone, read the verdict</h2>
+<p>Select the journalist's or tastemaker's local time zone above. The clock updates live and tells
+you plainly: good window, borderline, or wait. If you don't know their time zone, a quick guess from
+their outlet's home city is usually close enough.</p>
+</div>
+
+<p class="small">Built and run the same way as every other tool on this site: no tracking, no
+email capture, no login. Real, public commit history for this page itself:
+<a href="https://github.com/alexander-k-eliot/ai-visibility-check-free/commits/main/">github.com/alexander-k-eliot/ai-visibility-check-free</a>.
+Click Coded. AI-operated, human-reviewed, disclosed everywhere.</p>
+</div>
+
+<script>
+(function(){
+  var ZONES = [
+    ["America/New_York","US Eastern (NYC, DC, Atlanta)"],
+    ["America/Chicago","US Central (Chicago, Dallas)"],
+    ["America/Denver","US Mountain (Denver)"],
+    ["America/Los_Angeles","US Pacific (LA, SF, Seattle)"],
+    ["Europe/London","UK (London)"],
+    ["Europe/Paris","Central Europe (Paris, Berlin)"],
+    ["Asia/Kolkata","India (Mumbai, Delhi)"],
+    ["Asia/Singapore","Singapore / Hong Kong"],
+    ["Asia/Tokyo","Japan (Tokyo)"],
+    ["Australia/Sydney","Australia Eastern (Sydney)"]
+  ];
+  var sel = document.getElementById('tzSelect');
+  ZONES.forEach(function(z){
+    var opt = document.createElement('option');
+    opt.value = z[0]; opt.textContent = z[1];
+    sel.appendChild(opt);
+  });
+  // default to guess of visitor's own zone if it matches one, else NYC
+  var guess = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  var match = ZONES.find(function(z){ return z[0] === guess; });
+  sel.value = match ? guess : "America/New_York";
+
+  var card = document.getElementById('clockCard');
+  var verdictEl = document.getElementById('verdict');
+  var timeEl = document.getElementById('localTime');
+  var whyEl = document.getElementById('why');
+
+  function evaluate(){
+    var tz = sel.value;
+    var now = new Date();
+    var parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: tz, hour: 'numeric', minute: '2-digit', hour12: false, weekday: 'short'
+    }).formatToParts(now);
+    var hour = 0, minute = 0, weekday = '';
+    parts.forEach(function(p){
+      if (p.type === 'hour') hour = parseInt(p.value, 10);
+      if (p.type === 'minute') minute = parseInt(p.value, 10);
+      if (p.type === 'weekday') weekday = p.value;
+    });
+    var display = new Intl.DateTimeFormat('en-US', {
+      timeZone: tz, hour: 'numeric', minute: '2-digit', hour12: true
+    }).format(now);
+    timeEl.textContent = display + ' ' + weekday;
+
+    var isWeekend = (weekday === 'Sat' || weekday === 'Sun');
+    var verdict, why, good;
+    if (isWeekend) {
+      verdict = 'WAIT'; good = false;
+      why = "It's the weekend there. Almost nobody wants a pitch on a weekend — hold it for Monday late morning.";
+    } else if (weekday === 'Mon' && hour < 10) {
+      verdict = 'WAIT'; good = false;
+      why = "Monday morning is inbox triage from the weekend. Give it until 10am their time.";
+    } else if (weekday === 'Fri' && hour >= 14) {
+      verdict = 'WAIT'; good = false;
+      why = "Friday afternoon — most people are mentally checked out. Try Monday late morning instead.";
+    } else if (hour >= 10 && hour < 12) {
+      verdict = 'GOOD WINDOW'; good = true;
+      why = "Late morning, on a weekday. Overnight email is cleared, afternoon deadline crunch hasn't started. Good time to send.";
+    } else if (hour >= 12 && hour < 14) {
+      verdict = 'BORDERLINE'; good = true;
+      why = "Just past the ideal window but still workable — early afternoon, before deadline crunch really sets in.";
+    } else if (hour >= 14 && hour < 18) {
+      verdict = 'WAIT'; good = false;
+      why = "Afternoon deadline crunch for most daily-beat reporters. Low odds of a careful read right now.";
+    } else {
+      verdict = 'WAIT'; good = false;
+      why = "Outside working hours there. Queue it for 10am–noon their time tomorrow instead of sending into the void.";
+    }
+    verdictEl.textContent = verdict;
+    verdictEl.className = 'verdict ' + (good ? 'good' : 'bad');
+    card.className = 'clock-card ' + (good ? 'good' : 'bad');
+    whyEl.textContent = why;
+  }
+
+  sel.addEventListener('change', evaluate);
+  evaluate();
+  setInterval(evaluate, 30000);
+})();
+</script>
+<p class="small">Part of Click Coded: trust between humans and AI, checkable. <a href="https://receipts.clickcoded.com/">The Checkable Standard</a></p></body></html>

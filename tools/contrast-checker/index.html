@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/ai-visibility-check-free/assets/favicon.svg" type="image/svg+xml">
+<title>Contrast Checker: real WCAG 2.2 contrast ratios, instantly</title>
+<link rel="canonical" href="https://clickcoded.com/tools/contrast-checker/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contrast Checker — real WCAG 2.2 contrast ratios, instantly">
+<meta property="og:description" content="Free WCAG 2.2 color contrast checker. Enter a text color and background color, get the real contrast ratio and pass/fail against AA and AAA, normal and large text. No signup.">
+<meta property="og:image" content="https://clickcoded.com/ai-visibility-check-free/assets/og-cards/contrast-checker.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contrast Checker — real WCAG 2.2 contrast ratios, instantly">
+<meta name="twitter:description" content="Free WCAG 2.2 color contrast checker. Enter a text color and background color, get the real contrast ratio and pass/fail against AA and AAA, normal and large text. No signup.">
+<meta name="twitter:image" content="https://clickcoded.com/ai-visibility-check-free/assets/og-cards/contrast-checker.png">
+<meta name="description" content="Free WCAG 2.2 color contrast checker. Enter a text color and background color, get the real contrast ratio and pass/fail against AA and AAA, normal and large text. No signup.">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"WCAG Contrast Checker","applicationCategory":"BusinessApplication","operatingSystem":"Web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Calculates the real WCAG 2.2 contrast ratio between two colors and checks it against the AA and AAA thresholds for normal and large text."},{"@type":"Organization","name":"Click Coded","url":"https://clickcoded.com/","email":"run@clickcoded.com","description":"AI-operated, human-reviewed studio. Honest tools, no fake guarantees.","sameAs":["https://github.com/alexander-k-eliot","https://x.com/alexanderKeliot","https://www.youtube.com/@clickcoded","https://www.instagram.com/alexander.k.eliot/","https://www.reddit.com/user/alexander-k-eliot/","https://www.etsy.com/shop/AlexanderKonigEliot","https://www.fiverr.com/alexanderkeliot","https://clickcoded.gumroad.com"],"alternateName":"Alexander K. Eliot","disambiguatingDescription":"A one-person, AI-operated studio founded in 2026 by Alexander K. Eliot, publishing AI-visibility audits, benchmarks and free tools at clickcoded.com."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What contrast ratio does WCAG require?","acceptedAnswer":{"@type":"Answer","text":"WCAG 2.2 level AA requires a 4.5:1 contrast ratio for normal text and 3:1 for large text (18pt+, or 14pt+ bold) and UI components. Level AAA requires 7:1 for normal text and 4.5:1 for large text."}},{"@type":"Question","name":"Does passing this checker make my site WCAG compliant?","acceptedAnswer":{"@type":"Answer","text":"No. Contrast is one success criterion among many. No single check, and no automated tool alone, can promise full compliance — this checker measures one real thing accurately, nothing more."}}]}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/ai-visibility-check-free/assets/system.css">
+<style>
+.doc-head{display:flex;gap:14px;align-items:flex-start}.doc-head svg{flex:0 0 auto;margin-top:3px}
+.scorewrap{position:relative;width:150px;height:150px;margin:0 auto 4px}
+.ring{position:absolute;top:0;left:0;width:100%;height:100%}
+.scoretext{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+
+
+
+.wrap{max-width:640px;margin:0 auto}
+h1{font-size:1.9rem;line-height:1.2;margin:20px 0 6px}
+h2{font-size:1.2rem;margin:28px 0 8px}
+.mark{color:var(--mint);font-weight:bold}
+.sub{color:var(--dim);margin-bottom:20px}
+label{display:block;margin:14px 0 4px;font-size:.95rem;color:var(--dim)}
+input[type=text]{width:100%;padding:11px;border:1px solid #1d5c6b;border-radius:6px;background:#052b32;color:var(--ink);font:inherit}
+input[type=color]{width:100%;height:44px;padding:2px;border:1px solid #1d5c6b;border-radius:6px;background:#052b32}
+.card{background:var(--card);border-radius:8px;padding:20px;margin:22px 0}
+.big{font-size:2.6rem;font-weight:bold;color:var(--mint)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.badge{padding:6px 12px;border-radius:20px;font-size:.85rem;font-weight:bold}
+.pass{background:var(--mint);color:#052b32}
+.fail{background:var(--coral);color:#052b32}
+.preview{border-radius:8px;padding:28px 20px;margin:16px 0}
+.preview .lg{font-size:1.6rem;font-weight:bold;margin-bottom:8px}
+.preview .sm{font-size:1rem}
+a{color:var(--mint)}
+.cta{background:var(--card2);border-left:4px solid var(--mint);padding:14px 16px;border-radius:6px;margin:24px 0}
+.small{font-size:.85rem;color:var(--dim)}
+.wrap{padding:24px 16px 80px}
+h1,h2{font-family:var(--serif)}
+.mark{font-family:var(--mono)}
+.small{font-family:var(--sans)}
+</style>
+</head>
+<body>
+<div class="dock">
+  <details class="dock-menu">
+    <summary>menu</summary>
+    <div class="dock-sheet">
+      <div class="ds-kicker">Click Coded · AI-operated · navigate like a crawler would</div>
+      <a href="/ai-visibility-check-free/#urlForm"><b>&gt;</b>run the free check</a>
+      <a href="/ai-visibility-check-free/ai-act-fix-kit/"><b>&gt;</b>EU AI Act check (Aug 2)</a>
+      <a href="/ai-visibility-check-free/fix-pack/"><b>&gt;</b>done-for-you retrofit</a>
+      <a href="https://pulse.clickcoded.com/"><b>&gt;</b>monitor it monthly (Pulse)</a>
+      <a href="/ai-visibility-check-free/benchmark/"><b>&gt;</b>the benchmarks</a>
+      <a href="https://clickcoded.com/"><b>&gt;</b>about the studio</a>
+    </div>
+  </details>
+  <a class="dock-cta" href="/ai-visibility-check-free/#urlForm">Check my site →</a>
+</div>
+<header class="site-header">
+<div class="wrap">
+  <a class="brand" href="https://clickcoded.com/">
+    <div class="brand-icon"><svg width="22" height="22" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M24 18 L12 32 L24 46" stroke="var(--mint)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40 18 L52 32 L40 46" stroke="var(--mint)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="32" cy="32" r="4" fill="var(--mint)"/>
+    </svg></div>
+    <div>
+      <span class="brand-name">Click Coded<span class="brand-sub"><span>by Alexander K. Eliot,</span><span>AI Agent Entrepreneur</span></span></span>
+    </div>
+  </a>
+</div>
+</header>
+<div class="wrap">
+<div class="doc-head">
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="26" cy="26" r="21" stroke="var(--mint)" stroke-width="2.5"/>
+<path d="M26 5a21 21 0 0 1 0 42Z" fill="var(--ink)"/>
+<path d="M26 5a21 21 0 0 0 0 42Z" fill="var(--coral)"/>
+</svg>
+<div>
+<p class="mark">CLICK CODED</p>
+<h1>Does your color pass WCAG?</h1>
+</div>
+</div>
+<p class="sub">Enter a text color and a background color. Get the contrast ratio and an honest pass/fail against every WCAG 2.2 threshold. Free, no signup, nothing stored.</p>
+
+<div class="grid">
+  <div>
+    <label for="fgHex">Text color</label>
+    <input id="fgHex" type="text" value="#eef6f4" maxlength="7">
+    <input id="fgPick" type="color" value="#eef6f4">
+  </div>
+  <div>
+    <label for="bgHex">Background color</label>
+    <input id="bgHex" type="text" value="#063740" maxlength="7">
+    <input id="bgPick" type="color" value="#063740">
+  </div>
+</div>
+
+<div class="card">
+  <div class="scorewrap">
+    <svg class="ring" width="150" height="150" viewBox="0 0 150 150">
+      <circle cx="75" cy="75" r="65" fill="none" stroke="#0c3f49" stroke-width="12"/>
+      <circle id="ratioRing" cx="75" cy="75" r="65" fill="none" stroke="var(--coral)" stroke-width="12" stroke-linecap="round" transform="rotate(-90 75 75)" stroke-dasharray="0 408.4"/>
+    </svg>
+    <div class="scoretext"><span class="big" id="ratio" style="font-size:1.7rem">1.00:1</span></div>
+  </div>
+  <div class="sub" style="text-align:center">contrast ratio · WCAG scale, max 21:1</div>
+  <div class="badges" id="badges"></div>
+</div>
+
+<div class="preview" id="preview">
+  <div class="lg">Large text sample (18pt+)</div>
+  <div class="sm">Normal text sample, the size most body copy actually is on a live page.</div>
+</div>
+
+<div class="cta">
+<strong>Contrast is one check out of many.</strong>
+<p>This tool measures one thing accurately: the math WCAG 2.2 actually uses. It does not check keyboard navigation, alt text, landmarks, or anything else, and no tool that claims to fully certify compliance from a single check is being straight with you. The <a href="https://clickcoded.gumroad.com/l/accessibility-playbook">Accessibility Playbook</a> ($29) covers the real method end to end, including the manual checks automated tools miss. Want it done for you? Email <a href="mailto:run@clickcoded.com?subject=%2425%20AI-visibility%20audit%20request">run@clickcoded.com</a> for a $25 human-reviewed audit with a written fix list. Curious how real sites score on the fuller check? Read <a href="https://clickcoded.com/ai-visibility-check-free/accessibility-benchmark/">The State of Web Accessibility 2026</a>. A real axe-core scan of 10 major US retailers.</p>
+<p class="small">Checking accessibility? Worth checking AI visibility too. <a href="https://clickcoded.gumroad.com/l/ai-visibility-checklist">Free AI Visibility Checklist</a>, pay what you want, including nothing.</p>
+</div>
+
+<p class="small">More free tools from Click Coded: <a href="../">AI visibility checker</a> · <a href="../robots-txt-generator/">robots.txt generator</a> · <a href="../llms-txt-generator/">llms.txt generator</a> · <a href="../schema-generator/">schema generator</a> · <a href="../faq-schema-generator/">FAQ schema generator</a> · <a href="../fee-calculator/">reseller fee calculator</a> · <a href="../writing-tells-scanner/">writing tells scanner</a>.</p>
+
+<h2>The real WCAG 2.2 thresholds</h2>
+<ul class="small" style="margin-left:18px">
+<li><strong>AA normal text:</strong> 4.5:1 minimum.</li>
+<li><strong>AA large text (18pt+, or 14pt+ bold) and UI components:</strong> 3:1 minimum.</li>
+<li><strong>AAA normal text:</strong> 7:1 minimum.</li>
+<li><strong>AAA large text:</strong> 4.5:1 minimum.</li>
+</ul>
+<p class="small">Ratio computed with the real WCAG relative-luminance formula (sRGB-linearized, same math every real contrast tool uses), not an approximation. Built by Click Coded, AI-operated and human-reviewed. Contact: run@clickcoded.com</p>
+</div>
+
+<div class="cta"><strong>Want to hear when we ship something new?</strong><p>We add new free tools and benchmarks periodically. <a href="https://clickcoded.gumroad.com/subscribe">Get an email when we do</a>, no spam, unsubscribe anytime.</p></div>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+
+  function hexToRgb(hex){
+    hex = hex.trim().replace(/^#/,'');
+    if(hex.length===3) hex = hex.split('').map(c=>c+c).join('');
+    if(!/^[0-9a-fA-F]{6}$/.test(hex)) return null;
+    const n = parseInt(hex,16);
+    return {r:(n>>16)&255, g:(n>>8)&255, b:n&255};
+  }
+
+  function relLuminance({r,g,b}){
+    const chan = v => {
+      const c = v/255;
+      return c <= 0.03928 ? c/12.92 : Math.pow((c+0.055)/1.055, 2.4);
+    };
+    const R=chan(r), G=chan(g), B=chan(b);
+    return 0.2126*R + 0.7152*G + 0.0722*B;
+  }
+
+  function contrastRatio(hex1, hex2){
+    const c1=hexToRgb(hex1), c2=hexToRgb(hex2);
+    if(!c1||!c2) return null;
+    const L1=relLuminance(c1), L2=relLuminance(c2);
+    const lighter=Math.max(L1,L2), darker=Math.min(L1,L2);
+    return (lighter+0.05)/(darker+0.05);
+  }
+
+  function badge(label, pass){
+    return '<span class="badge '+(pass?'pass':'fail')+'">'+(pass?'PASS':'FAIL')+' '+label+'</span>';
+  }
+
+  function calc(){
+    const fg = $('fgHex').value, bg = $('bgHex').value;
+    const ratio = contrastRatio(fg, bg);
+    if(ratio===null){
+      $('ratio').textContent = 'enter valid hex colors';
+      $('badges').innerHTML='';
+      return;
+    }
+    $('ratio').textContent = ratio.toFixed(2)+':1';
+    $('ratio').style.color = ratio>=4.5 ? 'var(--mint)' : (ratio>=3 ? 'var(--amber)' : 'var(--coral)');
+    const pct=Math.min(1, ratio/21);
+    $('ratioRing').setAttribute('stroke-dasharray',(pct*408.4)+' 408.4');
+    $('ratioRing').style.stroke = ratio>=4.5 ? 'var(--mint)' : (ratio>=3 ? 'var(--amber)' : 'var(--coral)');
+    $('badges').innerHTML =
+      badge('AA normal (4.5:1)', ratio>=4.5) +
+      badge('AA large (3:1)', ratio>=3) +
+      badge('AAA normal (7:1)', ratio>=7) +
+      badge('AAA large (4.5:1)', ratio>=4.5);
+    $('preview').style.color = fg;
+    $('preview').style.background = bg;
+    if(hexToRgb(fg)) $('fgPick').value = '#'+fg.replace('#','').padStart(6,'0');
+    if(hexToRgb(bg)) $('bgPick').value = '#'+bg.replace('#','').padStart(6,'0');
+  }
+
+  $('fgPick').addEventListener('input', e=>{ $('fgHex').value = e.target.value; calc(); });
+  $('bgPick').addEventListener('input', e=>{ $('bgHex').value = e.target.value; calc(); });
+  $('fgHex').addEventListener('input', calc);
+  $('bgHex').addEventListener('input', calc);
+  calc();
+})();
+</script>
+<p class="small">Part of Click Coded: trust between humans and AI, checkable. <a href="https://receipts.clickcoded.com/">The Checkable Standard</a></p>
+</body>
+</html>

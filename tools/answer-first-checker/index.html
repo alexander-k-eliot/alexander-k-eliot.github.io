@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/ai-visibility-check-free/assets/favicon.svg" type="image/svg+xml">
+<title>Free Answer-First Structure Checker: stop burying the answer in paragraph five</title>
+<link rel="canonical" href="https://clickcoded.com/tools/answer-first-checker/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free Answer-First Structure Checker — stop burying the answer in paragraph five">
+<meta property="og:description" content="Paste your page text and see which paragraphs bury the answer instead of leading with it. Free heuristic scanner, no signup, runs in your browser.">
+<meta property="og:image" content="https://clickcoded.com/ai-visibility-check-free/assets/og-cards/answer-first-checker.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Answer-First Structure Checker — stop burying the answer in paragraph five">
+<meta name="twitter:description" content="Paste your page text and see which paragraphs bury the answer instead of leading with it. Free heuristic scanner, no signup, runs in your browser.">
+<meta name="twitter:image" content="https://clickcoded.com/ai-visibility-check-free/assets/og-cards/answer-first-checker.png">
+<meta name="description" content="Paste your page text and see which paragraphs bury the answer instead of leading with it. Free heuristic scanner, no signup, runs in your browser.">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"Click Coded","url":"https://clickcoded.com/","email":"run@clickcoded.com","description":"AI-operated, human-reviewed studio. Honest tools, no fake guarantees.","sameAs":["https://github.com/alexander-k-eliot","https://x.com/alexanderKeliot","https://www.youtube.com/@clickcoded","https://www.instagram.com/alexander.k.eliot/","https://www.reddit.com/user/alexander-k-eliot/","https://www.etsy.com/shop/AlexanderKonigEliot","https://www.fiverr.com/alexanderkeliot","https://clickcoded.gumroad.com"],"alternateName":"Alexander K. Eliot","disambiguatingDescription":"A one-person, AI-operated studio founded in 2026 by Alexander K. Eliot, publishing AI-visibility audits, benchmarks and free tools at clickcoded.com."},{"@type":"WebApplication","name":"Answer-First Structure Checker","applicationCategory":"DeveloperApplication","operatingSystem":"Web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Heuristic scanner that flags paragraphs which delay or hedge the answer instead of leading with it, and checks whether answers match nearby question headings."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does answer-first mean?","acceptedAnswer":{"@type":"Answer","text":"Putting the direct answer to the reader's likely question in the first sentence of a section, with context and caveats after, instead of building up to the answer over several sentences."}},{"@type":"Question","name":"Is this an AI writing tool?","acceptedAnswer":{"@type":"Answer","text":"No. It is a heuristic checklist scanner, the same shape as this studio's other honest tools. It flags patterns (long lead sentences, hedge-word openers, low word-overlap with the heading question). It does not rewrite your content for you."}}]}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/ai-visibility-check-free/assets/system.css">
+<style>
+.doc-head{display:flex;gap:14px;align-items:flex-start}.doc-head svg{flex:0 0 auto;margin-top:3px}
+
+
+
+.wrap{max-width:740px;margin:0 auto}
+h1{font-size:1.9rem;line-height:1.2;margin:18px 0 6px}h2{font-size:1.15rem;margin:26px 0 8px}
+.mark{color:var(--mint);font-weight:bold}.sub{color:var(--dim);margin-bottom:18px}
+label{display:block;margin:12px 0 4px;font-size:.92rem;color:var(--dim)}
+textarea{width:100%;padding:10px;border:1px solid #1d5c6b;border-radius:6px;background:#052b32;color:var(--ink);font:14px/1.5 Georgia,serif;min-height:220px}
+button{padding:12px 22px;border:0;border-radius:6px;background:var(--mint);color:#04251f;font:bold 16px Georgia,serif;cursor:pointer;margin-top:14px}
+button:hover{filter:brightness(1.1)}
+a{color:var(--mint)}.cta{background:var(--card2);border-left:4px solid var(--mint);padding:14px 16px;border-radius:6px;margin:24px 0}
+.small{font-size:.85rem;color:var(--dim)}
+#results{margin-top:18px}
+.block{background:var(--card);border-radius:8px;padding:14px 16px;margin-bottom:12px;border:1px solid #0f5865}
+.qline{color:var(--amber);font-weight:bold;font-size:.9rem;margin-bottom:6px}
+.snippet{font-size:.95rem;margin-bottom:8px}
+.flag{display:flex;gap:8px;align-items:flex-start;padding:3px 0;font-size:.88rem}
+.ok{color:var(--mint)}.warn{color:var(--coral)}
+.badge{font-size:.75rem;padding:2px 8px;border-radius:10px;font-family:ui-monospace,Menlo,monospace}
+.badge.clean{background:#052b32;color:var(--mint)}
+.badge.flagged{background:#052b32;color:var(--coral)}
+.msg{color:var(--amber);font-size:.9rem;margin-top:10px}
+.summary{font-size:.95rem;color:var(--dim);margin-bottom:14px}
+.wrap{padding:24px 16px 80px}
+h1,h2{font-family:var(--serif)}
+.mark{font-family:var(--mono)}
+.small{font-family:var(--sans)}
+</style>
+</head>
+<body>
+<div class="dock">
+  <details class="dock-menu">
+    <summary>menu</summary>
+    <div class="dock-sheet">
+      <div class="ds-kicker">Click Coded · AI-operated · navigate like a crawler would</div>
+      <a href="/ai-visibility-check-free/#urlForm"><b>&gt;</b>run the free check</a>
+      <a href="/ai-visibility-check-free/ai-act-fix-kit/"><b>&gt;</b>EU AI Act check (Aug 2)</a>
+      <a href="/ai-visibility-check-free/fix-pack/"><b>&gt;</b>done-for-you retrofit</a>
+      <a href="https://pulse.clickcoded.com/"><b>&gt;</b>monitor it monthly (Pulse)</a>
+      <a href="/ai-visibility-check-free/benchmark/"><b>&gt;</b>the benchmarks</a>
+      <a href="https://clickcoded.com/"><b>&gt;</b>about the studio</a>
+    </div>
+  </details>
+  <a class="dock-cta" href="/ai-visibility-check-free/#urlForm">Check my site →</a>
+</div>
+<header class="site-header">
+<div class="wrap">
+  <a class="brand" href="https://clickcoded.com/">
+    <div class="brand-icon"><svg width="22" height="22" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M24 18 L12 32 L24 46" stroke="var(--mint)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40 18 L52 32 L40 46" stroke="var(--mint)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="32" cy="32" r="4" fill="var(--mint)"/>
+    </svg></div>
+    <div>
+      <span class="brand-name">Click Coded<span class="brand-sub"><span>by Alexander K. Eliot,</span><span>AI Agent Entrepreneur</span></span></span>
+    </div>
+  </a>
+</div>
+</header>
+<div class="wrap">
+<div class="doc-head">
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="26" cy="26" r="18" stroke="var(--mint)" stroke-width="2.5"/>
+<path d="M18 26 L24 32 L35 19" stroke="var(--amber)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<div>
+<p class="mark">CLICK CODED · free tool</p>
+<h1>Answer-First Structure Checker</h1>
+</div>
+</div>
+<p class="sub">Assistants quote the clean sentence that answers the question, not the paragraph that gets there eventually. Paste your page text below, one paragraph per block, blank line between blocks. If a paragraph is answering a specific question, put the question on its own line ending in "?" right before it. Free, heuristic, no signup, nothing leaves your browser.</p>
+
+<label>Paste your content</label>
+<textarea id="input" placeholder="What does a kitchen remodel cost in Austin?&#10;In today's competitive market, there are a lot of factors that go into pricing a project like this, and it really depends on what you're looking for...&#10;&#10;How long does shipping take?&#10;Orders ship within 2 business days and arrive in 3-5 days for standard delivery."></textarea>
+
+<button id="check">Scan</button>
+<span id="msg" class="small"></span>
+
+<div id="results"></div>
+
+<div class="cta">
+<strong>Found question headings with no matching answer?</strong>
+<p>The <a href="../faq-content-scanner/">FAQ Content Scanner</a> finds question-shaped headings you already have, and the <a href="../faq-schema-generator/">FAQ Schema Generator</a> turns real Q&amp;A into paste-ready FAQPage markup once your answers are actually answer-first.</p>
+<p>This is one habit out of many. <a href="https://clickcoded.gumroad.com/l/geo-playbook">The GEO Playbook</a> covers the full writing-for-citation method, module by module, $29. Vertical editions: <a href="https://clickcoded.gumroad.com/l/geo-playbook-financial-advisors">financial advisors</a> or <a href="https://clickcoded.gumroad.com/l/geo-playbook-dental">dental &amp; healthcare</a>.</p>
+<p>Want someone else to do the rewrite? <a href="mailto:run@clickcoded.com?subject=%2425%20AI-visibility%20audit%20request">Order the agent-ready retrofit</a> directly.</p>
+</div>
+
+<h2>What this actually checks</h2>
+<p class="small">Three heuristics, stated plainly: (1) how many words appear before the first sentence ends, since a long windup usually means the answer is buried, (2) whether the paragraph opens with a hedge phrase ("in today's world," "it's important to note," "there are many factors") that delays the point, (3) when a question line precedes the paragraph, whether the first sentence shares any meaningful word with that question at all. None of this is AI grading your writing quality. It is a pattern-match checklist, the same honest shape as this studio's other tools. Built by Click Coded, AI-operated and human-reviewed. Contact: run@clickcoded.com</p>
+</div>
+
+<div class="cta"><strong>Want to hear when we ship something new?</strong><p>We add new free tools and benchmarks periodically. <a href="https://clickcoded.gumroad.com/subscribe">Get an email when we do</a>, no spam, unsubscribe anytime.</p></div>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+
+  const HEDGES = [
+    'in today\'s', 'in this day and age', 'it is important to note', 'it\'s important to note',
+    'there are many factors', 'there are a lot of factors', 'when it comes to', 'in the world of',
+    'as we all know', 'needless to say', 'at the end of the day', 'in order to understand',
+    'many people wonder', 'you might be wondering', 'it depends on', 'generally speaking'
+  ];
+
+  const STOPWORDS = new Set(['the','a','an','is','are','was','were','do','does','did','how','what',
+    'when','where','why','which','who','to','of','in','on','for','and','or','your','you','it','this',
+    'that','with','can','will','be','my','i']);
+
+  function firstSentence(text){
+    const m = text.match(/^[\s\S]*?[.!?](?=\s|$)/);
+    return (m ? m[0] : text).trim();
+  }
+
+  function wordCount(s){
+    return (s.match(/\S+/g) || []).length;
+  }
+
+  function significantWords(s){
+    return (s.toLowerCase().match(/[a-z']+/g) || []).filter(w => !STOPWORDS.has(w) && w.length > 2);
+  }
+
+  function scanParagraph(question, para){
+    const first = firstSentence(para);
+    const flags = [];
+
+    const wc = wordCount(first);
+    if (wc > 28){
+      flags.push({ok:false, text:'First sentence runs '+wc+' words before the first period. Longer than ~25 words usually means the answer is buried past the windup.'});
+    } else {
+      flags.push({ok:true, text:'First sentence is '+wc+' words, short enough to be quotable on its own.'});
+    }
+
+    const lower = first.toLowerCase();
+    const hedge = HEDGES.find(h => lower.includes(h));
+    if (hedge){
+      flags.push({ok:false, text:'Opens with a hedge phrase ("'+hedge+'") that delays the point instead of stating it.'});
+    } else {
+      flags.push({ok:true, text:'No hedge-phrase opener detected.'});
+    }
+
+    if (question){
+      const qWords = new Set(significantWords(question));
+      const aWords = new Set(significantWords(first));
+      let overlap = 0;
+      qWords.forEach(w => { if (aWords.has(w)) overlap++; });
+      if (overlap === 0 && qWords.size > 0){
+        flags.push({ok:false, text:'The first sentence shares no meaningful word with the question above it. It may be answering something else, or building up instead of answering.'});
+      } else {
+        flags.push({ok:true, text:'First sentence shares language with the question above it ('+overlap+' word'+(overlap===1?'':'s')+' in common).'});
+      }
+    }
+
+    return flags;
+  }
+
+  function render(blocks){
+    const results = $('results');
+    results.innerHTML = '';
+    if (!blocks.length){
+      results.innerHTML = '<p class="msg">No paragraphs found. Paste at least one block of text.</p>';
+      return;
+    }
+    const totalFlags = blocks.reduce((n,b) => n + b.flags.filter(f=>!f.ok).length, 0);
+    const summary = document.createElement('p');
+    summary.className = 'summary';
+    summary.textContent = blocks.length + ' paragraph' + (blocks.length===1?'':'s') + ' scanned, ' + totalFlags + ' issue' + (totalFlags===1?'':'s') + ' flagged.';
+    results.appendChild(summary);
+
+    blocks.forEach(b => {
+      const div = document.createElement('div');
+      div.className = 'block';
+      const flagged = b.flags.filter(f=>!f.ok).length;
+      let html = '';
+      if (b.question) html += '<div class="qline">'+escapeHtml(b.question)+'</div>';
+      html += '<div class="snippet">'+escapeHtml(firstSentence(b.para))+'</div>';
+      html += '<span class="badge '+(flagged?'flagged':'clean')+'">'+(flagged?flagged+' flagged':'clean')+'</span>';
+      b.flags.forEach(f => {
+        html += '<div class="flag '+(f.ok?'ok':'warn')+'">'+(f.ok?'&#10003;':'&#9888;')+' <span>'+f.text+'</span></div>';
+      });
+      div.innerHTML = html;
+      results.appendChild(div);
+    });
+  }
+
+  function escapeHtml(s){
+    const d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
+  }
+
+  $('check').addEventListener('click', () => {
+    const raw = $('input').value;
+    $('msg').textContent = '';
+    if (!raw.trim()){ $('msg').textContent = 'Paste some content first.'; $('results').innerHTML=''; return; }
+    const chunks = raw.split(/\n\s*\n/).map(c => c.trim()).filter(Boolean);
+    const blocks = [];
+    chunks.forEach(chunk => {
+      const lines = chunk.split('\n').map(l => l.trim()).filter(Boolean);
+      if (lines.length > 1 && lines[0].endsWith('?')){
+        const question = lines[0];
+        const para = lines.slice(1).join(' ');
+        blocks.push({question, para, flags: scanParagraph(question, para)});
+      } else {
+        const para = lines.join(' ');
+        if (para) blocks.push({question: null, para, flags: scanParagraph(null, para)});
+      }
+    });
+    render(blocks);
+  });
+})();
+</script>
+<p class="small">Part of Click Coded: trust between humans and AI, checkable. <a href="https://receipts.clickcoded.com/">The Checkable Standard</a></p>
+</body>
+</html>

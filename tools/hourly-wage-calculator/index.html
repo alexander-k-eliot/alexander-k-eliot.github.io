@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/ai-visibility-check-free/assets/favicon.svg" type="image/svg+xml">
+<title>True Hourly Wage Calculator: what reselling actually pays per hour</title>
+<link rel="canonical" href="https://clickcoded.com/tools/hourly-wage-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="True Hourly Wage Calculator — what reselling actually pays per hour">
+<meta property="og:description" content="Free calculator: enter a sale's price, fees, and the real time it took (sourcing, photos, listing, packing, messages) and see what you actually earned per hour. No signup.">
+<meta property="og:image" content="https://clickcoded.com/ai-visibility-check-free/assets/og-cards/hourly-wage-calculator.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="True Hourly Wage Calculator — what reselling actually pays per hour">
+<meta name="twitter:description" content="Free calculator: enter a sale's price, fees, and the real time it took (sourcing, photos, listing, packing, messages) and see what you actually earned per hour. No signup.">
+<meta name="twitter:image" content="https://clickcoded.com/ai-visibility-check-free/assets/og-cards/hourly-wage-calculator.png">
+<meta name="description" content="Free calculator: enter a sale's price, fees, and the real time it took (sourcing, photos, listing, packing, messages) and see what you actually earned per hour. No signup.">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"True Hourly Wage Calculator","applicationCategory":"BusinessApplication","operatingSystem":"Web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Calculates a reseller's real hourly wage on a sale, combining marketplace fee math with the actual time spent sourcing, photographing, listing, packing, and messaging."},{"@type":"Organization","name":"Click Coded","url":"https://clickcoded.com/","email":"run@clickcoded.com","description":"AI-operated, human-reviewed studio. Honest spreadsheets and tools for resellers.","sameAs":["https://github.com/alexander-k-eliot","https://x.com/alexanderKeliot","https://www.youtube.com/@clickcoded","https://www.instagram.com/alexander.k.eliot/","https://www.reddit.com/user/alexander-k-eliot/","https://www.etsy.com/shop/AlexanderKonigEliot","https://www.fiverr.com/alexanderkeliot","https://clickcoded.gumroad.com"],"alternateName":"Alexander K. Eliot","disambiguatingDescription":"A one-person, AI-operated studio founded in 2026 by Alexander K. Eliot, publishing AI-visibility audits, benchmarks and free tools at clickcoded.com."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does my hourly wage matter more than my profit margin?","acceptedAnswer":{"@type":"Answer","text":"Margin tells you what percent of the sale you kept. It says nothing about how long the sale took to earn. A 60% margin sale that took 90 minutes of sourcing, photos, listing, packing and messages can pay less per hour than a 30% margin sale that took 10 minutes, which is the comparison that actually decides whether reselling beats an hourly job."}},{"@type":"Question","name":"What counts as time spent on a sale?","acceptedAnswer":{"@type":"Answer","text":"The time most resellers never count: sourcing/thrifting the item, cleaning and photographing it, writing and posting the listing, packing and shipping it, and answering buyer messages. Any of these left at zero undercounts your real time and overstates your real wage."}}]}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/ai-visibility-check-free/assets/system.css">
+<style>
+
+
+
+.wrap{max-width:640px;margin:0 auto}
+h1{font-size:1.9rem;line-height:1.2;margin:20px 0 6px}
+h2{font-size:1.2rem;margin:28px 0 8px}
+.mark{color:var(--mint);font-weight:bold}
+.sub{color:var(--dim);margin-bottom:20px}
+label{display:block;margin:14px 0 4px;font-size:.95rem;color:var(--dim)}
+select,input{width:100%;padding:11px;border:1px solid #1d5c6b;border-radius:6px;background:#052b32;color:var(--ink);font:inherit}
+.card{background:var(--card);border-radius:8px;padding:20px;margin:22px 0}
+.big{font-size:2.6rem;font-weight:bold;color:var(--mint)}
+.line{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #14545f}
+.line:last-child{border:0}
+.neg{color:var(--coral)}
+a{color:var(--mint)}
+.cta{background:var(--card2);border-left:4px solid var(--mint);padding:14px 16px;border-radius:6px;margin:24px 0}
+.small{font-size:.85rem;color:var(--dim)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid4{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+fieldset{border:1px solid #1d5c6b;border-radius:8px;padding:14px 14px 6px;margin:22px 0}
+legend{padding:0 6px;color:var(--dim);font-size:.9rem}
+.wrap{padding:24px 16px 80px}
+h1,h2{font-family:var(--serif)}
+.mark{font-family:var(--mono)}
+.small{font-family:var(--sans)}
+</style>
+</head>
+<body>
+<div class="dock">
+  <details class="dock-menu">
+    <summary>menu</summary>
+    <div class="dock-sheet">
+      <div class="ds-kicker">Click Coded · AI-operated · navigate like a crawler would</div>
+      <a href="/ai-visibility-check-free/#urlForm"><b>&gt;</b>run the free check</a>
+      <a href="/ai-visibility-check-free/ai-act-fix-kit/"><b>&gt;</b>EU AI Act check (Aug 2)</a>
+      <a href="/ai-visibility-check-free/fix-pack/"><b>&gt;</b>done-for-you retrofit</a>
+      <a href="https://pulse.clickcoded.com/"><b>&gt;</b>monitor it monthly (Pulse)</a>
+      <a href="/ai-visibility-check-free/benchmark/"><b>&gt;</b>the benchmarks</a>
+      <a href="https://clickcoded.com/"><b>&gt;</b>about the studio</a>
+    </div>
+  </details>
+  <a class="dock-cta" href="/ai-visibility-check-free/#urlForm">Check my site →</a>
+</div>
+<header class="site-header">
+<div class="wrap">
+  <a class="brand" href="https://clickcoded.com/">
+    <div class="brand-icon"><svg width="22" height="22" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M24 18 L12 32 L24 46" stroke="var(--mint)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40 18 L52 32 L40 46" stroke="var(--mint)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="32" cy="32" r="4" fill="var(--mint)"/>
+    </svg></div>
+    <div>
+      <span class="brand-name">Click Coded<span class="brand-sub"><span>by Alexander K. Eliot,</span><span>AI Agent Entrepreneur</span></span></span>
+    </div>
+  </a>
+</div>
+</header>
+<div class="wrap">
+<p class="mark">CLICK CODED</p>
+<h1>What did that sale actually pay, per hour?</h1>
+<p class="sub">Sale price minus fees is your profit. Profit divided by the time the sale actually took, sourcing, photos, listing, packing, messages, is your real wage. Most resellers only ever look at the first number. Free, no signup, nothing stored.</p>
+
+<fieldset>
+<legend>The sale</legend>
+  <label for="platform">Platform</label>
+  <select id="platform">
+    <option value="etsy">Etsy</option>
+    <option value="ebay">eBay</option>
+    <option value="poshmark" selected>Poshmark</option>
+    <option value="mercari">Mercari</option>
+    <option value="depop">Depop</option>
+  </select>
+  <div class="grid">
+    <div><label for="price">Sale price ($)</label><input id="price" type="number" value="42" min="0" step="0.01"></div>
+    <div><label for="ship">Shipping you charged ($)</label><input id="ship" type="number" value="0" min="0" step="0.01"></div>
+    <div><label for="shipcost">Your shipping cost ($)</label><input id="shipcost" type="number" value="0" min="0" step="0.01"></div>
+    <div><label for="cost">Item cost / COGS ($)</label><input id="cost" type="number" value="12" min="0" step="0.01"></div>
+  </div>
+</fieldset>
+
+<fieldset>
+<legend>The time it actually took (minutes)</legend>
+  <div class="grid4">
+    <div><label for="tsource">Sourcing / thrifting</label><input id="tsource" type="number" value="20" min="0" step="1"></div>
+    <div><label for="tphoto">Cleaning + photos</label><input id="tphoto" type="number" value="10" min="0" step="1"></div>
+    <div><label for="tlist">Writing + posting listing</label><input id="tlist" type="number" value="8" min="0" step="1"></div>
+    <div><label for="tpack">Packing + shipping trip</label><input id="tpack" type="number" value="12" min="0" step="1"></div>
+    <div><label for="tmsg">Buyer messages</label><input id="tmsg" type="number" value="5" min="0" step="1"></div>
+  </div>
+</fieldset>
+
+<div class="card">
+  <div class="big" id="wage">$0.00/hr</div>
+  <div class="sub" id="compare">your real hourly wage on this sale</div>
+  <div class="line"><span>Sale + shipping charged</span><span id="gross">$0.00</span></div>
+  <div class="line"><span id="feelabel">Platform fee</span><span class="neg" id="fee">$0.00</span></div>
+  <div class="line"><span>Your shipping cost</span><span class="neg" id="shipout">$0.00</span></div>
+  <div class="line"><span>Item cost</span><span class="neg" id="costout">$0.00</span></div>
+  <div class="line"><strong>Profit</strong><strong id="net">$0.00</strong></div>
+  <div class="line"><span>Total time on this sale</span><span id="mins">0 min</span></div>
+</div>
+
+<div class="cta">
+<strong>Doing this across dozens of sales a week?</strong>
+<p>This calculator does one sale at a time. The <a href="https://www.etsy.com/listing/4540171138">Reseller Profit Tracker spreadsheet</a> ($14.99) logs fees, profit, and time per item across all six platforms, so your real average hourly wage is one glance, not a guess. Want the strategy too? <a href="https://clickcoded.gumroad.com/l/reseller-profit-playbook">The Reseller Profit Playbook</a> ($29) covers break-even math and picking the right platform per item.</p>
+</div>
+
+<h2>Why this number, not just margin</h2>
+<p>A sale with a 60% margin that ate 90 minutes of sourcing, photos, listing, packing and messages can pay less per hour than a 30%-margin sale that took 10 minutes. Margin measures the sale. This measures your time. The number that actually decides whether reselling is beating an hourly job, or quietly not.</p>
+
+<h2>The 2026 US fee rates used here</h2>
+<ul class="small" style="margin-left:18px">
+<li><strong>Etsy:</strong> 6.5% transaction + 3% processing on price+shipping, + $0.25 processing + $0.20 listing.</li>
+<li><strong>eBay:</strong> ~13.25% final value fee on price+shipping + $0.30/order (most categories. Category rates vary).</li>
+<li><strong>Poshmark:</strong> flat $2.95 under $15, otherwise 20% of price (buyers pay shipping).</li>
+<li><strong>Mercari:</strong> 10% flat on price+shipping.</li>
+<li><strong>Depop (US):</strong> 0% selling fee + 3.3% + $0.45 payment processing.</li>
+</ul>
+<p class="small">Rates verified July 2026. Platforms change fees. Always verify in your seller account. This is a snapshot tool, not financial or tax advice. Also see the plain <a href="../fee-calculator/">Reseller Fee Calculator</a> (profit and margin only, no time input) and the <a href="../reseller-fee-guide/">full platform fee comparison</a>. Built by Click Coded, AI-operated and human-reviewed. Contact: run@clickcoded.com</p>
+</div>
+
+<div class="cta"><strong>Want to hear when we ship something new?</strong><p>We add new free tools and benchmarks periodically. <a href="https://clickcoded.gumroad.com/subscribe">Get an email when we do</a>, no spam, unsubscribe anytime.</p></div>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const usd=n=>(n<0?'-$':'$')+Math.abs(n).toFixed(2);
+  function fee(p, price, ship){
+    const base=price+ship;
+    if(p==='etsy')   return base*0.095 + 0.45;
+    if(p==='ebay')   return base*0.1325 + 0.30;
+    if(p==='mercari')return base*0.10;
+    if(p==='depop')  return base*0.033 + 0.45;
+    if(p==='poshmark') return price<15 ? 2.95 : price*0.20;
+    return 0;
+  }
+  function calc(){
+    const p=$('platform').value;
+    const price=+$('price').value||0, ship=+$('ship').value||0;
+    const shipcost=+$('shipcost').value||0, cost=+$('cost').value||0;
+    const f=fee(p,price,ship);
+    const gross=price+ship;
+    const net=gross-f-shipcost-cost;
+    const mins=['tsource','tphoto','tlist','tpack','tmsg'].reduce((s,id)=>s+(+$(id).value||0),0);
+    const hours=mins/60;
+    const wage=hours>0?net/hours:null;
+    $('gross').textContent=usd(gross);
+    $('fee').textContent='-'+usd(f);
+    $('shipout').textContent='-'+usd(shipcost);
+    $('costout').textContent='-'+usd(cost);
+    $('net').textContent=usd(net);
+    $('mins').textContent=mins+' min ('+hours.toFixed(2)+' hr)';
+    $('feelabel').textContent = p==='poshmark' && price<15 ? 'Platform fee (flat under $15)' : 'Platform fee';
+    if(wage===null){
+      $('wage').textContent='—';
+      $('compare').textContent='enter time spent to see your real hourly wage';
+    } else {
+      $('wage').textContent=usd(wage)+'/hr';
+      $('wage').style.color = wage>=15 ? 'var(--mint)' : (wage>=7.25 ? 'var(--amber)' : 'var(--coral)');
+      let note='your real hourly wage on this sale';
+      if(wage<7.25) note='below the US federal minimum wage ($7.25/hr)';
+      else if(wage<15) note='below a common $15/hr benchmark wage';
+      $('compare').textContent=note;
+    }
+  }
+  ['platform','price','ship','shipcost','cost','tsource','tphoto','tlist','tpack','tmsg'].forEach(id=>$(id).addEventListener('input',calc));
+  calc();
+})();
+</script>
+<p class="small">Part of Click Coded: trust between humans and AI, checkable. <a href="https://receipts.clickcoded.com/">The Checkable Standard</a></p>
+</body>
+</html>
