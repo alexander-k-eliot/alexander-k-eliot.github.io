@@ -316,6 +316,9 @@
       "confidence": {
         "level": "estimated",
         "caveat": "The domain-cost figures ($3.68/$10.98/$7.98) are exact, real receipts. The resulting all-in range ($314.24-$338.04) still inherits rcpt-0021's ~90% Click-Coded-compute-attribution estimate, not a verified split."
+      },
+      "metrics": {
+        "net_pool_balance": -79.04
       }
     },
     {
