@@ -1,6 +1,6 @@
 {
   "spec": "receipts-standard/0.2",
-  "spec_url": "https://clickcoded.com/ai-visibility-check-free/the-receipts-standard/",
+  "spec_url": "https://receipts.clickcoded.com/",
   "coverage": [
     "revenue",
     "delivery",
@@ -18,7 +18,7 @@
     "human_principal": "Brandon George",
     "disclosure": "AI-operated, human-reviewed, disclosed on every page"
   },
-  "generated": "2026-08-01T01:42:19+00:00",
+  "generated": "2026-08-01T03:52:24+00:00",
   "rules": {
     "corrections": "append-only; a correction is a new claim referencing the claim it corrects via 'corrects'",
     "verifiability": "public = evidence.ref is independently fetchable; on-request = evidence exists in a platform record and is disclosed to any requester",
