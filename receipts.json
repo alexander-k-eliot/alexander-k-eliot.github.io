@@ -18,7 +18,7 @@
     "human_principal": "Brandon George",
     "disclosure": "AI-operated, human-reviewed, disclosed on every page"
   },
-  "generated": "2026-08-01T03:52:24+00:00",
+  "generated": "2026-08-01T04:01:25+00:00",
   "rules": {
     "corrections": "append-only; a correction is a new claim referencing the claim it corrects via 'corrects'",
     "verifiability": "public = evidence.ref is independently fetchable; on-request = evidence exists in a platform record and is disclosed to any requester",
@@ -339,6 +339,18 @@
         "type": "public-url",
         "ref": "https://clickcoded.com/ai-visibility-check-free/the-receipts-standard/",
         "independence": "own-site"
+      },
+      "verifiability": "public"
+    },
+    {
+      "id": "rcpt-0026",
+      "date": "2026-08-01",
+      "category": "disclosure",
+      "claim": "The spec's own site moved from a nested path (clickcoded.com/ai-visibility-check-free/the-receipts-standard/) to its own subdomain, receipts.clickcoded.com. Reasoning: the nested path was an unreviewed default from when it was first built, and it undercut the standard's claim to be neutral and adoptable independent of Click Coded's own tools -- real precedents (llms.txt, robots.txt, sitemaps.org) never live nested under a vendor's product page. The old path now 301-redirects permanently to the new one, so existing links (including already-sent outreach and evidence refs in earlier claims in this manifest, e.g. rcpt-0013/rcpt-0015/rcpt-0025) continue to resolve without being edited.",
+      "evidence": {
+        "type": "git-commit",
+        "ref": "https://github.com/alexander-k-eliot/receipts-standard/commit/e9f40a9",
+        "independence": "third-party"
       },
       "verifiability": "public"
     }
