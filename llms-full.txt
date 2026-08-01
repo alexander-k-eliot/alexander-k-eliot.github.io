@@ -670,3 +670,13 @@ Click Coded's open standard for verifiable operations, published 2026-07-30, ren
 Source: https://receipts.clickcoded.com/generator/
 
 A free tool that builds a conforming `checkable.json` from a form. Fill in operator details and add claims; the JSON updates live and can be downloaded or copied. Runs entirely in the browser with no backend and no external requests, so nothing typed into it is uploaded anywhere. Each field carries inline guidance on the honesty rule behind it. Host the result at your site root (`/checkable.json`, a `/receipts.json` alias works too) or alongside your disclosure page, then archive a timestamped copy at web.archive.org/save for an external timestamp you do not control.
+
+Source: https://clickcoded.com/proof/can-ai-find-help/
+Source: https://clickcoded.com/proof/newsroom-ai-blocklist/
+Source: https://clickcoded.com/proof/mrbeast-proof/
+Source: https://clickcoded.com/proof/your-doctors-website-wont-talk-to-ai/
+Source: https://clickcoded.com/proof/2am-test/
+Source: https://clickcoded.com/proof/two-hour-source-desk/
+Source: https://clickcoded.com/correction-feed/
+Source: https://clickcoded.com/proof/real-bounce-rate/
+Source: https://clickcoded.com/proof/etiquette-audit/

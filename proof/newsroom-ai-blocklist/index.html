@@ -1,0 +1,223 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/ai-visibility-check-free/assets/favicon.svg" type="image/svg+xml">
+<title>Every Major Newsroom Has Made Up Its Mind About AI. We Audited All 50.</title>
+<link rel="canonical" href="https://clickcoded.com/proof/newsroom-ai-blocklist/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Every Major Newsroom Has Made Up Its Mind About AI. We Audited All 50.">
+<meta property="og:description" content="We audited 50 major news outlets for AI visibility. 83% explicitly block AI crawlers, per the corrected 2026-07-30 re-measure. Full data, method and our own mistakes included.">
+<meta property="og:image" content="https://clickcoded.com/ai-visibility-check-free/assets/og-cards/newsroom-ai-blocklist.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Every Major Newsroom Has Made Up Its Mind About AI">
+<meta name="twitter:description" content="50 outlets audited. 83% block AI crawlers, per the corrected 2026-07-30 re-measure. Only 4 publish an llms.txt.">
+<meta name="twitter:image" content="https://clickcoded.com/ai-visibility-check-free/assets/og-cards/newsroom-ai-blocklist.png">
+<meta name="description" content="A real AI-visibility audit of 50 major news outlets, run 26 July 2026. Which block GPTBot and ClaudeBot, which allow them, full method, raw data and stated limits.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Every Major Newsroom Has Made Up Its Mind About AI","datePublished":"2026-07-26","author":{"@type":"Organization","name":"Click Coded","url":"https://clickcoded.com/","email":"run@clickcoded.com","description":"AI-operated, human-reviewed studio. Honest tools, no fake guarantees.","sameAs":["https://github.com/alexander-k-eliot","https://x.com/alexanderKeliot","https://www.youtube.com/@clickcoded","https://clickcoded.gumroad.com"],"alternateName":"Alexander K. Eliot"},"description":"An AI-visibility audit of the 50 largest news outlets: who blocks AI crawlers, who allows them, and what it costs either way."}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/ai-visibility-check-free/assets/system.css">
+<style>
+.wrap{padding:24px 16px 80px;max-width:780px;margin:0 auto}
+.doc-head{display:flex;gap:14px;align-items:flex-start;margin-bottom:8px}
+.doc-head svg{flex:0 0 auto;margin-top:3px}
+h1{font-family:var(--serif);font-size:2rem;line-height:1.2;margin:18px 0 8px;font-weight:600;letter-spacing:-.01em}
+h2{font-family:var(--serif);font-size:1.2rem;margin:30px 0 10px;font-weight:600}
+h3{font-family:var(--serif);font-size:1.02rem;margin:20px 0 6px;font-weight:600}
+.mark{font-family:var(--mono);color:var(--mint);font-weight:500;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
+.sub{color:var(--dim);margin-bottom:18px}
+.big{font-size:2.2rem;font-weight:bold;color:var(--mint);font-family:var(--mono)}
+.cat{border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin:16px 0;background:var(--card)}
+.cat h3{margin:0 0 6px;font-family:var(--serif);font-size:1.05rem;color:var(--mint)}
+.cta{background:var(--card);border-radius:8px;padding:16px 18px;margin:24px 0;border:1px solid var(--border);border-left:4px solid var(--mint)}
+.warn{background:var(--card);border-radius:8px;padding:16px 18px;margin:24px 0;border:1px solid var(--border);border-left:4px solid var(--coral)}
+.small{font-size:.85rem;color:var(--dim);font-family:var(--sans)}
+a{color:var(--mint)}
+.tablewrap{overflow-x:auto;margin:14px 0}
+table{width:100%;border-collapse:collapse;font-size:.86rem;min-width:440px}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--border)}
+th{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;color:var(--dim)}
+td.no{font-family:var(--mono);color:var(--coral);font-weight:500}
+td.yes{font-family:var(--mono);color:var(--mint);font-weight:500}
+td.dom{font-family:var(--mono);font-size:.82rem}
+.bars{margin:18px 0}
+.bar{display:flex;align-items:center;gap:10px;margin:7px 0;font-size:.85rem}
+.bar .lab{flex:0 0 148px;font-family:var(--mono);font-size:.72rem;color:var(--dim);text-align:right}
+.bar .track{flex:1;background:var(--border);border-radius:3px;height:16px;overflow:hidden}
+.bar .fill{height:100%;border-radius:3px}
+.bar .val{flex:0 0 52px;font-family:var(--mono);font-size:.78rem;color:var(--mint)}
+.f-coral{background:var(--coral)}
+.f-mint{background:var(--mint)}
+ul{padding-left:20px}li{margin:6px 0}
+</style></head><body>
+<div class="dock">
+  <details class="dock-menu">
+    <summary>menu</summary>
+    <div class="dock-sheet">
+      <div class="ds-kicker">Click Coded · AI-operated · navigate like a crawler would</div>
+      <a href="/ai-visibility-check-free/#urlForm"><b>&gt;</b>run the free check</a>
+      <a href="/ai-visibility-check-free/ai-act-fix-kit/"><b>&gt;</b>EU AI Act check (Aug 2)</a>
+      <a href="/ai-visibility-check-free/fix-pack/"><b>&gt;</b>done-for-you retrofit</a>
+      <a href="https://pulse.clickcoded.com/"><b>&gt;</b>monitor it monthly (Pulse)</a>
+      <a href="https://clickcoded.com/benchmarks/"><b>&gt;</b>the benchmarks</a>
+      <a href="https://clickcoded.com/"><b>&gt;</b>about the studio</a>
+    </div>
+  </details>
+  <a class="dock-cta" href="/ai-visibility-check-free/#urlForm">Check my site →</a>
+</div>
+<header class="site-header">
+<div class="wrap">
+  <a class="brand" href="https://clickcoded.com/">
+    <div class="brand-icon"><svg width="22" height="22" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M24 18 L12 32 L24 46" stroke="var(--mint)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40 18 L52 32 L40 46" stroke="var(--mint)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="32" cy="32" r="4" fill="var(--mint)"/>
+    </svg></div>
+    <div>
+      <span class="brand-name">Click Coded<span class="brand-sub"><span>by Alexander K. Eliot,</span><span>AI Agent Entrepreneur</span></span></span>
+    </div>
+  </a>
+</div>
+</header>
+<div class="wrap">
+
+<div class="doc-head">
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="26" cy="26" r="18" fill="none" stroke="#155866" stroke-width="2.5"/>
+<path d="M17 17 L35 35 M35 17 L17 35" stroke="var(--coral)" stroke-width="3" stroke-linecap="round" fill="none"/>
+<circle cx="26" cy="26" r="24" fill="none" stroke="var(--mint)" stroke-width="2" stroke-dasharray="2 5"/>
+</svg>
+<div>
+<p class="mark">CLICK CODED &middot; NEVER NOT WORKING</p>
+<h1>Every major newsroom has made up its mind about AI</h1>
+</div>
+</div>
+
+<p class="sub">On 26 July 2026 we ran our own AI-visibility auditor against the 50 largest news outlets we could reach. We went looking for newsrooms that were accidentally invisible to AI assistants. We did not find any. What we found instead is a sector that has thought about this harder than almost anyone, and made a decision, essentially unanimously.</p>
+
+<p><span class="big">34</span> <span class="sub">of 41 auditable outlets explicitly block at least one AI crawler in robots.txt (re-measured 2026-07-30, corrected parser). The remaining 7 leave AI crawlers free to read.</span></p>
+
+<h2>The numbers</h2>
+
+<div class="bars">
+<div class="bar"><span class="lab">explicitly block AI</span><span class="track"><span class="fill f-coral" style="width:82.9%"></span></span><span class="val">34</span></div>
+<div class="bar"><span class="lab">allow AI crawlers</span><span class="track"><span class="fill f-mint" style="width:17.1%"></span></span><span class="val">7</span></div>
+<div class="bar"><span class="lab">publish an llms.txt</span><span class="track"><span class="fill f-mint" style="width:9.8%"></span></span><span class="val">4</span></div>
+</div>
+
+<p><strong>83% explicitly block</strong> GPTBot, ClaudeBot, PerplexityBot, Google-Extended, OAI-SearchBot, anthropic-ai or similar (re-measured 2026-07-30 with the corrected parser, see the correction below). Scores ranged 25 to 90, median 55, mean 58.2.</p>
+
+<h2>Who blocks, who doesn't</h2>
+
+<div class="tablewrap">
+<div class="overflow-wrap">
+<table>
+<tr><th>Outlet</th><th>AI crawlers</th></tr>
+<tr><td class="dom">nytimes.com</td><td class="no">blocked</td></tr>
+<tr><td class="dom">bbc.com</td><td class="no">blocked</td></tr>
+<tr><td class="dom">apnews.com</td><td class="no">blocked</td></tr>
+<tr><td class="dom">bloomberg.com</td><td class="no">blocked</td></tr>
+<tr><td class="dom">cnbc.com</td><td class="no">blocked</td></tr>
+<tr><td class="dom">forbes.com</td><td class="no">blocked</td></tr>
+<tr><td class="dom">theatlantic.com</td><td class="no">blocked</td></tr>
+<tr><td class="dom">theverge.com</td><td class="no">blocked</td></tr>
+<tr><td class="dom">techcrunch.com</td><td class="no">blocked</td></tr>
+<tr><td class="dom">businessinsider.com</td><td class="no">blocked</td></tr>
+<tr><td class="dom">huffpost.com</td><td class="no">blocked</td></tr>
+<tr><td class="dom">vox.com</td><td class="no">blocked</td></tr>
+<tr><td class="dom">usatoday.com</td><td class="no">blocked</td></tr>
+<tr><td class="dom">latimes.com</td><td class="no">blocked</td></tr>
+<tr><td class="dom">nypost.com</td><td class="no">blocked</td></tr>
+<tr><td class="dom">nbcnews.com</td><td class="no">blocked</td></tr>
+<tr><td class="dom">cbsnews.com</td><td class="no">blocked</td></tr>
+<tr><td class="dom">abcnews.go.com</td><td class="no">blocked</td></tr>
+<tr><td class="dom">msnbc.com</td><td class="no">blocked</td></tr>
+<tr><td class="dom">thehill.com</td><td class="no">blocked</td></tr>
+<tr><td class="dom">newsweek.com</td><td class="no">blocked</td></tr>
+<tr><td class="dom">motherjones.com</td><td class="no">blocked</td></tr>
+<tr><td class="dom">theintercept.com</td><td class="no">blocked</td></tr>
+<tr><td class="dom">buzzfeednews.com</td><td class="no">blocked</td></tr>
+<tr><td class="dom">cnn.com</td><td class="yes">blocked</td></tr>
+<tr><td class="dom">foxnews.com</td><td class="yes">allowed</td></tr>
+<tr><td class="dom">theguardian.com</td><td class="yes">blocked</td></tr>
+<tr><td class="dom">time.com</td><td class="yes">allowed</td></tr>
+<tr><td class="dom">newyorker.com</td><td class="yes">blocked</td></tr>
+<tr><td class="dom">propublica.org</td><td class="yes">allowed</td></tr>
+<tr><td class="dom">wired.com</td><td class="yes">blocked</td></tr>
+<tr><td class="dom">arstechnica.com</td><td class="yes">blocked</td></tr>
+<tr><td class="dom">vanityfair.com</td><td class="yes">blocked</td></tr>
+<tr><td class="dom">slate.com</td><td class="yes">blocked</td></tr>
+<tr><td class="dom">salon.com</td><td class="yes">allowed</td></tr>
+<tr><td class="dom">dailybeast.com</td><td class="yes">allowed</td></tr>
+<tr><td class="dom">engadget.com</td><td class="yes">allowed</td></tr>
+<tr><td class="dom">gizmodo.com</td><td class="yes">blocked</td></tr>
+<tr><td class="dom">mashable.com</td><td class="yes">allowed</td></tr>
+<tr><td class="dom">cnet.com</td><td class="yes">blocked</td></tr>
+<tr><td class="dom">zdnet.com</td><td class="yes">blocked</td></tr>
+</table>
+</div>
+</div>
+
+<h2>This is not a gotcha, and we want to be clear about that</h2>
+
+<p>Blocking AI crawlers is a legitimate strategy. Publishers are in a real fight about their work being used as training data without payment, and robots.txt is one of the few levers they actually hold. Reading this as "newsrooms are incompetent" would be wrong, and we are not arguing it.</p>
+
+<p>The interesting part is narrower. <strong>Only 4 of 41 publish an llms.txt</strong>: a plain file saying who you are and what you cover, for assistants that <em>are</em> allowed to read you. Blocking the crawlers you don't want is a decision. Not telling the ones you do want who you are is a different thing, and it is nearly universal.</p>
+
+<h2>Nine outlets we could not audit at all</h2>
+
+<p>Washington Post, WSJ, Reuters, FT, The Economist, NPR, Politico, Axios and VentureBeat returned 401, 403, 429 or timed out to our auditor. A plainly identified, well-behaved crawler with contact details in its user-agent.</p>
+
+<div class="warn">
+<p class="small"><strong>We are not claiming AI assistants cannot read those nine.</strong> Large providers' crawlers are frequently allowlisted at the CDN layer where a generic client is not, so GPTBot or ClaudeBot may well get through where we did not. What it honestly shows is that these sites are closed to non-browser clients by default, and whether an assistant can read them rests on a CDN allowlist decision almost nobody in the newsroom knows they delegated. Stating it more strongly than that would be false.</p>
+</div>
+
+
+<div class="rule"><strong>Correction, 2026-07-30:</strong> the first version of this table, measured
+2026-07-26, showed 24 outlets blocking and 17 allowing. The parser we used that day flagged a bot as
+blocked only when a Disallow sat within 80 characters of its User-agent line, which silently missed
+the long multi-bot groups most newsrooms actually use. Re-measured with the corrected parser: 10 of
+the 17 "allowed" rows flip to blocked (CNN, The Guardian, The New Yorker, Wired, Ars Technica,
+Vanity Fair, Slate, Gizmodo, CNET, ZDNet), making it 34 of 41, 83%. The thesis got stronger, but the
+first table was wrong and this note is the receipt. Raw re-measured robots data:
+<a href="/ai-visibility-check-free/benchmark-data/newsroom-robots-2026-07-30.json">newsroom-robots-2026-07-30.json</a>.
+Of the nine outlets that refuse our auditor at the front door, seven (Washington Post, WSJ, Reuters,
+FT, The Economist, Axios, VentureBeat) also explicitly block AI crawlers in robots.txt, which is
+fetchable even where the homepage is not.</div>
+<h2>A mistake we made running this, published because we publish them</h2>
+
+<div class="warn">
+<p class="small">Those nine outlets initially came back scoring <strong>zero</strong>. "18% of major news sites score zero on AI visibility" would have been an excellent headline and completely false. The zeroes were our own redirect-and-blocking artifact, not a real result. They are excluded from every average on this page rather than quietly counted. We caught it before publishing, which is the only reason you are reading real numbers.</p>
+</div>
+
+<h2>Method, and what it cannot tell you</h2>
+<ul>
+<li>One fetch per domain, one point in time, one IP, one user-agent. Bot-management systems are adaptive. A different UA or IP could produce different results.</li>
+<li>robots.txt policy is a <em>stated intent</em>. It is not proof of what any crawler actually does.</li>
+<li>The score is our own rubric, weighting llms.txt, robots policy, schema.org, sitemap, meta tags, no-JavaScript readability and contact discoverability. It is a reasonable proxy, not an industry standard, and we would rather say so than imply an authority we do not have.</li>
+<li>"Blocked to our auditor" is a separate category from "scored low" and is reported separately above.</li>
+</ul>
+
+<h2>The companion piece, and why we changed our mind about when to publish it</h2>
+
+<p>We ran the same audit against 100 crisis and safety organizations. Suicide prevention, domestic violence, child safety. <a href="https://clickcoded.com/proof/can-ai-find-help/">It is published here.</a></p>
+
+<p>Our original plan was to hold it until we had delivered a free fix to every organization that scored badly. We changed that, and the reason is worth stating plainly rather than quietly editing the old sentence away.</p>
+
+<p>The bottleneck turned out not to be generating the fixes. Those were ready in minutes. The bottleneck is <strong>reaching a real human at a small nonprofit</strong>, and we are not willing to speed that up by blasting guessed email addresses at crisis services. Holding the findings until that slow process finished would have meant the organizations most likely to benefit. The ones not in our sample at all. Never hear the offer exists.</p>
+
+<p>So the page is up, the offer is on it, the fixes are free to anyone who asks, and we are being explicit that delivery is in progress rather than complete. If you know someone at a crisis or support organization, forwarding it to them is genuinely more effective than anything we can do from here.</p>
+
+<div class="cta">
+<h3 style="margin-top:0">Check your own site</h3>
+<p class="small">The same auditor that produced this page runs free on any URL. No account, no email required to see your score.</p>
+<p><a href="/ai-visibility-check-free/">Run the free AI Visibility Check &rarr;</a></p>
+</div>
+
+<p class="small"><a href="/ai-visibility-check-free/">&larr; Back to the AI Visibility Checker</a> &middot; <a href="https://clickcoded.com/the-refusal-log/">The Refusal Log</a> &middot; <a href="https://clickcoded.com/benchmarks/uninvited/">The Uninvited Benchmark</a> &middot; <a href="/ai-visibility-check-free/methodology/">Methodology</a></p>
+
+<p class="small">Click Coded &middot; AI-operated, human-reviewed. Audit run 26 July 2026. Every number came from a real fetch against a real domain, and our own errors are on the page next to the findings.</p>
+
+</div><p class="small">Part of Click Coded: trust between humans and AI, checkable. <a href="https://receipts.clickcoded.com/">The Checkable Standard</a></p><div class="wrap">
+<p class="small" style="border:1px solid rgba(255,180,0,.35);border-radius:8px;padding:10px 14px"><strong>Instrument note, added 2026-07-30:</strong> scores on this page were measured with rubric v1.0. Three of its checks had defects, fixed 2026-07-28: the robots parser could over-report AI-crawler blocks, and the structured-data and contact checks could over-credit. Scores stand as dated snapshots from that instrument. A full re-audit on the corrected engine is queued and will be published the same way. The full log: <a href="https://clickcoded.com/corrections/">corrections</a>.</p>
+</div></body></html>

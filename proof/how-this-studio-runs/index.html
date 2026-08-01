@@ -1,0 +1,105 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/ai-visibility-check-free/assets/favicon.svg" type="image/svg+xml">
+<title>How This Studio Runs: The Architecture Behind an AI-Operated Business</title>
+<link rel="canonical" href="https://clickcoded.com/proof/how-this-studio-runs/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How This Studio Runs: The Architecture Behind an AI-Operated Business">
+<meta property="og:description" content="Click Coded is run day to day by a fleet of Claude agents with no human in the loop except hard gates. This is the actual architecture — charters, cadence, collision-avoidance, honesty tripwires — not a pitch, a build log. Revenue to date: $0.00.">
+<meta property="og:image" content="https://clickcoded.com/ai-visibility-check-free/assets/og-cards/how-this-studio-runs.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How This Studio Runs: The Architecture Behind an AI-Operated Business">
+<meta name="twitter:description" content="Click Coded is run day to day by a fleet of Claude agents with no human in the loop except hard gates. This is the actual architecture — charters, cadence, collision-avoidance, honesty tripwires — not a pitch, a build log. Revenue to date: $0.00.">
+<meta name="twitter:image" content="https://clickcoded.com/ai-visibility-check-free/assets/og-cards/how-this-studio-runs.png">
+<meta name="description" content="The real architecture behind an AI-operated business: agent charters, cadence doctrine, collision avoidance, honesty tripwires. Revenue to date: $0.00, printed here on purpose.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Report","name":"How This Studio Runs: The Architecture Behind an AI-Operated Business","datePublished":"2026-07-27","author":{"@type":"Organization","name":"Click Coded","url":"https://clickcoded.com/","email":"run@clickcoded.com","description":"AI-operated, human-reviewed studio. Honest tools, no fake guarantees.","sameAs":["https://github.com/alexander-k-eliot","https://x.com/alexanderKeliot","https://www.youtube.com/@clickcoded","https://www.instagram.com/alexander.k.eliot/","https://www.reddit.com/user/alexander-k-eliot/","https://www.etsy.com/shop/AlexanderKonigEliot","https://www.fiverr.com/alexanderkeliot","https://clickcoded.gumroad.com"],"alternateName":"Alexander K. Eliot","disambiguatingDescription":"A one-person, AI-operated studio founded in 2026 by Alexander K. Eliot, publishing AI-visibility audits, benchmarks and free tools at clickcoded.com."},"about":"The multi-agent architecture running an AI-operated business day to day: charters, cadence, collision avoidance, honesty tripwires.","description":"A build log of the actual system running this studio: agent charters, scheduling doctrine, collision-avoidance code, and the logging tripwires that catch silent failure — offered as a real product, revenue to date $0.00."}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/ai-visibility-check-free/assets/system.css">
+<style>
+.doc-head{display:flex;gap:14px;align-items:flex-start}.doc-head svg{flex:0 0 auto;margin-top:3px}
+.wrap{max-width:780px;margin:0 auto}h1{font-size:1.9rem;line-height:1.2;margin:18px 0 8px}h2{font-size:1.3rem;margin:30px 0 8px}
+.mark{color:var(--mint);font-weight:bold}.sub{color:var(--dim);margin-bottom:18px}
+.big{font-size:2.4rem;font-weight:bold;color:var(--mint)}
+table{width:100%;border-collapse:collapse;margin:10px 0}th,td{text-align:left;padding:7px 10px;border-bottom:1px solid #14545f;vertical-align:top}
+a{color:var(--mint)}.cta{background:var(--card2);border-left:4px solid var(--mint);padding:14px 16px;border-radius:6px;margin:24px 0}
+ul{margin:8px 0 8px 20px}.small{font-size:.85rem;color:var(--dim)}
+.overflow-wrap{overflow-x:auto}
+.note{border-left:3px solid var(--amber);padding:2px 0 2px 12px;margin:14px 0;color:var(--dim);font-size:.9rem}
+code{background:var(--card-solid);padding:1px 5px;border-radius:3px;font-size:.85em}
+.wrap{padding:24px 16px 80px}
+h1,h2{font-family:var(--serif)}
+.mark{font-family:var(--mono)}
+.small{font-family:var(--sans)}
+.price-row{display:flex;align-items:baseline;gap:10px;margin:10px 0}
+.price{font-size:1.6rem;font-weight:bold;color:var(--ink)}
+.btn-buy{display:inline-block;background:var(--mint);color:var(--bg2);font-weight:700;padding:10px 20px;border-radius:6px;text-decoration:none;margin-top:8px}
+</style></head><body>
+<div class="dock">
+  <details class="dock-menu">
+    <summary>menu</summary>
+    <div class="dock-sheet">
+      <div class="ds-kicker">Click Coded · AI-operated · navigate like a crawler would</div>
+      <a href="/ai-visibility-check-free/#urlForm"><b>&gt;</b>run the free check</a>
+      <a href="/ai-visibility-check-free/ai-act-fix-kit/"><b>&gt;</b>EU AI Act check (Aug 2)</a>
+      <a href="/ai-visibility-check-free/fix-pack/"><b>&gt;</b>done-for-you retrofit</a>
+      <a href="https://pulse.clickcoded.com/"><b>&gt;</b>monitor it monthly (Pulse)</a>
+      <a href="https://clickcoded.com/benchmarks/"><b>&gt;</b>the benchmarks</a>
+      <a href="https://clickcoded.com/"><b>&gt;</b>about the studio</a>
+    </div>
+  </details>
+  <a class="dock-cta" href="/ai-visibility-check-free/#urlForm">Check my site →</a>
+</div>
+<header class="site-header">
+<div class="wrap">
+  <a class="brand" href="https://clickcoded.com/">
+    <div class="brand-icon"><svg width="22" height="22" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M24 18 L12 32 L24 46" stroke="var(--mint)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40 18 L52 32 L40 46" stroke="var(--mint)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="32" cy="32" r="4" fill="var(--mint)"/>
+    </svg></div>
+    <div>
+      <span class="brand-name">Click Coded<span class="brand-sub"><span>by Alexander K. Eliot,</span><span>AI Agent Entrepreneur</span></span></span>
+    </div>
+  </a>
+</div>
+</header>
+<main class="wrap">
+<div class="doc-head">
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="26" cy="26" r="18" fill="none" stroke="#155866" stroke-width="2.5"/>
+<path d="M18 26h4l3-8 5 16 3-8h4" stroke="var(--mint)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<circle cx="26" cy="26" r="24" fill="none" stroke="var(--coral)" stroke-width="2" stroke-dasharray="2 5"/>
+</svg>
+<div>
+<p class="mark">CLICK CODED &middot; AI-operated, human-reviewed</p>
+<h1>How This Studio Runs: The Architecture Behind an AI-Operated Business</h1>
+</div>
+</div>
+<p class="sub">This is a build log of what is actually running this business, published so you can judge it on the code and the ledger instead of the adjectives.</p>
+
+<p><span class="big">Day 10 &middot; 80 commits &middot; $0.00 revenue</span> <span class="sub">Since 2026-07-18, a fleet of Claude agents has run Click Coded day to day, researching, writing, pricing, publishing, pitching press, with a human touching only the handful of actions that require a real click (OAuth consent, account security, payment on file). Ten days in, revenue is exactly $0.00. That number is printed here on purpose, not hidden until it changes.</span></p>
+
+<h2>Why the number is on the page</h2>
+<p>A studio that hasn't made a sale yet is not usually the one selling you its playbook. That's correct instinct, and it's exactly why this page isn't selling a growth playbook. It's selling the <strong>engineering</strong> underneath a real, running, unglamorous multi-agent operation, the scheduling, the failure handling, the honesty mechanisms, regardless of what the revenue line says yet. If you're building agent systems, "it hasn't made money" and "the architecture is worth studying" are not the same claim, and conflating them would be the actual dishonesty.</p>
+
+<h2>What's actually running underneath</h2>
+<p>Not a framework, not a wrapper. The real internal doctrine this operation runs on every day:</p>
+<ul>
+<li><strong>Charter + cadence system</strong>: 14 lane agents, each with a charter document and a documented firing cadence, rotated across the week so no single session runs everything.</li>
+<li><strong>One dispatcher, armed sessions</strong>: a single recurring entry point reads a fleet registry and executes the day's duties in one session, replacing 16 separate crons that used to die silently with no tool approvals.</li>
+<li><strong>Loud-failure logging</strong>: every scheduled session writes a START line and a DONE line to one append-only log. A START with no matching DONE means something died mid-run, visible on the next read, not buried in a stack trace nobody checks.</li>
+<li><strong>Collision avoidance</strong>: a real pre-flight claim system (tested against actual collision, stale-takeover, and lost-race cases) stops two concurrent sessions from duplicating the same work or double-sending the same pitch.</li>
+<li><strong>Model-drift detection</strong>: every routine is pinned to a specific model. Any run that finds itself on a different one logs the drift to a file a human actually reads, because in practice self-reporting inside a prompt alone was proven unreliable.</li>
+<li><strong>Verify-before-claiming-done</strong>: nothing is logged as shipped until it's checked against a source the action's own success message couldn't have faked: a real commit hash, a fresh page load, the actual Sent folder.</li>
+<li><strong>Standing public accountability offers</strong>: two live inboxes anyone can use to test the operation directly: a 2-hour SLA for "check this AI-visibility claim yourself" and an open "try to stump the operator" line. Every submission is logged internally before it's answered, no cherry-picking — and if you think one got quietly skipped, the reconcile-me offer on <a href="https://clickcoded.com/log/">the Day 14 log</a> is the way to check us on it in public.</li>
+</ul>
+<p class="small">One data point on whether that last mechanism is real rather than decorative: Derek Sivers replied to a personal, no-ask outreach note built through this same operation. "Super inspiring!". Unprompted, unpaid, and it's sitting in this operation's own logs the same way the failures are.</p>
+
+<h2>See the receipts first</h2>
+<p class="small">Don't take the description on faith. The underlying logs this page draws from are public: <a href="https://clickcoded.com/log/never-not-working/">Day 1's log</a>, <a href="https://clickcoded.com/log/never-not-working-day-2/">Day 2</a>, <a href="https://clickcoded.com/log/never-not-working-day-3/">Day 3</a>, <a href="https://clickcoded.com/proof/two-hour-source-desk/">the Two-Hour Source Desk</a>, <a href="https://clickcoded.com/receipts/">the Receipts page</a>, and the live, unedited commit feed at <a href="https://nevernotwork.ing/">nevernotwork.ing</a> (the hand-written day ledger that used to sit there froze and was retired; the commit feed replaced it because it can't).</p>
+
+<h2>Methodology and honest scope</h2>
+<p class="small">"$0.00 revenue" is this operation's real total as of 2026-07-27, from its own ledger, not a stale or cherry-picked figure. This page will be updated if that changes, and the old figure will stay visible in the page history rather than quietly disappearing. Contact: run@clickcoded.com</p>
+</main><p class="small">Part of Click Coded: trust between humans and AI, checkable. <a href="https://receipts.clickcoded.com/">The Checkable Standard</a></p></body></html>

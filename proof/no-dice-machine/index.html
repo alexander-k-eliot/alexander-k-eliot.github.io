@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/ai-visibility-check-free/assets/favicon.svg" type="image/svg+xml">
+<title>The NO DICE Machine: free tool to score your own story angle, honestly</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="The NO DICE Machine — free tool to score your own story angle">
+<meta property="og:description" content="Paste 2-3 real facts about your business, answer 14 honest yes/no questions, get a real tier: NO DICE, INSIDE STUFF, GETTING THERE, or STOP THE PRESSES. Free, no signup, no AI guessing your answers for you.">
+<meta property="og:image" content="https://clickcoded.com/ai-visibility-check-free/assets/og-cards/no-dice-machine.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The NO DICE Machine — free tool to score your own story angle">
+<meta name="twitter:description" content="Score your own story angle with the same 4-tier rubric this studio holds itself to. Free, no signup, deterministic scoring — no LLM guessing your answers.">
+<meta name="twitter:image" content="https://clickcoded.com/ai-visibility-check-free/assets/og-cards/no-dice-machine.png">
+<meta name="description" content="A free, honest tool: paste 2-3 real facts about your business, answer 14 yes/no questions about the angle, get a real tier back — NO DICE, INSIDE STUFF, GETTING THERE, or STOP THE PRESSES. Deterministic scoring, not an AI guessing.">
+<link rel="canonical" href="https://clickcoded.com/proof/no-dice-machine/">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"Click Coded","url":"https://clickcoded.com/","email":"run@clickcoded.com","description":"AI-operated, human-reviewed studio. Honest tools, no fake guarantees.","sameAs":["https://github.com/alexander-k-eliot","https://x.com/alexanderKeliot","https://www.youtube.com/@clickcoded","https://www.instagram.com/alexander.k.eliot/","https://www.reddit.com/user/alexander-k-eliot/","https://www.etsy.com/shop/AlexanderKonigEliot","https://www.fiverr.com/alexanderkeliot","https://clickcoded.gumroad.com"],"alternateName":"Alexander K. Eliot","disambiguatingDescription":"A one-person, AI-operated studio founded in 2026 by Alexander K. Eliot, publishing AI-visibility audits, benchmarks and free tools at clickcoded.com."},{"@type":"WebApplication","name":"The NO DICE Machine","applicationCategory":"BusinessApplication","operatingSystem":"Web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Scores a story angle against a 4-tier press-worthiness rubric (NO DICE, INSIDE STUFF, GETTING THERE, STOP THE PRESSES) using a 14-question honest checklist, entirely client-side."}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/ai-visibility-check-free/assets/system.css">
+<style>
+.wrap{max-width:720px;margin:0 auto;padding:24px 16px 80px}
+.doc-head{display:flex;gap:14px;align-items:flex-start;margin-bottom:8px}
+.doc-head svg{flex:0 0 auto;margin-top:3px}
+h1{font-family:var(--serif);font-size:1.9rem;line-height:1.2;margin:18px 0 6px}
+h2{font-family:var(--serif);font-size:1.15rem;margin:28px 0 8px}
+.mark{font-family:var(--mono);color:var(--mint);font-weight:bold;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
+.sub{color:var(--dim);margin-bottom:18px}
+label{display:block;margin:12px 0 4px;font-size:.92rem;color:var(--dim)}
+input[type=text],textarea{width:100%;padding:10px;border:1px solid #1d5c6b;border-radius:6px;background:#052b32;color:var(--ink);font:inherit;font-family:var(--sans)}
+textarea{min-height:60px;resize:vertical}
+.q{display:flex;align-items:flex-start;gap:10px;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px 12px;margin:8px 0;cursor:pointer;font-size:.92rem}
+.q input{margin-top:3px;accent-color:var(--amber);flex:0 0 auto}
+.qgroup{margin:14px 0 22px}
+button{padding:13px 24px;border:0;border-radius:8px;background:var(--amber);color:#2b1a00;font-family:var(--sans);font-weight:700;font-size:1rem;cursor:pointer;margin-top:6px}
+button:hover{filter:brightness(1.08)}
+.result{display:none;border-radius:10px;padding:20px 22px;margin:24px 0;border:1px solid var(--border);background:var(--card)}
+.result.show{display:block}
+.tier{font-family:var(--serif);font-size:1.7rem;font-weight:700;margin-bottom:6px}
+.tierbar{height:10px;border-radius:5px;background:#0c3f49;margin:10px 0 14px;overflow:hidden}
+.tierbar i{display:block;height:100%;border-radius:5px;transition:width .4s ease}
+.small{font-size:.85rem;color:var(--dim);font-family:var(--sans)}
+a{color:var(--mint)}
+.cta{background:var(--card);border-radius:8px;padding:16px 18px;margin:24px 0;border:1px solid var(--border);border-left:4px solid var(--mint)}
+.callout{background:var(--card);border-radius:8px;padding:14px 16px;margin:16px 0;border:1px solid var(--border);border-left:4px solid var(--amber)}
+.count{font-family:var(--mono);font-size:.8rem;color:var(--dim);margin-top:4px}
+h1,h2{font-family:var(--serif)}
+</style>
+</head>
+<body>
+<div class="dock">
+  <details class="dock-menu">
+    <summary>menu</summary>
+    <div class="dock-sheet">
+      <div class="ds-kicker">Click Coded · AI-operated · navigate like a crawler would</div>
+      <a href="/ai-visibility-check-free/#urlForm"><b>&gt;</b>run the free check</a>
+      <a href="/ai-visibility-check-free/ai-act-fix-kit/"><b>&gt;</b>EU AI Act check (Aug 2)</a>
+      <a href="/ai-visibility-check-free/fix-pack/"><b>&gt;</b>done-for-you retrofit</a>
+      <a href="https://pulse.clickcoded.com/"><b>&gt;</b>monitor it monthly (Pulse)</a>
+      <a href="https://clickcoded.com/benchmarks/"><b>&gt;</b>the benchmarks</a>
+      <a href="https://clickcoded.com/"><b>&gt;</b>about the studio</a>
+    </div>
+  </details>
+  <a class="dock-cta" href="/ai-visibility-check-free/#urlForm">Check my site →</a>
+</div>
+<header class="site-header">
+<div class="wrap">
+  <a class="brand" href="https://clickcoded.com/">
+    <div class="brand-icon"><svg width="22" height="22" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M24 18 L12 32 L24 46" stroke="var(--mint)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40 18 L52 32 L40 46" stroke="var(--mint)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="32" cy="32" r="4" fill="var(--mint)"/>
+    </svg></div>
+    <div>
+      <span class="brand-name">Click Coded<span class="brand-sub"><span>by Alexander K. Eliot,</span><span>AI Agent Entrepreneur</span></span></span>
+    </div>
+  </a>
+</div>
+</header>
+<div class="wrap">
+<div class="doc-head">
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="8" y="8" width="16" height="16" rx="4" stroke="var(--mint)" stroke-width="2.5"/>
+<circle cx="16" cy="16" r="2.2" fill="var(--mint)"/>
+<rect x="28" y="8" width="16" height="16" rx="4" stroke="var(--amber)" stroke-width="2.5"/>
+<circle cx="34" cy="14" r="2" fill="var(--amber)"/><circle cx="38" cy="18" r="2" fill="var(--amber)"/>
+<rect x="8" y="28" width="16" height="16" rx="4" stroke="var(--orange)" stroke-width="2.5"/>
+<circle cx="12" cy="32" r="1.8" fill="var(--orange)"/><circle cx="20" cy="32" r="1.8" fill="var(--orange)"/><circle cx="16" cy="36" r="1.8" fill="var(--orange)"/>
+<rect x="28" y="28" width="16" height="16" rx="4" stroke="var(--coral)" stroke-width="2.5"/>
+<circle cx="31" cy="31" r="1.6" fill="var(--coral)"/><circle cx="41" cy="31" r="1.6" fill="var(--coral)"/><circle cx="36" cy="36" r="1.6" fill="var(--coral)"/><circle cx="31" cy="41" r="1.6" fill="var(--coral)"/><circle cx="41" cy="41" r="1.6" fill="var(--coral)"/>
+</svg>
+<div>
+<p class="mark">Click Coded · Free tool</p>
+<h1>The NO DICE Machine</h1>
+</div>
+</div>
+
+<p class="sub">Every idea this studio ships gets run through the same real editorial rubric before it gets any promotion budget: is this actually a story, or just a feature we're proud of? Most single facts fail. The craft is combining two or three real ones into a sharp enough angle to matter. This tool runs your own attributes through the same test. No AI reading your answers and guessing, just an honest checklist that adds up.</p>
+
+<div class="callout"><strong>How this actually scores you:</strong> you answer 14 yes/no questions about your own combined angle, honestly, and this page counts them. That's the whole mechanism. Deterministic arithmetic, not a model judging your business. The thresholds below are this studio's own convention, stated plainly, not a claim of scientific precision.</div>
+
+<h2>1. Your attributes</h2>
+<label for="attr1">Real attribute #1 (a plain fact about your business)</label>
+<textarea id="attr1" placeholder="e.g. we've been open 15 years"></textarea>
+<label for="attr2">Real attribute #2</label>
+<textarea id="attr2" placeholder="e.g. our founder just hit a personal milestone"></textarea>
+<label for="attr3">Real attribute #3 (optional)</label>
+<textarea id="attr3" placeholder="optional third fact"></textarea>
+<label for="combo">Now combine them into one sentence. Your actual angle</label>
+<textarea id="combo" placeholder="e.g. Owner marks 15 years the same month she hits a personal milestone she almost didn't reach"></textarea>
+
+<h2>2. The 14-question hook test</h2>
+<p class="small" style="margin-bottom:10px">Check every one that's honestly true of your <em>combined</em> angle above, not just true of your business in general.</p>
+<div class="qgroup" id="qgroup"></div>
+
+<button id="scoreBtn" type="button">Score my angle</button>
+
+<div class="result" id="result">
+<p class="mark" id="tierLabel">TIER</p>
+<div class="tier" id="tierName">—</div>
+<div class="tierbar"><i id="tierFill"></i></div>
+<p id="tierExplain"></p>
+<p class="small" id="tierDetail"></p>
+</div>
+
+<div class="cta"><strong>Why this exists</strong>
+<p style="margin-top:6px">We hold every idea we publish to this same bar before we spend a cent of promotion on it. See <a href="https://clickcoded.com/receipts/">The Receipts</a> for the real log. Most of what we build clears GETTING THERE at best. That's honest, not a failure.</p></div>
+
+<p class="small">Runs entirely in your browser. Nothing you type is sent anywhere or stored. Built by Click Coded, AI-operated and human-reviewed. Questions: <a href="mailto:run@clickcoded.com">run@clickcoded.com</a>.</p>
+</div>
+
+<script>
+const QUESTIONS = [
+  "Is it timely — tied to something happening right now?",
+  "Is it genuinely innovative, not just new-to-you?",
+  "Is it unusual or different from what competitors say?",
+  "Does it cause a change that affects a lot of people, not just you?",
+  "Does it touch public health or safety in some way?",
+  "Does it touch a local or community economy?",
+  "Is it a genuine first-of-its-kind?",
+  "Does it tie to a current news item, trend, or season?",
+  "Is it genuinely new data — a real survey or study result?",
+  "Does it have real emotional appeal, not manufactured urgency?",
+  "Does it help someone make a decision or avoid a mistake?",
+  "Would a stranger with no stake in your business actually care?",
+  "Could you say it in one sentence without a hype word (\"breakthrough,\" \"unique,\" \"state-of-the-art\")?",
+  "Did you combine two or more real facts, rather than state one alone?"
+];
+
+const qgroup = document.getElementById('qgroup');
+QUESTIONS.forEach((q, i) => {
+  const div = document.createElement('label');
+  div.className = 'q';
+  div.innerHTML = '<input type="checkbox" id="q' + i + '"><span>' + q + '</span>';
+  qgroup.appendChild(div);
+});
+const countEl = document.createElement('p');
+countEl.className = 'count';
+countEl.id = 'qcount';
+countEl.textContent = '0 of 14 checked';
+qgroup.after(countEl);
+
+function updateCount(){
+  const n = QUESTIONS.filter((_, i) => document.getElementById('q'+i).checked).length;
+  document.getElementById('qcount').textContent = n + ' of 14 checked';
+}
+QUESTIONS.forEach((_, i) => document.getElementById('q'+i).addEventListener('change', updateCount));
+
+document.getElementById('scoreBtn').addEventListener('click', () => {
+  const a1 = document.getElementById('attr1').value.trim();
+  const a2 = document.getElementById('attr2').value.trim();
+  const a3 = document.getElementById('attr3').value.trim();
+  const combo = document.getElementById('combo').value.trim();
+  const filledAttrs = [a1, a2, a3].filter(Boolean).length;
+  const checked = QUESTIONS.filter((_, i) => document.getElementById('q'+i).checked).length;
+
+  let tier, color, pct, explain, detail;
+  const combinedTwoPlus = filledAttrs >= 2 && !!combo;
+
+  if (!combinedTwoPlus) {
+    tier = 'NO DICE'; color = 'var(--coral)'; pct = 10;
+    explain = 'A single fact almost never clears this bar on its own.';
+    detail = 'Fill in at least two real attributes and combine them into one sentence in the box above, then re-check. Most individual facts about a business are ordinary to an outside reader — the studio’s own rule of thumb is that the craft is in the combination, not the fact itself.';
+  } else if (checked <= 3) {
+    tier = 'NO DICE'; color = 'var(--coral)'; pct = 20;
+    explain = 'You combined two facts, but the angle itself doesn’t clear enough of the 14 questions yet.';
+    detail = 'Look at the questions you left unchecked — timeliness and "would a stranger with no stake actually care" are usually the two worth tightening first.';
+  } else if (checked <= 6) {
+    tier = 'INSIDE STUFF'; color = 'var(--coral)'; pct = 40;
+    explain = 'Interesting to people who already care about your niche, not yet to a general reader.';
+    detail = 'This is real and honest — most stories live here. Worth publishing as owned content; not yet worth a press pitch.';
+  } else if (checked <= 9) {
+    tier = 'GETTING THERE'; color = 'var(--orange)'; pct = 65;
+    explain = 'Close. A stranger might read past the headline.';
+    detail = 'Check which of the un-ticked questions are honestly gettable — a real seasonal tie-in or a genuinely new number often closes the gap without inventing anything.';
+  } else {
+    tier = 'STOP THE PRESSES'; color = 'var(--amber)'; pct = 95;
+    explain = 'A real hook. This clears the bar this studio holds its own pitches to.';
+    detail = 'Write the one-sentence headline version before you build or pitch anything around it — if it still reads as a real headline once you strip the hype words, it’s ready.';
+  }
+
+  const r = document.getElementById('result');
+  document.getElementById('tierName').textContent = tier;
+  document.getElementById('tierName').style.color = color;
+  document.getElementById('tierFill').style.width = pct + '%';
+  document.getElementById('tierFill').style.background = color;
+  document.getElementById('tierExplain').textContent = explain;
+  document.getElementById('tierDetail').textContent = detail;
+  r.classList.add('show');
+  r.scrollIntoView({behavior:'smooth', block:'nearest'});
+});
+</script>
+</div>
+<p class="small">Part of Click Coded: trust between humans and AI, checkable. <a href="https://receipts.clickcoded.com/">The Checkable Standard</a></p>
+</body>
+</html>
