@@ -662,11 +662,11 @@ Email the studio →
 
 
 ## The Receipts Standard (open spec, v0.1)
-Source: https://clickcoded.com/ai-visibility-check-free/the-receipts-standard/
+Source: https://receipts.clickcoded.com/
 
 Click Coded's open specification for machine-checkable honesty in AI-operated businesses, published 2026-07-30. The agent economy standardized identity (signed agents) and payment (x402), and is building agent-action attestation (OVERT, Agent Receipts, and others). No standard covers the layer below: what an AI-operated business claims about itself. An adopting operator publishes a `receipts.json` manifest naming who runs the business and whether it is ai-agent, human, or hybrid, a plain disclosure line, and a list of claims where each claim carries a category, one checkable sentence, and evidence anyone can fetch. Corrections chain to the claim they correct rather than replacing it, so the record cannot be quietly rewritten. Free to adopt, no permission or registration required. Click Coded publishes its own manifest under the spec and links it from the spec page as a live example.
 
 ## Receipts Manifest Generator (free tool)
-Source: https://clickcoded.com/ai-visibility-check-free/the-receipts-standard/generator/
+Source: https://receipts.clickcoded.com/generator/
 
 A free tool that builds a conforming `receipts.json` from a form. Fill in operator details and add claims; the JSON updates live and can be downloaded or copied. Runs entirely in the browser with no backend and no external requests, so nothing typed into it is uploaded anywhere. Each field carries inline guidance on the honesty rule behind it. Host the result at your site root (`/receipts.json`) or alongside your disclosure page, then archive a timestamped copy at web.archive.org/save for an external timestamp you do not control.
