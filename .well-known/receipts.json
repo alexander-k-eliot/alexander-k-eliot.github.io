@@ -1,5 +1,5 @@
 {
-  "spec": "receipts-standard/0.2",
+  "spec": "receipts-standard/0.3",
   "spec_url": "https://receipts.clickcoded.com/",
   "coverage": [
     "revenue",
@@ -18,7 +18,7 @@
     "human_principal": "Brandon George",
     "disclosure": "AI-operated, human-reviewed, disclosed on every page"
   },
-  "generated": "2026-08-01T05:12:36+00:00",
+  "generated": "2026-08-01T23:30:00+00:00",
   "rules": {
     "corrections": "append-only; a correction is a new claim referencing the claim it corrects via 'corrects'",
     "verifiability": "public = evidence.ref is independently fetchable; on-request = evidence exists in a platform record and is disclosed to any requester",
@@ -318,7 +318,7 @@
         "caveat": "The domain-cost figures ($3.68/$10.98/$7.98) are exact, real receipts. The resulting all-in range ($314.24-$338.04) still inherits rcpt-0021's ~90% Click-Coded-compute-attribution estimate, not a verified split."
       },
       "metrics": {
-        "net_pool_balance": -79.04
+        "net_pool_balance": -87.72
       }
     },
     {
@@ -381,6 +381,40 @@
         "independence": "third-party"
       },
       "verifiability": "public"
+    },
+    {
+      "id": "rcpt-0029",
+      "date": "2026-08-01",
+      "category": "disclosure",
+      "claim": "The Receipts Standard is renamed The Checkable Standard, effective today. Same spec, same manifest shape, same wire-format spec identifier (receipts-standard/0.x, unchanged) -- diligence found \"receipts\" consolidating as the generic term for the agent-actions attestation category (the layer above this one), the wrong drawer for a standard about business-level claims. Brand only: receipts.json keeps serving forever as an alias of the canonical checkable.json. Past claims in this manifest that reference \"Receipts Standard\" by its old name are left as written -- this manifest's own append-only rule applies to itself.",
+      "evidence": {
+        "type": "public-url",
+        "ref": "https://receipts.clickcoded.com/",
+        "independence": "own-site"
+      },
+      "verifiability": "public"
+    },
+    {
+      "id": "rcpt-0030",
+      "date": "2026-08-01",
+      "category": "correction",
+      "corrects": "rcpt-0021",
+      "claim": "rcpt-0021's pool-cost figure ($56.40) and all-in range ($291.60-$315.40) are stale by the same checkablestandard.org domain purchase ($8.68, logged same-day in LEDGER.md) that already moved rcpt-0023's pool-cost figure to $79.04, then $87.72 after this purchase. Corrected: pool-tracked platform/listing/domain fees total $87.72 (still under the $100 pool alone); the all-in range (adding the $21.00 book and $214.20-$238.00 attributed Claude compute) is $322.92-$346.72. The Honest Clock and what-it-costs page were both updated to match in the same publish as this claim.",
+      "evidence": {
+        "type": "public-url",
+        "ref": "https://clickcoded.com/ai-visibility-check-free/what-it-costs/",
+        "independence": "own-site"
+      },
+      "verifiability": "public",
+      "confidence": {
+        "level": "estimated",
+        "caveat": "Inherits rcpt-0021's ~90% Click-Coded-compute-attribution estimate, not a verified split."
+      },
+      "metrics": {
+        "pool_costs_total": 87.72,
+        "all_in_low": 322.92,
+        "all_in_high": 346.72
+      }
     }
   ]
 }
