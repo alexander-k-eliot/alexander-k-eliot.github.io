@@ -42,7 +42,8 @@
   --mono:'IBM Plex Mono',ui-monospace,'SF Mono',Consolas,monospace;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:auto}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 body{
   background:
     radial-gradient(ellipse 900px 500px at 12% -8%, rgba(46,230,168,.10), transparent 60%),
@@ -85,9 +86,11 @@ p{margin:0 0 12px}
 .navlinks a{position:relative;text-decoration:none;transition:color .15s;padding-bottom:3px}
 .navlinks a:hover{color:var(--mint)}
 .navlinks a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1.5px;background:var(--mint);transition:right .2s}
+.navlinks a:hover::after{right:0}
 .navlinks a.active{color:var(--mint)}
 .navlinks a.active::after{right:0}
-.nav-cta{display:none;flex-shrink:0;background:var(--mint);color:#04251f;font-family:var(--sans);font-weight:600;font-size:13px;text-decoration:none;padding:9px 16px;border-radius:7px;white-space:nowrap}
+.nav-cta{display:none;flex-shrink:0;background:var(--mint);color:#04251f;font-family:var(--sans);font-weight:600;font-size:13px;text-decoration:none;padding:9px 16px;border-radius:7px;white-space:nowrap;transition:filter .15s,transform .15s}
+.nav-cta:hover{filter:brightness(1.08);transform:translateY(-1px)}
 @media(min-width:880px){.nav-cta{display:inline-block}}
 /* Mobile command dock: bottom thumb-zone nav (no hamburger, no JS: <details>-powered).
    The menu opens as a terminal-style readout, on-brand for "can a machine read this site". */
@@ -100,6 +103,8 @@ p{margin:0 0 12px}
 .dock-menu[open] summary{border-color:var(--mint);color:var(--mint)}
 .dock-menu[open] summary::before{content:"×"}
 .dock-sheet{position:fixed;left:0;right:0;bottom:calc(58px + env(safe-area-inset-bottom));background:rgba(4,37,31,.97);backdrop-filter:blur(14px);border-top:1px solid var(--mint);padding:18px 22px 14px;font-family:var(--mono)}
+.dock-menu[open] .dock-sheet{animation:sheetIn .18s ease-out}
+@keyframes sheetIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 .dock-sheet .ds-kicker{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:12px}
 .dock-sheet a{display:block;text-decoration:none;color:var(--ink);font-size:15px;padding:11px 0;border-bottom:1px dashed var(--line-soft)}
 .dock-sheet a:last-child{border-bottom:none}
@@ -119,12 +124,13 @@ body{scroll-padding-top:70px}
 @media(min-width:880px){.hero{grid-template-columns:1.15fr .85fr;padding:76px 0 56px}}
 h1{font-family:var(--serif);font-weight:600;font-size:clamp(30px,5.4vw,52px);line-height:1.12;letter-spacing:-.01em;margin:16px 0 18px;text-wrap:balance}
 h1 mark{background:transparent;color:var(--ink);position:relative;font-style:italic;font-weight:470}
-h1 mark::after{content:"";position:absolute;left:-2%;right:-2%;bottom:.02em;height:.32em;background:linear-gradient(90deg,var(--mint),var(--amber));opacity:.32;z-index:-1;border-radius:2px}
+h1 mark::after{content:"";position:absolute;left:-2%;right:-2%;bottom:.02em;height:.32em;background:linear-gradient(90deg,var(--mint),var(--amber));opacity:.32;z-index:-1;border-radius:2px;transform-origin:left;animation:markSweep .5s ease-out .4s both}
+@keyframes markSweep{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 .sub{color:var(--dim);font-size:16.5px;max-width:46ch;margin:0 0 26px}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px}
 a.cta{display:inline-flex;align-items:center;gap:8px;background:var(--mint);color:#04251f;font-weight:600;font-size:15px;text-decoration:none;padding:14px 22px;border-radius:9px;font-family:var(--sans);box-shadow:0 8px 24px -8px rgba(46,230,168,.5);transition:transform .15s,box-shadow .15s}
 a.cta:hover{transform:translateY(-1px);box-shadow:0 10px 28px -6px rgba(46,230,168,.6)}
-a.cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none}
+a.cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none;transition:transform .15s,border-color .15s,color .15s}
 a.cta.ghost:hover{border-color:var(--mint);color:var(--mint)}
 .trust-note{color:var(--dim);font-size:13px;font-family:var(--mono)}
 
@@ -141,7 +147,7 @@ a.cta.ghost:hover{border-color:var(--mint);color:var(--mint)}
 .dial svg{width:100%;height:100%;transform:rotate(-90deg)}
 .dial .track{stroke:rgba(238,246,244,.09)}
 .dial .arc{stroke:var(--orange);stroke-linecap:round;filter:drop-shadow(0 0 10px rgba(232,134,63,.55));stroke-dasharray:678;stroke-dashoffset:678;animation:draw 1.6s cubic-bezier(.2,.7,.2,1) .3s forwards,arcGlow 3.2s ease-in-out 1.9s infinite}
-@media(prefers-reduced-motion:reduce){.dial .arc{animation:none;stroke-dashoffset:237;filter:drop-shadow(0 0 10px rgba(232,134,63,.55))}.dial::before{animation:none;opacity:.7}.kicker .dot{animation:none}}
+@media(prefers-reduced-motion:reduce){.dial .arc{animation:none;stroke-dashoffset:237;filter:drop-shadow(0 0 10px rgba(232,134,63,.55))}.dial::before{animation:none;opacity:.7}.kicker .dot{animation:none}h1 mark::after{animation:none}.dock-menu[open] .dock-sheet{animation:none}.term-body .line:last-child::after{animation:none}.final-cta::before{animation:none}.step-arrow,.step-arrow.mobile{animation:none}.case-arrow{animation:none}}
 @keyframes draw{to{stroke-dashoffset:237}}
 @keyframes arcGlow{0%,100%{filter:drop-shadow(0 0 10px rgba(232,134,63,.55)) drop-shadow(0 0 2px rgba(245,185,66,.3))}50%{filter:drop-shadow(0 0 24px rgba(245,185,66,.9)) drop-shadow(0 0 7px rgba(245,185,66,.7))}}
 @keyframes dialGlow{0%,100%{opacity:.55;transform:scale(.92)}50%{opacity:1;transform:scale(1.06)}}
@@ -185,6 +191,11 @@ a.cta.ghost:hover{border-color:var(--mint);color:var(--mint)}
 .term-body .note{color:var(--dim)}
 .term-body .diff{color:var(--dim)}
 .term-body .arrow-mint{color:var(--mint);font-weight:600}
+.term-body .line:last-child::after{content:"▋";color:var(--mint);margin-left:2px}
+@media(prefers-reduced-motion:no-preference){
+  .term-body .line:last-child::after{animation:blink 1.06s step-end infinite}
+  @keyframes blink{50%{opacity:0}}
+}
 
 /* ---- case study ---- */
 .case{padding:44px 0}
@@ -197,8 +208,10 @@ a.cta.ghost:hover{border-color:var(--mint);color:var(--mint)}
 .byline-chip:hover{border-color:var(--mint);color:var(--mint)}
 .story-beats{display:grid;grid-template-columns:1fr;gap:14px}
 @media(min-width:760px){.story-beats{grid-template-columns:repeat(3,1fr)}}
-.story-beat{background:rgba(4,38,44,.35);border:1px solid var(--line-soft);border-radius:14px;padding:18px 18px 16px}
-.story-beat .t-icn{width:34px;height:34px;border-radius:9px;border:1px solid rgba(46,230,168,.35);background:rgba(46,230,168,.07);display:flex;align-items:center;justify-content:center;margin-bottom:10px;color:var(--mint)}
+.story-beat{background:rgba(4,38,44,.35);border:1px solid var(--line-soft);border-radius:14px;padding:18px 18px 16px;transition:border-color .18s}
+.story-beat:hover{border-color:rgba(46,230,168,.4)}
+.story-beat .t-icn{width:34px;height:34px;border-radius:9px;border:1px solid rgba(46,230,168,.35);background:rgba(46,230,168,.07);display:flex;align-items:center;justify-content:center;margin-bottom:10px;color:var(--mint);transition:border-color .18s,background .18s}
+.story-beat:hover .t-icn{border-color:rgba(46,230,168,.55);background:rgba(46,230,168,.16)}
 .story-beat h3{font-family:var(--serif);font-size:1.05rem;font-weight:600;margin:0 0 6px;color:var(--ink)}
 .story-beat p{font-size:.87rem;color:var(--dim);margin:0}
 .story-beat a{color:var(--mint)}
@@ -241,7 +254,7 @@ a.cta.ghost:hover{border-color:var(--mint);color:var(--mint)}
 .case-score.before .num{color:var(--coral)}
 .case-score.after .num{color:var(--amber)}
 .case-score .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);margin-top:4px}
-.case-arrow{color:var(--mint)}
+.case-arrow{color:var(--mint);animation:pulse 2.2s ease-in-out infinite}
 .case-link{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:13px;color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(46,230,168,.35);padding-bottom:2px;margin-top:6px}
 .case-link:hover{border-color:var(--mint)}
 
@@ -260,8 +273,10 @@ a.cta.ghost:hover{border-color:var(--mint);color:var(--mint)}
 .plan{padding:44px 0}
 .steps{display:grid;gap:28px;position:relative}
 @media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr);gap:44px}}
-.step{background:var(--card);border:1px solid var(--line-soft);border-radius:16px;padding:26px 22px 24px;position:relative}
-.step .icon{width:58px;height:58px;border-radius:14px;background:rgba(46,230,168,.1);border:1px solid rgba(46,230,168,.32);display:flex;align-items:center;justify-content:center;color:var(--mint);margin-bottom:16px;box-shadow:0 10px 26px -12px rgba(46,230,168,.4)}
+.step{background:var(--card);border:1px solid var(--line-soft);border-radius:16px;padding:26px 22px 24px;position:relative;transition:border-color .18s}
+.step:hover{border-color:rgba(46,230,168,.4)}
+.step .icon{width:58px;height:58px;border-radius:14px;background:rgba(46,230,168,.1);border:1px solid rgba(46,230,168,.32);display:flex;align-items:center;justify-content:center;color:var(--mint);margin-bottom:16px;box-shadow:0 10px 26px -12px rgba(46,230,168,.4);transition:border-color .18s,background .18s}
+.step:hover .icon{border-color:rgba(46,230,168,.55);background:rgba(46,230,168,.16)}
 .step .icon svg{width:28px;height:28px}
 .step .n{position:absolute;top:24px;right:22px;font-family:var(--serif);font-style:italic;font-size:26px;color:var(--line);line-height:1}
 .step h3{font-family:var(--sans);font-size:17px;font-weight:600;margin:0 0 6px}
@@ -272,6 +287,9 @@ a.cta.ghost:hover{border-color:var(--mint);color:var(--mint)}
 }
 .step-arrow.mobile{display:flex;justify-content:center;color:var(--mint);opacity:.6;margin:-8px 0}
 @media(min-width:760px){.step-arrow.mobile{display:none}}
+.step-arrow,.step-arrow.mobile{animation:arrowFlow 3.2s ease-in-out infinite}
+.step:nth-child(2) .step-arrow,.step:nth-child(2) .step-arrow.mobile{animation-delay:.4s}
+@keyframes arrowFlow{0%,100%{opacity:.6}50%{opacity:1}}
 
 /* ---- link grid ---- */
 h2.section{font-family:var(--mono);font-size:12.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--dim);margin:52px 0 16px;font-weight:500;display:flex;align-items:center;gap:12px}
@@ -282,7 +300,8 @@ h2.section::after{content:"";flex:1;height:1px;background:var(--line-soft)}
 @media(min-width:640px){.links{grid-template-columns:1fr 1fr}}
 a.link{display:flex;align-items:flex-start;gap:15px;background:var(--card);border:1px solid var(--line-soft);border-radius:14px;padding:18px 19px;text-decoration:none;color:var(--ink);transition:border-color .15s,background .15s,transform .15s}
 a.link:hover{border-color:var(--mint);background:var(--card2);transform:translateY(-1px)}
-a.link .icn{flex-shrink:0;width:46px;height:46px;border-radius:12px;background:rgba(238,246,244,.05);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--mint)}
+a.link .icn{flex-shrink:0;width:46px;height:46px;border-radius:12px;background:rgba(238,246,244,.05);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--mint);transition:border-color .15s,background .15s}
+a.link:hover .icn{border-color:rgba(46,230,168,.4);background:rgba(46,230,168,.1)}
 a.link .icn svg{width:22px;height:22px}
 a.link .t{font-size:15.5px;font-weight:600;font-family:var(--sans)}
 a.link .t small{display:block;color:var(--dim);font-size:12.5px;margin-top:3px;font-weight:400;line-height:1.5}
@@ -295,14 +314,106 @@ a.link.primary .icn{background:rgba(46,230,168,.14);border-color:rgba(46,230,168
 .social a:hover{color:var(--mint);border-color:var(--mint)}
 
 .final-cta{text-align:center;margin:56px 0 20px;padding:44px 24px;background:linear-gradient(160deg,var(--card2),var(--card-solid));border-radius:18px;border:1px solid var(--line);position:relative;overflow:hidden}
-.final-cta::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 400px 200px at 50% 0%,rgba(46,230,168,.15),transparent 70%)}
+.final-cta::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 400px 200px at 50% 0%,rgba(46,230,168,.15),transparent 70%);animation:ctaGlow 6s ease-in-out infinite}
+@keyframes ctaGlow{0%,100%{opacity:.8}50%{opacity:1}}
 .final-cta *{position:relative}
 .final-cta h2{font-family:var(--serif);font-weight:600;font-size:clamp(22px,3.4vw,30px);margin:0 0 10px}
 .final-cta p{color:var(--dim);margin:0 0 22px}
 
 footer{text-align:center;color:var(--dim);font-size:12px;font-family:var(--mono);margin-top:40px;padding:26px 0 48px;border-top:1px solid var(--line-soft)}
-footer a{color:var(--dim)}
+footer a{color:var(--dim);transition:color .15s}
 footer a:hover{color:var(--mint)}
+
+/* ---- H8: scroll-driven entrance choreography ----
+   Brandon-approved 2026-08-02, the one borderline item from the motion audit
+   (ops/MOTION-AUDIT-PUNCHLIST-2026-08-02.md). CSS only, no JS -- raw HTML is
+   identical either way. Fully inert unless BOTH: the browser supports
+   animation-timeline:view() AND the user has no prefers-reduced-motion
+   preference; everyone else gets today's fully static page, unchanged.
+   .receipt/.tcard/a.link already animate `transform` on :hover, and CSS
+   gives animations priority over transitions on the same property -- so
+   those three use an opacity-only entrance (fadeIn) to avoid silently
+   breaking their hover lift. Everything else uses the fuller rise+fade. */
+@supports (animation-timeline: view()) {
+@media (prefers-reduced-motion: no-preference) {
+
+@keyframes riseIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes typeCmd{to{width:var(--cmd-w,30ch)}}
+
+.receipts .section-head,
+#case-study .section-head,
+.plan .section-head{animation:riseIn linear both;animation-timeline:view();animation-range:entry 0% entry 30%}
+
+.receipts-grid .receipt{animation:fadeIn linear both;animation-timeline:view()}
+.receipts-grid .receipt:nth-child(1){animation-range:entry 0% entry 30%}
+.receipts-grid .receipt:nth-child(2){animation-range:entry 6% entry 36%}
+.receipts-grid .receipt:nth-child(3){animation-range:entry 12% entry 42%}
+.receipts-grid .receipt:nth-child(4){animation-range:entry 18% entry 48%}
+
+.trust-grid .tcard{animation:fadeIn linear both;animation-timeline:view()}
+.trust-grid .tcard:nth-child(1){animation-range:entry 0% entry 28%}
+.trust-grid .tcard:nth-child(2){animation-range:entry 5% entry 33%}
+.trust-grid .tcard:nth-child(3){animation-range:entry 10% entry 38%}
+.trust-grid .tcard:nth-child(5){animation-range:entry 20% entry 48%}
+.trust-grid .tcard.prime{
+  animation:fadeIn linear both,primePulse 3.2s ease-in-out infinite;
+  animation-timeline:view(),auto;
+  animation-range:entry 15% entry 43%,normal;
+}
+
+.stack-layer{animation:riseIn linear both;animation-timeline:view()}
+.stack-layer:nth-child(1){animation-range:entry 0% entry 25%}
+.stack-layer:nth-child(2){animation-range:entry 8% entry 33%}
+.stack-layer:nth-child(3){animation-range:entry 16% entry 41%}
+.stack-layer.gap{
+  animation:riseIn linear both,gapPulse 3.2s ease-in-out infinite;
+  animation-timeline:view(),auto;
+  animation-range:entry 24% entry 49%,normal;
+}
+
+.step{animation:riseIn linear both;animation-timeline:view()}
+.step:nth-child(1){animation-range:entry 0% entry 30%}
+.step:nth-child(2){animation-range:entry 10% entry 40%}
+.step:nth-child(3){animation-range:entry 20% entry 50%}
+
+.story-beat{animation:riseIn linear both;animation-timeline:view()}
+.story-beat:nth-child(1){animation-range:entry 0% entry 30%}
+.story-beat:nth-child(2){animation-range:entry 10% entry 40%}
+.story-beat:nth-child(3){animation-range:entry 20% entry 50%}
+
+.links a.link{animation:fadeIn linear both;animation-timeline:view()}
+.links a.link:nth-child(1){animation-range:entry 0% entry 28%}
+.links a.link:nth-child(2){animation-range:entry 6% entry 34%}
+.links a.link:nth-child(3){animation-range:entry 12% entry 40%}
+.links a.link:nth-child(4){animation-range:entry 18% entry 46%}
+
+/* terminal "print": command types out, then result lines appear in sequence.
+   Completion range runs past the ~35% guideline used above on purpose -- a
+   12-line terminal is a multi-beat sequence, not a single fade, and needs
+   the room. Flagged to Brandon as a deliberate exception, not a drift. */
+.term .term-body .cmd{
+  display:inline-block;overflow:hidden;white-space:nowrap;vertical-align:top;width:0;
+  animation:typeCmd steps(var(--cmd-steps,30),end) linear both;
+  animation-timeline:view();animation-range:entry 6% entry 18%;
+}
+.proof .term .term-body .cmd{--cmd-steps:31;--cmd-w:32ch}
+#case-study .term .term-body .cmd{--cmd-steps:39;--cmd-w:40ch}
+.term .term-body .line:not(:first-child){animation:riseIn linear both;animation-timeline:view()}
+.term .term-body .line:nth-of-type(2){animation-range:entry 18% entry 28%}
+.term .term-body .line:nth-of-type(3){animation-range:entry 22% entry 32%}
+.term .term-body .line:nth-of-type(4){animation-range:entry 26% entry 36%}
+.term .term-body .line:nth-of-type(5){animation-range:entry 30% entry 40%}
+.term .term-body .line:nth-of-type(6){animation-range:entry 34% entry 44%}
+.term .term-body .line:nth-of-type(7){animation-range:entry 38% entry 48%}
+.term .term-body .line:nth-of-type(8){animation-range:entry 42% entry 52%}
+.term .term-body .line:nth-of-type(9){animation-range:entry 46% entry 56%}
+.term .term-body .line:nth-of-type(10){animation-range:entry 50% entry 60%}
+.term .term-body .line:nth-of-type(11){animation-range:entry 54% entry 64%}
+.term .term-body .line:nth-of-type(12){animation-range:entry 58% entry 68%}
+
+}
+}
 </style>
 </head>
 <body>
