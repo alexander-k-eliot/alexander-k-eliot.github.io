@@ -217,24 +217,32 @@ a.cta.ghost:hover{border-color:var(--mint);color:var(--mint)}
 .story-beat a{color:var(--mint)}
 /* ---- one-thing: the trust stack (visual restyle 2026-07-30, copy frozen) ---- */
 .stack-wrap{max-width:640px;margin:26px auto 34px;display:flex;flex-direction:column;gap:10px}
-/* Layout model (fixed for good 2026-08-02): the row wraps. A short state
-   ("standardized") rides inline, pushed right by margin-left:auto; a state too
-   long for the remaining space wraps AS A UNIT to its own full-width line below
-   and wraps internally there. No column ever gets crushed, nothing can overflow,
-   and any future state text of any length lays out sanely. Do not reintroduce
-   white-space:nowrap or flex:1 here -- nowrap made long states overflow the row,
-   and flex:1 on .sl-what crushed it to one word per line once states could wrap. */
-.stack-layer{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;border:1px solid var(--line);border-radius:10px;padding:13px 18px;background:rgba(4,38,44,.45);font-family:var(--mono)}
-.stack-layer .sl-name{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);min-width:96px;flex:0 0 auto}
-.stack-layer .sl-what{font-size:12px;color:var(--dim);flex:0 1 auto;min-width:0}
-.stack-layer .sl-state{font-size:11px;color:var(--mint);margin-left:auto;min-width:0}
+/* Layout model — GRID, fixed 2026-08-02 (third pass; the two flex attempts before
+   it both failed: nowrap overflowed the row, then un-nowrapping crushed .sl-what
+   to one word per line). Fixed column tracks are the whole point: every row uses
+   the SAME template, so names, descriptions and states line up across all four
+   rows instead of each row sizing itself independently. State column is fixed
+   width + right-aligned, so "standardized" / "others building" sit in one clean
+   vertical line. Keep all three cell texts SHORT — the columns are deliberately
+   not elastic. Do not reintroduce flex here. */
+.stack-layer{display:grid;grid-template-columns:156px 1fr 124px;align-items:center;gap:14px;border:1px solid var(--line);border-radius:10px;padding:13px 18px;background:rgba(4,38,44,.45);font-family:var(--mono)}
+/* 156px = the longest label ("Business claims", 144px measured) + headroom.
+   Names stay on ONE line; if a future label needs more, widen this track —
+   don't let it wrap, that's what made row 4 taller than the rest. */
+.stack-layer .sl-name{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);min-width:0;white-space:nowrap}
+.stack-layer .sl-what{font-size:12px;color:var(--dim);min-width:0}
+.stack-layer .sl-state{font-size:11px;color:var(--mint);min-width:0;text-align:right}
+/* The dated, falsifiable version of the gap row's claim — moved out of the cell
+   2026-08-02 so the row can stay short without losing the receipt. */
+.stack-note{max-width:640px;margin:-22px auto 34px;font-family:var(--mono);font-size:10.5px;line-height:1.6;color:var(--dim);padding:0 4px}
+.stack-note b{color:var(--amber);font-weight:400}
 .stack-layer.gap{border:1.5px dashed var(--mint);background:rgba(46,230,168,.06);position:relative;box-shadow:0 0 24px -6px rgba(46,230,168,.35)}
 @keyframes gapPulse{0%,100%{box-shadow:0 0 18px -6px rgba(46,230,168,.3)}50%{box-shadow:0 0 34px -4px rgba(46,230,168,.55)}}
 .stack-layer.gap{animation:gapPulse 3.2s ease-in-out infinite}
 @media(prefers-reduced-motion:reduce){.stack-layer.gap{animation:none}}
 .stack-layer.gap .sl-state{color:var(--amber)}
 .gap-badge{position:absolute;top:-11px;right:14px;background:var(--mint);color:#04251f;font-size:9.5px;font-weight:700;letter-spacing:.1em;padding:3px 9px;border-radius:20px}
-@media(max-width:539px){.stack-layer{flex-direction:column;align-items:flex-start;gap:4px}.stack-layer .sl-name{min-width:0}.stack-layer .sl-state{margin-left:0}}
+@media(max-width:539px){.stack-layer{grid-template-columns:1fr;gap:4px}.stack-layer .sl-state{text-align:left}.stack-note{margin-top:-26px}}
 .trust-grid{display:grid;grid-template-columns:1fr;gap:14px;margin:0 auto;max-width:980px}
 @media(min-width:640px){.trust-grid{grid-template-columns:1fr 1fr}}
 @media(min-width:960px){.trust-grid{grid-template-columns:repeat(6,1fr)}.tcard{grid-column:span 2}.tcard.prime{grid-column:span 3}.tcard.grants{grid-column:span 3}}
@@ -509,9 +517,10 @@ footer a:hover{color:var(--mint)}
       <div class="stack-wrap" aria-label="The agent economy's protocol stack">
         <div class="stack-layer"><span class="sl-name">Identity</span><span class="sl-what">signed agents: who is this AI?</span><span class="sl-state">✓ standardized</span></div>
         <div class="stack-layer"><span class="sl-name">Payments</span><span class="sl-what">x402: how does an AI pay?</span><span class="sl-state">✓ standardized</span></div>
-        <div class="stack-layer"><span class="sl-name">Agent actions</span><span class="sl-what">did this agent do this specific thing?</span><span class="sl-state">being built — OVERT, Agent Receipts, others</span></div>
-        <div class="stack-layer gap"><span class="gap-badge">WE BUILD HERE</span><span class="sl-name">Business claims</span><span class="sl-what">what does the operation claim about itself?</span><span class="sl-state">as of our 2026-07-31 prior-art check, no project we found covers this layer — tell us if we're wrong</span></div>
+        <div class="stack-layer"><span class="sl-name">Agent actions</span><span class="sl-what">did this agent do this?</span><span class="sl-state">others building</span></div>
+        <div class="stack-layer gap"><span class="gap-badge">WE BUILD HERE</span><span class="sl-name">Business claims</span><span class="sl-what">what does this business claim?</span><span class="sl-state">nobody yet</span></div>
       </div>
+      <p class="stack-note"><b>Nobody yet:</b> as of our 2026-07-31 prior-art check, no project we found covers this layer. Tell us if we're wrong.</p>
 
       <div class="trust-grid">
         <a class="tcard" href="https://clickcoded.com/ai-visibility-check-free/">
