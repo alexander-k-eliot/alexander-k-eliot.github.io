@@ -1,6 +1,6 @@
 {
   "spec": "receipts-standard/0.3",
-  "spec_url": "https://receipts.clickcoded.com/",
+  "spec_url": "https://checkable.clickcoded.com/",
   "coverage": [
     "revenue",
     "delivery",
@@ -18,7 +18,7 @@
     "human_principal": "Brandon George",
     "disclosure": "AI-operated, human-reviewed, disclosed on every page"
   },
-  "generated": "2026-08-01T23:30:00+00:00",
+  "generated": "2026-08-02T00:09:35+00:00",
   "rules": {
     "corrections": "append-only; a correction is a new claim referencing the claim it corrects via 'corrects'",
     "verifiability": "public = evidence.ref is independently fetchable; on-request = evidence exists in a platform record and is disclosed to any requester",
@@ -46,7 +46,7 @@
       "claim": "Audited 100 crisis-service organizations for AI readability; built and delivered free fix kits to 10 of them, unprompted and unpaid.",
       "evidence": {
         "type": "public-url",
-        "ref": "https://clickcoded.com/proof/can-ai-find-help/",
+        "ref": "https://clickcoded.com/ai-visibility-check-free/can-ai-find-help/",
         "independence": "own-site"
       },
       "verifiability": "public"
@@ -58,7 +58,7 @@
       "claim": "Five crisis-org deliveries logged as DELIVERED were found unsent on Sent-folder ground truth; corrected publicly and re-sent for real the same day.",
       "evidence": {
         "type": "public-url",
-        "ref": "https://clickcoded.com/receipts/",
+        "ref": "https://clickcoded.com/ai-visibility-check-free/receipts/",
         "independence": "own-site"
       },
       "verifiability": "public",
@@ -71,7 +71,7 @@
       "claim": "Published an audited benchmark of 158 real homepages across 15 industries; weighted average AI-visibility score 65/100; methodology public.",
       "evidence": {
         "type": "public-url",
-        "ref": "https://clickcoded.com/proof/state-of-machine-readable-business/",
+        "ref": "https://clickcoded.com/ai-visibility-check-free/state-of-machine-readable-business/",
         "independence": "own-site"
       },
       "verifiability": "public"
@@ -106,7 +106,7 @@
       "claim": "The Compute Grants program went live: up to 5 delivered grants per month, capacity-tithed. Grants delivered to date under the program: 0.",
       "evidence": {
         "type": "public-url",
-        "ref": "https://clickcoded.com/proof/compute-grants/",
+        "ref": "https://clickcoded.com/ai-visibility-check-free/compute-grants/",
         "independence": "own-site"
       },
       "verifiability": "public"
@@ -118,7 +118,7 @@
       "claim": "Our own audit engine demoted llms.txt to a completeness checkbox on evidence, a month before Google's June 15 2026 guidance made it official.",
       "evidence": {
         "type": "public-url",
-        "ref": "https://clickcoded.com/proof/google-just-said-it/",
+        "ref": "https://clickcoded.com/ai-visibility-check-free/google-just-said-it/",
         "independence": "own-site"
       },
       "verifiability": "public"
@@ -142,7 +142,7 @@
       "claim": "First Monthly Director's Review: after 12 days of operation, revenue is $0.00, 190+ cold sends produced zero replies, and 50 warm 1:1 DMs produced 3 human replies and no sales conversations. Verified against live payment dashboards and the live inbox during the review, and said out loud.",
       "evidence": {
         "type": "public-url",
-        "ref": "https://clickcoded.com/receipts/",
+        "ref": "https://clickcoded.com/ai-visibility-check-free/receipts/",
         "independence": "own-site"
       },
       "verifiability": "public"
@@ -166,7 +166,7 @@
       "claim": "Published the September-15 benchmark: 101 major sites through the new Sept15Read engine. Findings: only 4 of 80 readable giants sit behind Cloudflare, 39% already block AI retrieval by explicit robots policy, 21 blocked automated checks outright. Three benchmark runs were required \u2014 our own rate limiter and two header-detection bugs were caught and disclosed in the piece itself.",
       "evidence": {
         "type": "public-url",
-        "ref": "https://clickcoded.com/log/september-15/",
+        "ref": "https://clickcoded.com/ai-visibility-check-free/september-15/",
         "independence": "own-site"
       },
       "verifiability": "public"
@@ -214,7 +214,7 @@
       "claim": "Extended the visual-canon pass (rcpt-0015) to full coverage per Brandon's direction not to leave a follow-up for later: all 50 remaining checker-site pages that still used the generic share-card image now carry a bespoke og-card with a real visual element \u2014 16 industry-benchmark pages got a score-dial template with hand-verified numbers, 30 free-tool pages got a drawn-icon template, and 3 editorial log pages got fully bespoke cards. Zero pages on the estate now use the generic image. Two rendering bugs were caught and fixed before shipping: auto-sizing tool-card headlines that ran into the icon column, and a bar chart that drew two different counts (50 vs 100) at equal width, which was itself an unchecked visual claim. A stale pre-rename '\u00c6 Studio' byline and a stale github.io author URL were also found and fixed on one page, independent of this pass's original scope.",
       "evidence": {
         "type": "public-url",
-        "ref": "https://clickcoded.com/benchmarks/telecom/",
+        "ref": "https://clickcoded.com/ai-visibility-check-free/telecom-benchmark/",
         "independence": "own-site"
       },
       "verifiability": "public"
@@ -227,7 +227,7 @@
       "claim": "Correction to rcpt-0008: our audit engine never demoted llms.txt to 'a completeness checkbox,' and no demotion predates Google's June 15 2026 guidance. The public methodology weights llms.txt at 18 of 100 (20 of 100 before v1.1), near the top of the rubric, and the git history (first commit 2026-07-19) shows no such change. What is true: we check the file as an index, generate it free in fix kits, and have never sold it as a citation lever. The claim and the page it pointed to flattered us and were wrong. The page now carries an inline correction.",
       "evidence": {
         "type": "public-url",
-        "ref": "https://clickcoded.com/proof/google-just-said-it/",
+        "ref": "https://clickcoded.com/ai-visibility-check-free/google-just-said-it/",
         "independence": "own-site",
         "excerpt": "it flattered us"
       },
@@ -254,7 +254,7 @@
       "claim": "Instrument disclosure for rcpt-0004 and every sector benchmark published 2026-07-20..22: the engine version used had three defective checks, fixed 2026-07-28. Its robots parser flagged a bot as blocked when ANY Disallow path sat within 80 characters of the bot's User-agent line (over-reported blocking); its structured-data check counted JSON-LD script tags without parsing them (over-credited broken data); its contact check matched the bare word 'contact' anywhere in HTML (over-credited). Published scores from that window, including the 65/100 average over 158 homepages, are dated snapshots from a defective instrument and now carry that label where they appear. A full re-benchmark on the corrected engine, with the corpus and raw results committed, is queued. Named fetch-refusal and single-company claims were individually re-measured on 2026-07-30 with the corrected engine; results in the corrections log.",
       "evidence": {
         "type": "public-url",
-        "ref": "https://clickcoded.com/corrections/",
+        "ref": "https://clickcoded.com/ai-visibility-check-free/corrections/",
         "independence": "own-site"
       },
       "verifiability": "public"
@@ -266,7 +266,7 @@
       "claim": "rcpt-0002 said fix kits were delivered to 10 crisis organizations; its evidence page still described delivery as in progress, not yet complete \u2014 frozen at its 2026-07-26 writing even though delivery completed 2026-07-27 (rcpt-0003 documents the mislogged-then-resent five). Page updated with a dated completion note; the original honest hedge kept for the record. Found by our own published-claims audit.",
       "evidence": {
         "type": "public-url",
-        "ref": "https://clickcoded.com/proof/can-ai-find-help/",
+        "ref": "https://clickcoded.com/ai-visibility-check-free/can-ai-find-help/",
         "independence": "own-site"
       },
       "verifiability": "public",
@@ -279,7 +279,7 @@
       "claim": "The operation's stated working budget was a $100 pool. Real all-in spend to date is approximately $291.60-$315.40, roughly 3x the stated limit. Pool-tracked platform/listing fees (Etsy, Upwork, Cloudflare) total $56.40 and alone stayed under $100. The overrun is Claude usage tokens: $238.00 confirmed spent running this operation, of which the operator estimates roughly 90% (~$214.20) is attributable to Click Coded specifically rather than unrelated work on the same account \u2014 stated as an estimate, not a verified split. A $21.00 personal book purchase tied to outreach research is also counted in the all-in figure. The $100 figure was never sized to cover compute and should have been corrected earlier instead of standing uncorrected in the ledger.",
       "evidence": {
         "type": "public-url",
-        "ref": "https://clickcoded.com/what-it-costs/",
+        "ref": "https://clickcoded.com/ai-visibility-check-free/what-it-costs/",
         "independence": "own-site"
       },
       "verifiability": "public",
@@ -296,7 +296,7 @@
       "claim": "rcpt-0021 originally cited the operator's internal ledger repo as evidence. That repo is private, so the evidence link was unverifiable by the public, a defect in the disclosure itself, live for roughly an hour. Fixed same day: a standing public cost page now carries the full itemization (fees $56.40 line by line, book $21.00, Claude compute $238.00 confirmed with the ~90% attribution labeled as the operator's estimate, all-in $291.60 to $315.40, revenue $0.00), and rcpt-0021's evidence now points there. The receipts page notes the swap inline rather than hiding it.",
       "evidence": {
         "type": "public-url",
-        "ref": "https://clickcoded.com/what-it-costs/",
+        "ref": "https://clickcoded.com/ai-visibility-check-free/what-it-costs/",
         "independence": "own-site"
       },
       "verifiability": "public"
@@ -309,7 +309,7 @@
       "claim": "Three domain purchases had been paid for but never entered in the ledger: aestudio.pro ($3.68, paid 2026-07-22, the original AE Studio domain, abandoned after a prior-art check found an unrelated company already using that name, which triggered the rebrand to Click Coded), clickcoded.com ($10.98, paid 2026-07-26, the current live domain), and nevernotwork.ing ($7.98, paid 2026-07-26, a deliberately unlinked easter-egg domain). Brandon flagged the gap; not a new expense, just a $22.64 correction to costs already incurred but not logged. Pool-tracked costs move from $56.40 to $79.04, pool balance from -$56.40 to -$79.04 ($20.96 of the $100 pool remains), and the all-in range from $291.60-$315.40 to $314.24-$338.04.",
       "evidence": {
         "type": "public-url",
-        "ref": "https://clickcoded.com/what-it-costs/",
+        "ref": "https://clickcoded.com/ai-visibility-check-free/what-it-costs/",
         "independence": "own-site"
       },
       "verifiability": "public",
@@ -402,7 +402,7 @@
       "claim": "rcpt-0021's pool-cost figure ($56.40) and all-in range ($291.60-$315.40) are stale by the same checkablestandard.org domain purchase ($8.68, logged same-day in LEDGER.md) that already moved rcpt-0023's pool-cost figure to $79.04, then $87.72 after this purchase. Corrected: pool-tracked platform/listing/domain fees total $87.72 (still under the $100 pool alone); the all-in range (adding the $21.00 book and $214.20-$238.00 attributed Claude compute) is $322.92-$346.72. The Honest Clock and what-it-costs page were both updated to match in the same publish as this claim.",
       "evidence": {
         "type": "public-url",
-        "ref": "https://clickcoded.com/what-it-costs/",
+        "ref": "https://clickcoded.com/ai-visibility-check-free/what-it-costs/",
         "independence": "own-site"
       },
       "verifiability": "public",
@@ -415,6 +415,20 @@
         "all_in_low": 322.92,
         "all_in_high": 346.72
       }
+    },
+    {
+      "id": "rcpt-0031",
+      "date": "2026-08-01",
+      "category": "correction",
+      "corrects": "rcpt-0017",
+      "claim": "Correction to rcpt-0017: that claim's evidence URL (clickcoded.com/ai-visibility-check-free/google-just-said-it/) stopped supporting it. The site IA restructure moved the page to clickcoded.com/proof/google-just-said-it/ on 2026-08-01 and left a client-side stub at the old address. The stub returns HTTP 200 but is a meta-refresh redirect containing about 659 bytes and none of the original text, so the declared excerpt 'it flattered us' was no longer present and our own Hole 4 check correctly failed the manifest. Nothing about rcpt-0017's substance changed and the correction it describes is still published, verbatim, at the new URL. Evidence here repoints to that new URL. Logged rather than silently editing rcpt-0017 in place, because corrections are append-only and that rule applies to our own bookkeeping. General lesson, recorded because it will recur: a client-side meta-refresh stub is invisible to any non-browser fetcher, so a moved page cited as evidence needs a real HTTP 301 or a correction like this one.",
+      "evidence": {
+        "type": "public-url",
+        "ref": "https://clickcoded.com/proof/google-just-said-it/",
+        "independence": "own-site",
+        "excerpt": "it flattered us"
+      },
+      "verifiability": "public"
     }
   ]
 }
