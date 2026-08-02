@@ -1,0 +1,4 @@
+#!/bin/sh
+# Publish-time claim gate (accuracy audit 2026-07-30): new/changed pages carrying
+# check-derived numbers need a dated entry in ops/receipts-claims.jsonl.
+exec python3 "$(git rev-parse --show-toplevel)/../../../ops/claimcheck.py" --staged
