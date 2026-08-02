@@ -339,19 +339,19 @@ footer a:hover{color:var(--mint)}
 
 @keyframes riseIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-@keyframes typeCmd{to{width:var(--cmd-w,30ch)}}
+@keyframes typeCmd{from{width:0}}
 
 .receipts .section-head,
 #case-study .section-head,
 .plan .section-head{animation:riseIn linear both;animation-timeline:view();animation-range:entry 0% entry 30%}
 
-.receipts-grid .receipt{animation:fadeIn linear both;animation-timeline:view()}
+.receipts-grid .receipt{animation:fadeIn linear both;animation-timeline:view();animation-range:entry 0% entry 35%}
 .receipts-grid .receipt:nth-child(1){animation-range:entry 0% entry 30%}
 .receipts-grid .receipt:nth-child(2){animation-range:entry 6% entry 36%}
 .receipts-grid .receipt:nth-child(3){animation-range:entry 12% entry 42%}
 .receipts-grid .receipt:nth-child(4){animation-range:entry 18% entry 48%}
 
-.trust-grid .tcard{animation:fadeIn linear both;animation-timeline:view()}
+.trust-grid .tcard{animation:fadeIn linear both;animation-timeline:view();animation-range:entry 0% entry 35%}
 .trust-grid .tcard:nth-child(1){animation-range:entry 0% entry 28%}
 .trust-grid .tcard:nth-child(2){animation-range:entry 5% entry 33%}
 .trust-grid .tcard:nth-child(3){animation-range:entry 10% entry 38%}
@@ -362,7 +362,7 @@ footer a:hover{color:var(--mint)}
   animation-range:entry 15% entry 43%,normal;
 }
 
-.stack-layer{animation:riseIn linear both;animation-timeline:view()}
+.stack-layer{animation:riseIn linear both;animation-timeline:view();animation-range:entry 0% entry 35%}
 .stack-layer:nth-child(1){animation-range:entry 0% entry 25%}
 .stack-layer:nth-child(2){animation-range:entry 8% entry 33%}
 .stack-layer:nth-child(3){animation-range:entry 16% entry 41%}
@@ -372,17 +372,17 @@ footer a:hover{color:var(--mint)}
   animation-range:entry 24% entry 49%,normal;
 }
 
-.step{animation:riseIn linear both;animation-timeline:view()}
+.step{animation:riseIn linear both;animation-timeline:view();animation-range:entry 0% entry 35%}
 .step:nth-child(1){animation-range:entry 0% entry 30%}
 .step:nth-child(2){animation-range:entry 10% entry 40%}
 .step:nth-child(3){animation-range:entry 20% entry 50%}
 
-.story-beat{animation:riseIn linear both;animation-timeline:view()}
+.story-beat{animation:riseIn linear both;animation-timeline:view();animation-range:entry 0% entry 35%}
 .story-beat:nth-child(1){animation-range:entry 0% entry 30%}
 .story-beat:nth-child(2){animation-range:entry 10% entry 40%}
 .story-beat:nth-child(3){animation-range:entry 20% entry 50%}
 
-.links a.link{animation:fadeIn linear both;animation-timeline:view()}
+.links a.link{animation:fadeIn linear both;animation-timeline:view();animation-range:entry 0% entry 35%}
 .links a.link:nth-child(1){animation-range:entry 0% entry 28%}
 .links a.link:nth-child(2){animation-range:entry 6% entry 34%}
 .links a.link:nth-child(3){animation-range:entry 12% entry 40%}
@@ -393,12 +393,14 @@ footer a:hover{color:var(--mint)}
    12-line terminal is a multi-beat sequence, not a single fade, and needs
    the room. Flagged to Brandon as a deliberate exception, not a drift. */
 .term .term-body .cmd{
-  display:inline-block;overflow:hidden;white-space:nowrap;vertical-align:top;width:0;
-  animation:typeCmd steps(var(--cmd-steps,30),end) linear both;
+  display:inline-block;overflow:hidden;white-space:nowrap;vertical-align:top;
+  width:var(--cmd-w,30ch);
+  animation-name:typeCmd;animation-duration:auto;animation-fill-mode:both;
+  animation-timing-function:steps(var(--cmd-steps,30),end);
   animation-timeline:view();animation-range:entry 6% entry 18%;
 }
-.proof .term .term-body .cmd{--cmd-steps:31;--cmd-w:32ch}
-#case-study .term .term-body .cmd{--cmd-steps:39;--cmd-w:40ch}
+.proof .term .term-body .cmd{--cmd-steps:31;--cmd-w:31ch}
+#case-study .term .term-body .cmd{--cmd-steps:38;--cmd-w:38ch}
 .term .term-body .line:not(:first-child){animation:riseIn linear both;animation-timeline:view()}
 .term .term-body .line:nth-of-type(2){animation-range:entry 18% entry 28%}
 .term .term-body .line:nth-of-type(3){animation-range:entry 22% entry 32%}
